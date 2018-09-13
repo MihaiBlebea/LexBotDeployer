@@ -1,0 +1,16 @@
+{
+    "Code": {
+        "S3Bucket": "lexbot2-dev-serverlessdeploymentbucket-7oyp19i8m4a8",
+        "S3Key": "STRING_VALUE",
+        "S3ObjectVersion": "1",
+        "ZipFile": ""
+    },
+    "Description": "",
+    "FunctionName": "MyFunction",
+    "Handler": "souce_file.handler_name",
+    "MemorySize": 128,
+    "Publish": true,
+    "Role": "arn:aws:s3:::lexbot2-dev-serverlessdeploymentbucket-7oyp19i8m4a8",
+    "Runtime": "nodejs8.10",
+    "Timeout": 15
+}

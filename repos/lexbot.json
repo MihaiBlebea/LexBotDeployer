@@ -1,0 +1,32 @@
+{
+    "intents": [
+        {
+            "intentVersion": "1",
+            "intentName": "MakeAppointment"
+        }
+    ],
+    "name": "OrderFlowersBot",
+    "locale": "en-US",
+    "checksum": "a5a29ce4-9df2-4611-bd7f-33d45dcd8699",
+    "abortStatement": {
+        "messages": [
+            {
+                "content": "Sorry, I'm not able to assist at this time",
+                "contentType": "PlainText"
+            }
+        ]
+    },
+    "clarificationPrompt": {
+        "maxAttempts": 3,
+        "messages": [
+            {
+                "content": "I didn't understand you, what would you like to do?",
+                "contentType": "PlainText"
+            }
+        ]
+    },
+    "voiceId": "Salli",
+    "childDirected": false,
+    "idleSessionTTLInSeconds": 600,
+    "description": "Bot to order humans"
+}
