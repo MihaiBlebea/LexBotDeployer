@@ -15,7 +15,9 @@ const deployBotRequest = (callback, timeout)=> {
                     bots.createBotVersion(data.checksum, (data)=> {
                         if(callback)
                         {
-                            callback(data)
+                            setTimeout(()=> {
+                                callback(data)
+                            }, timeout)
                         }
                     })
                 }, timeout)
@@ -37,7 +39,9 @@ const deploySlotRequest = (callback, timeout)=> {
                     slots.createSlotVersion(data.checksum, (data)=> {
                         if(callback)
                         {
-                            callback(data)
+                            setTimeout(()=> {
+                                callback(data)
+                            }, timeout)
                         }
                     })
                 }, timeout)
