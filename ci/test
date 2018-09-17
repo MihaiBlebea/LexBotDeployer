@@ -1,7 +1,11 @@
 #!/usr/bin/env node
 
-const test = ()=> {
-    console.log('ceva')
+var branch = process.argv[2]
+
+const test = (branch_name)=> {
+    console.log('ceva: ' + branch_name)
 }
 
-test()
+test(branch)
+
+console.log(process.argv)
