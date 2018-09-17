@@ -29,8 +29,8 @@ const deplyBot = (branch_name, foo)=> {
         console.log(data)
         requests.deployBotRequest((data)=> {
             console.log(data)
-        }, 1000)
-    }, 1000)
+        }, 2000)
+    }, 2000)
 }
 
 deplyBot(branch, foo)
