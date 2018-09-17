@@ -9,4 +9,4 @@ const test = (branch_name)=> {
 
 test(branch)
 
-console.log(diff)
+console.log(process.argv)
