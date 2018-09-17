@@ -76,5 +76,6 @@ const deploySlotRequest = (callback, timeout)=> {
 
 module.exports = {
     deployBotRequest,
+    deployIntentRequest,
     deploySlotRequest
 }
