@@ -9,8 +9,8 @@ var foo = process.argv[3]
 
 
 const deplyBot = (branch_name, foo)=> {
-    console.log('Date of deploy: ' + Date.now())
-    console.log('Deployed branch: ' + branch_name)
+    console.log('Date of deploy: ' + Date.now() + '\n')
+    console.log('Deployed branch: ' + branch_name + '\n')
 
     // bots.getBotVersions((data)=> {
     //     setTimeout(()=> {
@@ -26,9 +26,9 @@ const deplyBot = (branch_name, foo)=> {
     // })
 
     requests.deploySlotRequest((data)=> {
-        console.log(data)
+        console.log(data, '\n')
         requests.deployBotRequest((data)=> {
-            console.log(data)
+            console.log(data, '\n')
         }, 1000)
     }, 1000)
 }
