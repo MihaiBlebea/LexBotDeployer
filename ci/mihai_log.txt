@@ -1,4 +1,0 @@
-ceva: master
-[ '/usr/local/bin/node',
-  '/Users/mihai.blebea/Projects/LexBots/withNode/ci/test',
-  'master' ]
