@@ -7,7 +7,7 @@ var foo = process.argv[3]
 
 
 const test = (branch_name, foo)=> {
-    console.log('Date of deploy: ' + Date.now())
+    console.log('Date of deploy: ' + Date.now().toString())
     console.log('Deployed branch: ' + branch_name)
 
     bots.getBotVersions((data)=> {

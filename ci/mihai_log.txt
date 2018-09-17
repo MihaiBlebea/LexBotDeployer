@@ -1,0 +1,18 @@
+Date of deploy: 1537190893001
+Deployed branch: master
+Result of bot deploy { name: 'OrderFlowersBot',
+  description: 'Bot to order humans',
+  intents: [ { intentName: 'MakeAppointment', intentVersion: '1' } ],
+  clarificationPrompt:
+   { messages: [ [Object] ], maxAttempts: 3, responseCard: null },
+  abortStatement: { messages: [ [Object] ], responseCard: null },
+  status: 'READY',
+  failureReason: null,
+  lastUpdatedDate: 2018-09-12T09:19:24.725Z,
+  createdDate: 2018-09-12T09:18:31.108Z,
+  idleSessionTTLInSeconds: 600,
+  voiceId: 'Salli',
+  checksum: 'd77771d5-e631-4772-b47a-4d2662e93898',
+  version: '4',
+  locale: 'en-US',
+  childDirected: false }
