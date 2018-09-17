@@ -2,9 +2,7 @@
 
 var branch = process.argv[2]
 var foo = process.argv[3]
-var diff = process.argv[4]
 
-console.log(process.argv)
 
 const test = (branch_name, foo)=> {
     console.log('ceva: ' + branch_name)
