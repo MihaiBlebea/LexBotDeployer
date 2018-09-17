@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 
 var branch = process.argv[2]
-var diff = process.argv[3]
-
-const test = (branch_name)=> {
-    console.log('ceva: ' + branch_name)
-}
-
-test(branch)
+var foo = process.argv[3]
+var diff = process.argv[4]
 
 console.log(process.argv)
+
+const test = (branch_name, foo)=> {
+    console.log('ceva: ' + branch_name)
+    return (foo === 'yes') ? process.exit(0) : process.exit(1)
+}
+
+test(branch, foo)
