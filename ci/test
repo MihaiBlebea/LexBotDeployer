@@ -1,29 +1,36 @@
 #!/usr/bin/env node
 
 const bots = require('./../services/bots.js')
+const requests = require('./../services/requests')
+
 
 var branch = process.argv[2]
 var foo = process.argv[3]
 
 
-const test = (branch_name, foo)=> {
+const deplyBot = (branch_name, foo)=> {
     console.log('Date of deploy: ' + Date.now())
     console.log('Deployed branch: ' + branch_name)
 
-    bots.getBotVersions((data)=> {
-        setTimeout(()=> {
-            bots.putBot(data.checksum, (data)=> {
-                setTimeout(()=> {
-                    bots.createBotVersion(data.checksum, (data)=> {
-                        console.log('Result of bot deploy', data)
-                        return (foo === 'yes') ? process.exit(0) : process.exit(1)
-                    })
-                }, 1000)
-            })
-        }, 1000)
-    })
+    // bots.getBotVersions((data)=> {
+    //     setTimeout(()=> {
+    //         bots.putBot(data.checksum, (data)=> {
+    //             setTimeout(()=> {
+    //                 bots.createBotVersion(data.checksum, (data)=> {
+    //                     console.log('Result of bot deploy', data)
+    //                     return (foo === 'yes') ? process.exit(0) : process.exit(1)
+    //                 })
+    //             }, 1000)
+    //         })
+    //     }, 1000)
+    // })
 
-    // return (foo === 'yes') ? process.exit(0) : process.exit(1)
+    requests.deploySlotRequest((data)=> {
+        console.log(data)
+        requests.deployBotRequest((data)=> {
+            console.log(data)
+        }, 1000)
+    }, 1000)
 }
 
-test(branch, foo)
+deplyBot(branch, foo)
