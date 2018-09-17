@@ -48,10 +48,11 @@ program
     .action(()=> {
         console.log('Get checksum of the lates bot version')
         intents.getIntentLatestVersion((data)=> {
-            console.log(data)
-            // intents.putIntent(data.checksum, (data)=> {
-            //     console.log(data)
-            // })
+            intents.putIntent(data.checksum, (data)=> {
+                intents.createIntentVersion(data.checksum, (data)=> {
+                    console.log(data)
+                })
+            })
         })
     })
 

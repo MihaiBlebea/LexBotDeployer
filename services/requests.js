@@ -27,6 +27,30 @@ const deployBotRequest = (callback, timeout)=> {
 }
 
 
+const deployIntentRequest = (callback, timeout)=> {
+    if(!timeout)
+    {
+        timeout = 1000
+    }
+    intents.getIntentLatestVersion((data)=> {
+        setTimeout(()=> {
+            intents.putIntent(data.checksum, (data)=> {
+                setTimeout(()=> {
+                    intents.createIntentVersion(data.checksum, (data)=> {
+                        if(callback)
+                        {
+                            setTimeout(()=> {
+                                callback(data)
+                            }, timeout)
+                        }
+                    })
+                }, timeout)
+            })
+        }, timeout)
+    })
+}
+
+
 const deploySlotRequest = (callback, timeout)=> {
     if(!timeout)
     {
