@@ -15,16 +15,16 @@ const deplyBot = (branch_name, foo)=> {
     requests.deploySlotRequest('SlotTypeOne', (data)=> {
         console.log('Slot version deployed', data.version)
 
-        requests.deployIntentRequest('IntentOne', (data)=> {
-            console.log('Intent version deployed', data.version)
-
-            requests.deployBotRequest('BotOne', (data)=> {
-                console.log('Bot version eployed', data.version)
-                
-                return (foo === 'yes') ? process.exit(0) : process.exit(1)
-            }, 2000)
-
-        }, 2000)
+        // requests.deployIntentRequest('IntentOne', (data)=> {
+        //     console.log('Intent version deployed', data.version)
+        //
+        //     requests.deployBotRequest('BotOne', (data)=> {
+        //         console.log('Bot version eployed', data.version)
+        //
+        //         return (foo === 'yes') ? process.exit(0) : process.exit(1)
+        //     }, 2000)
+        //
+        // }, 2000)
 
     }, 2000)
 }
