@@ -20,3 +20,4 @@ VERSION DATA { name: 'BotOne',
   locale: 'en-US',
   childDirected: false }
 Bot version eployed 1
+SlotTypeOne

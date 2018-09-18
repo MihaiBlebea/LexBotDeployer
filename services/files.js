@@ -13,9 +13,10 @@ const getFileName = (file)=> {
 
 const processFiles = (folderFiles, callback)=> {
     extractFiles(folderFiles, (files)=> {
-        return files.map((file)=> {
-            return callback(getFileName(file))
+        let fileNames = files.map((file)=> {
+            return getFileName(file)
         })
+        callback(fileNames)
     })
 }
 
