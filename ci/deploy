@@ -13,7 +13,7 @@ const deplyBot = (branch_name, foo)=> {
     console.log('Deployed branch: ' + branch_name)
 
     requests.deploySlotRequest('SlotTypeOne', (data)=> {
-        console.log(data)
+        console.log(data.version)
         // requests.deployIntentRequest((data)=> {
         //     console.log(data)
         //     requests.deployBotRequest((data)=> {
