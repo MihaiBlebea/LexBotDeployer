@@ -14,13 +14,13 @@ const deplyBot = (branch_name, foo)=> {
 
     requests.deploySlotRequest((data)=> {
         console.log(data)
-        requests.deployIntentRequest((data)=> {
-            console.log(data)
-            requests.deployBotRequest((data)=> {
-                console.log(data)
-                return (foo === 'yes') ? process.exit(0) : process.exit(1)
-            }, 2000)
-        }, 2000)
+        // requests.deployIntentRequest((data)=> {
+        //     console.log(data)
+        //     requests.deployBotRequest((data)=> {
+        //         console.log(data)
+        //         return (foo === 'yes') ? process.exit(0) : process.exit(1)
+        //     }, 2000)
+        // }, 2000)
     }, 2000)
 }
 
