@@ -8,9 +8,9 @@ const deployBotRequest = (botName, callback, timeout)=> {
     {
         timeout = 1000;
     }
-    bots.getBotVersions(botName, (data)=> {
+    bots.getBotVersions(botName, (versionData)=> {
         setTimeout(()=> {
-            bots.putBot(botName, data.checksum, (data)=> {
+            bots.putBot(botName, versionData, (data)=> {
                 setTimeout(()=> {
                     bots.createBotVersion(botName, data.checksum, (data)=> {
                         if(callback)
@@ -23,7 +23,6 @@ const deployBotRequest = (botName, callback, timeout)=> {
                 }, timeout)
             })
         }, timeout)
-        console.log(data)
     })
 }
 

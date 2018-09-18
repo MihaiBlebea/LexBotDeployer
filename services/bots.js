@@ -1,13 +1,17 @@
 const AWS = require('aws-sdk')
 
 
-const putBot = (botName, checksum, callback)=> {
+const putBot = (botName, versionData, callback)=> {
     var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
     var params = require('./../repos/' + botName + '.json')
-    params = {
-        ...params,
-        checksum: checksum
+    if(versionData !== null)
+    {
+        params = {
+            ...params,
+            checksum: versionData.checksum
+        }
     }
+
     lex.putBot(params, function(err, data) {
         if(err)
         {
@@ -56,11 +60,10 @@ const getBotVersions = (botName, callback)=> {
         name: botName,
         versionOrAlias: '$LATEST'
     }
-    lex.getBot(params, function(err, data) {
-        if(err)
+    lex.getBot(params, function(error, data) {
+        if(error) console.log(error, error.stack)
+        if(callback)
         {
-            console.log(err, err.stack);
-        } else {
             callback(data)
         }
     })
