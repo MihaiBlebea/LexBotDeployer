@@ -65,14 +65,10 @@ const getIntentLatestVersion = (intentName, callback)=> {
         name: intentName
     }
     lex.getIntent(params, function(err, data) {
-        if(err)
+        if(err) console.log(err, err.stack)
+        if(callback)
         {
-            console.log(err, err.stack);
-        } else {
-            if(callback)
-            {
-                callback(data)
-            }
+            callback(data)
         }
     })
 }

@@ -1,0 +1,44 @@
+Date of deploy: 1537267717128
+Deployed branch: master
+2
+{ NotFoundException: The specified resource 'IntentOne' does not exist. Choose another resource.
+    at Object.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/json.js:48:27)
+    at Request.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/rest_json.js:52:8)
+    at Request.callListeners (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:109:20)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:81:10)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:683:14)
+    at Request.transition (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:22:10)
+    at AcceptorStateMachine.runTo (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:14:12)
+    at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10
+    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:9)
+    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:12)
+  message:
+   'The specified resource \'IntentOne\' does not exist. Choose another resource.',
+  code: 'NotFoundException',
+  time: 2018-09-18T10:48:46.306Z,
+  requestId: '6aee3351-bb30-11e8-a843-bf71be9f8a90',
+  statusCode: 404,
+  retryable: false,
+  retryDelay: 60.830279645444804 } 'NotFoundException: The specified resource \'IntentOne\' does not exist. Choose another resource.\n    at Object.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/json.js:48:27)\n    at Request.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/rest_json.js:52:8)\n    at Request.callListeners (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:109:20)\n    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:81:10)\n    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:683:14)\n    at Request.transition (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:22:10)\n    at AcceptorStateMachine.runTo (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:14:12)\n    at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10\n    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:9)\n    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:12)'
+Date of deploy: 1537267781622
+Deployed branch: master
+2
+{ NotFoundException: The specified resource 'IntentOne' does not exist. Choose another resource.
+    at Object.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/json.js:48:27)
+    at Request.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/rest_json.js:52:8)
+    at Request.callListeners (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:109:20)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:81:10)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:683:14)
+    at Request.transition (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:22:10)
+    at AcceptorStateMachine.runTo (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:14:12)
+    at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10
+    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:9)
+    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:12)
+  message:
+   'The specified resource \'IntentOne\' does not exist. Choose another resource.',
+  code: 'NotFoundException',
+  time: 2018-09-18T10:49:50.729Z,
+  requestId: '91548622-bb30-11e8-b0a0-5705e56512b3',
+  statusCode: 404,
+  retryable: false,
+  retryDelay: 37.96773569908054 } 'NotFoundException: The specified resource \'IntentOne\' does not exist. Choose another resource.\n    at Object.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/json.js:48:27)\n    at Request.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/rest_json.js:52:8)\n    at Request.callListeners (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:109:20)\n    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:81:10)\n    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:683:14)\n    at Request.transition (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:22:10)\n    at AcceptorStateMachine.runTo (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:14:12)\n    at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10\n    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:9)\n    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:12)'
