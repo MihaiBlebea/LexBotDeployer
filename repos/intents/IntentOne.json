@@ -50,8 +50,8 @@
             "description": "The type of sauce to use on the pizza.",
             "priority": 3,
             "sampleUtterances": [
-                "Make it {Sauce} sauce.",
-                "I'd like {Sauce} sauce."
+                "Make it {SlotTypeOne} sauce.",
+                "I'd like {SlotTypeOne} sauce."
             ],
             "slotConstraint": "Required",
             "slotType": "SlotTypeOne",
