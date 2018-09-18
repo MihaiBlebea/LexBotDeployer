@@ -1,0 +1,21 @@
+Date of deploy: 1537279906580
+Deployed branch: master
+Slot version deployed 4
+Intent version deployed 1
+VERSION DATA { name: 'BotOne',
+  description: 'Bot to order humans222',
+  intents: [ { intentName: 'IntentOne', intentVersion: '1' } ],
+  clarificationPrompt:
+   { messages: [ [Object] ], maxAttempts: 3, responseCard: null },
+  abortStatement: { messages: [ [Object] ], responseCard: null },
+  status: 'READY',
+  failureReason: null,
+  lastUpdatedDate: 2018-09-18T11:39:53.295Z,
+  createdDate: 2018-09-18T11:39:30.493Z,
+  idleSessionTTLInSeconds: 600,
+  voiceId: 'Salli',
+  checksum: 'eafe248d-82c8-4493-816d-fe617187e110',
+  version: '$LATEST',
+  locale: 'en-US',
+  childDirected: false }
+Bot version eployed 1
