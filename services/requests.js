@@ -3,16 +3,16 @@ const slots = require('./slots.js')
 const intents = require('./intents.js')
 
 
-const deployBotRequest = (callback, timeout)=> {
+const deployBotRequest = (botName, callback, timeout)=> {
     if(!timeout)
     {
         timeout = 1000;
     }
-    bots.getBotVersions((data)=> {
+    bots.getBotVersions(botName, (data)=> {
         setTimeout(()=> {
-            bots.putBot(data.checksum, (data)=> {
+            bots.putBot(botName, data.checksum, (data)=> {
                 setTimeout(()=> {
-                    bots.createBotVersion(data.checksum, (data)=> {
+                    bots.createBotVersion(botName, data.checksum, (data)=> {
                         if(callback)
                         {
                             setTimeout(()=> {

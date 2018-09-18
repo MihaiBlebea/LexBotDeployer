@@ -1,9 +1,9 @@
 const AWS = require('aws-sdk')
 
 
-const putBot = (checksum, callback)=> {
+const putBot = (botName, checksum, callback)=> {
     var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
-    var params = require('./../repos/lexbot.json')
+    var params = require('./../repos/' + botName + '.json')
     params = {
         ...params,
         checksum: checksum
@@ -34,10 +34,10 @@ const getBots = ()=> {
     })
 }
 
-const createBotVersion = (checksum, callback)=> {
+const createBotVersion = (botName, checksum, callback)=> {
     var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
     var params = {
-        name: 'OrderFlowersBot',
+        name: botName,
         checksum: checksum
     }
     lex.createBotVersion(params, function(err, data) {
@@ -50,10 +50,10 @@ const createBotVersion = (checksum, callback)=> {
     })
 }
 
-const getBotVersions = (callback)=> {
+const getBotVersions = (botName, callback)=> {
     var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
     var params = {
-        name: 'OrderFlowersBot',
+        name: botName,
         versionOrAlias: '$LATEST'
     }
     lex.getBot(params, function(err, data) {
@@ -66,10 +66,10 @@ const getBotVersions = (callback)=> {
     })
 }
 
-const deleteBot = ()=> {
+const deleteBot = (botName)=> {
     var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
     var params = {
-        name: 'OrderFlowersBot'
+        name: botName
     }
     lex.deleteBot(params, function(err, data) {
         if(err)
