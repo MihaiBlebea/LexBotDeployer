@@ -5,13 +5,13 @@ const putBot = (botName, versionData, callback)=> {
     var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
     var params = require('./../repos/' + botName + '.json')
     console.log('VERSION DATA', versionData)
-    // if(versionData !== null)
-    // {
-    //     params = {
-    //         ...params,
-    //         checksum: versionData.checksum
-    //     }
-    // }
+    if(versionData !== null)
+    {
+        params = {
+            ...params,
+            checksum: versionData.checksum
+        }
+    }
 
     lex.putBot(params, function(err, data) {
         if(err)
