@@ -55,7 +55,7 @@
             ],
             "slotConstraint": "Required",
             "slotType": "SlotTypeOne",
-            "slotTypeVersion": "2",
+            "slotTypeVersion": "1",
             "valueElicitationPrompt": {
                 "maxAttempts": 1,
                 "messages": [
