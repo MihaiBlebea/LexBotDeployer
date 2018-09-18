@@ -1,8 +1,10 @@
 const program = require('commander')
 
-const bots = require('./services/bots.js')
-const slots = require('./services/slots.js')
-const intents = require('./services/intents.js')
+const bots = require('./services/bots')
+const slots = require('./services/slots')
+const intents = require('./services/intents')
+const requests = require('./services/requests')
+
 
 program
     .command('bot:make-version')
@@ -78,7 +80,9 @@ program
 program
     .command('test')
     .action(()=> {
-        withTimeout(testing, 3)
+        requests.deploySlotRequest((data)=> {
+            console.log(data.version)
+        })
     })
 
 

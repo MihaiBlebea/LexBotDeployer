@@ -12,7 +12,6 @@ const deplyBot = (branch_name, foo)=> {
     console.log('Date of deploy: ' + Date.now())
     console.log('Deployed branch: ' + branch_name)
 
-
     requests.deploySlotRequest((data)=> {
         console.log(data)
         requests.deployIntentRequest((data)=> {

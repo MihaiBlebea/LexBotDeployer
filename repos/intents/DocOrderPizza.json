@@ -44,5 +44,31 @@
         "I want a crust pizza",
         "I want a crust pizza with sauce."
     ],
-    "slots": []
+    "slots": [
+        {
+            "name": "PizzaSauceType",
+            "description": "The type of sauce to use on the pizza.",
+            "priority": 3,
+            "sampleUtterances": [
+                "Make it {Sauce} sauce.",
+                "I'd like {Sauce} sauce."
+            ],
+            "slotConstraint": "Required",
+            "slotType": "PizzaSauceType",
+            "slotTypeVersion": "2",
+            "valueElicitationPrompt": {
+                "maxAttempts": 1,
+                "messages": [
+                    {
+                        "content": "White or red sauce?",
+                        "contentType": "PlainText"
+                    },
+                    {
+                        "content": "Garlic or tomato sauce?",
+                        "contentType": "PlainText"
+                    }
+                ]
+            }
+        }
+    ]
 }
