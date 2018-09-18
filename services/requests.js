@@ -57,9 +57,9 @@ const deploySlotRequest = (slotName, callback, timeout)=> {
         timeout = 1000
     }
 
-    slots.getSlotVersion(slotName, (data)=> {
+    slots.getSlotVersion(slotName, (versionData)=> {
         setTimeout(()=> {
-            slots.putSlot(slotName, data.checksum, (data)=> {
+            slots.putSlot(slotName, versionData, (data)=> {
                 setTimeout(()=> {
                     slots.createSlotVersion(slotName, data.checksum, (data)=> {
                         if(callback)

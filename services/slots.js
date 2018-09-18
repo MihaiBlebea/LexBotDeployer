@@ -32,12 +32,15 @@ const getSlotVersion = (slotName, callback)=> {
     })
 }
 
-const putSlot = (slotName, checksum, callback)=> {
+const putSlot = (slotName, versionData, callback)=> {
     var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
     var params = require('./../repos/slots/' + slotName + '.json')
-    params = {
-        ...params,
-        checksum: checksum
+    if(versionData !== null)
+    {
+        params = {
+            ...params,
+            checksum: versionData.checksum
+        }
     }
     lex.putSlotType(params, function(err, data) {
         if(err)
