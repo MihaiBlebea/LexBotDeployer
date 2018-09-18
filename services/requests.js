@@ -28,16 +28,16 @@ const deployBotRequest = (callback, timeout)=> {
 }
 
 
-const deployIntentRequest = (callback, timeout)=> {
+const deployIntentRequest = (intentName, callback, timeout)=> {
     if(!timeout)
     {
         timeout = 1000
     }
-    intents.getIntentLatestVersion((data)=> {
+    intents.getIntentLatestVersion(intentName, (data)=> {
         setTimeout(()=> {
-            intents.putIntent(data.checksum, (data)=> {
+            intents.putIntent(intentName, data.checksum, (data)=> {
                 setTimeout(()=> {
-                    intents.createIntentVersion(data.checksum, (data)=> {
+                    intents.createIntentVersion(intentName, data.checksum, (data)=> {
                         if(callback)
                         {
                             setTimeout(()=> {

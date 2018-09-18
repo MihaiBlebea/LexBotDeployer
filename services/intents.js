@@ -1,10 +1,10 @@
 const AWS = require('aws-sdk')
 
 
-const createIntentVersion = (checksum, callback)=> {
+const createIntentVersion = (intentName, checksum, callback)=> {
     var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
     var params = {
-        name: 'DocOrderPizza',
+        name: intentName,
         checksum: checksum
     }
     lex.createIntentVersion(params, function(err, data) {
@@ -20,9 +20,9 @@ const createIntentVersion = (checksum, callback)=> {
     })
 }
 
-const putIntent = (checksum, callback)=> {
+const putIntent = (intentName, checksum, callback)=> {
     var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
-    var params = require('./../repos/intents/DocOrderPizza.json')
+    var params = require('./../repos/intents/' + intentName + '.json')
     params = {
         ...params,
         checksum: checksum
@@ -40,10 +40,10 @@ const putIntent = (checksum, callback)=> {
     })
 }
 
-const getIntentVersions = (callback)=> {
+const getIntentVersions = (intentName, callback)=> {
     var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
     var params = {
-        name: 'DocOrderPizza'
+        name: intentName
     }
     lex.getIntentVersions(params, function(err, data) {
         if(err)
@@ -58,11 +58,11 @@ const getIntentVersions = (callback)=> {
     })
 }
 
-const getIntentLatestVersion = (callback)=> {
+const getIntentLatestVersion = (intentName, callback)=> {
     var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
     var params = {
         version: '$LATEST',
-        name: 'DocOrderPizza'
+        name: intentName
     }
     lex.getIntent(params, function(err, data) {
         if(err)
