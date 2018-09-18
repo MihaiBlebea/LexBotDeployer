@@ -34,22 +34,16 @@ const deploySlots = async (branch_name)=> {
     const slotFolder = './../repos/slots'
     files.processFiles(slotFolder, (files)=> {
 
-        var foo = files.map((file)=> {
-            return requests.deploySlotRequest(file, (data)=> {
-                console.log('INSIDE LOOP', data)
-                return data.version
+        files.map((file)=> {
+            requests.deploySlotRequest(file, (data)=> {
+                console.log(data.version)
             })
         })
-        console.log('OUTISDE LOOP', foo)
-        return foo
-
     })
 }
 
 
 
-deploySlots(branch).then((result)=> {
-    console.log(result)
-})
+// deploySlots(branch)
 
-// deplyBot(branch, foo)
+deplyBot(branch, foo)
