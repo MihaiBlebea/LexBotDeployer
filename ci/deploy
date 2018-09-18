@@ -33,12 +33,12 @@ const deplyBot = (branch_name, foo)=> {
 const deploySlots = (branch_name)=> {
     const slotFolder = './../repos/slots'
     files.processFiles(slotFolder, (files)=> {
-        console.log(files)
-        // files.map((file)=> {
-        //     requests.deploySlotRequest(file, (data)=> {
-        //         console.log(data.version)
-        //     })
-        // })
+        // console.log(files)
+        files.map((file)=> {
+            requests.deploySlotRequest(file, (data)=> {
+                console.log(data.version)
+            })
+        })
 
     })
 }

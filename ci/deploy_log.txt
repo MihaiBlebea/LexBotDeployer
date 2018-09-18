@@ -21,3 +21,4 @@ VERSION DATA { name: 'BotOne',
   childDirected: false }
 Bot version eployed 1
 SlotTypeOne
+[ 'SlotTypeOne' ]
