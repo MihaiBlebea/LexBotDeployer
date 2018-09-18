@@ -1,9 +1,9 @@
 const AWS = require('aws-sdk')
 
 
-const getSlotVersions = (callback)=> {
+const getSlotVersions = (slotName, callback)=> {
     var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
-    var params = { name: 'PizzaSauceType' }
+    var params = { name: slotName }
     lex.getSlotTypeVersions(params, function(err, data) {
         if(err)
         {
@@ -17,11 +17,11 @@ const getSlotVersions = (callback)=> {
     })
 }
 
-const getSlotVersion = (callback)=> {
+const getSlotVersion = (slotName, callback)=> {
     var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
     var params = {
         version: "$LATEST",
-        name: "PizzaSauceType"
+        name: slotName
     }
     lex.getSlotType(params, function(err, data) {
         if(err)
@@ -36,9 +36,9 @@ const getSlotVersion = (callback)=> {
     })
 }
 
-const putSlot = (checksum, callback)=> {
+const putSlot = (slotName, checksum, callback)=> {
     var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
-    var params = require('./../repos/slots/PizzaSauceType.json')
+    var params = require('./../repos/slots/' + slotName + '.json')
     params = {
         ...params,
         checksum: checksum
@@ -56,10 +56,10 @@ const putSlot = (checksum, callback)=> {
     })
 }
 
-const createSlotVersion = (checksum, callback)=> {
+const createSlotVersion = (slotName, checksum, callback)=> {
     var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
     var params = {
-        name: 'PizzaSauceType',
+        name: slotName,
         checksum: checksum
     };
     lex.createSlotTypeVersion(params, function(err, data) {
@@ -75,10 +75,10 @@ const createSlotVersion = (checksum, callback)=> {
     })
 }
 
-const deleteSlot = ()=> {
+const deleteSlot = (slotName)=> {
     var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
     var params = {
-        name: 'PizzaSauceType'
+        name: slotName
     }
     lex.deleteSlotType(params, function(err, data) {
         if(err)

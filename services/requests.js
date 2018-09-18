@@ -51,16 +51,16 @@ const deployIntentRequest = (callback, timeout)=> {
 }
 
 
-const deploySlotRequest = (callback, timeout)=> {
+const deploySlotRequest = (slotName, callback, timeout)=> {
     if(!timeout)
     {
         timeout = 1000
     }
-    slots.getSlotVersion((data)=> {
+    slots.getSlotVersion(slotName, (data)=> {
         setTimeout(()=> {
-            slots.putSlot(data.checksum, (data)=> {
+            slots.putSlot(slotName, data.checksum, (data)=> {
                 setTimeout(()=> {
-                    slots.createSlotVersion(data.checksum, (data)=> {
+                    slots.createSlotVersion(slotName, data.checksum, (data)=> {
                         if(callback)
                         {
                             setTimeout(()=> {
