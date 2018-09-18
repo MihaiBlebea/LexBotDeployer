@@ -33,21 +33,20 @@ const deployIntentRequest = (intentName, callback, timeout)=> {
     {
         timeout = 1000
     }
-    intents.getIntentLatestVersion(intentName, (data)=> {
+    intents.getIntentLatestVersion(intentName, (versionData)=> {
         setTimeout(()=> {
-            console.log(data)
-            // intents.putIntent(intentName, data.checksum, (data)=> {
-            //     setTimeout(()=> {
-            //         intents.createIntentVersion(intentName, data.checksum, (data)=> {
-            //             if(callback)
-            //             {
-            //                 setTimeout(()=> {
-            //                     callback(data)
-            //                 }, timeout)
-            //             }
-            //         })
-            //     }, timeout)
-            // })
+            intents.putIntent(intentName, versionData, (data)=> {
+                setTimeout(()=> {
+                    intents.createIntentVersion(intentName, data.checksum, (data)=> {
+                        if(callback)
+                        {
+                            setTimeout(()=> {
+                                callback(data)
+                            }, timeout)
+                        }
+                    })
+                }, timeout)
+            })
         }, timeout)
     })
 }

@@ -20,12 +20,15 @@ const createIntentVersion = (intentName, checksum, callback)=> {
     })
 }
 
-const putIntent = (intentName, checksum, callback)=> {
+const putIntent = (intentName, versionData, callback)=> {
     var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
     var params = require('./../repos/intents/' + intentName + '.json')
-    params = {
-        ...params,
-        checksum: checksum
+    if(versionData !== null)
+    {
+        params = {
+            ...params,
+            checksum: versionData.checksum
+        }
     }
     lex.putIntent(params, function(err, data) {
         if(err)
