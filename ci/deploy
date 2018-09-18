@@ -30,19 +30,24 @@ const deplyBot = (branch_name, foo)=> {
     }, 2000)
 }
 
-const deploySlots = (branch_name)=> {
+const deploySlots = async (branch_name)=> {
     const slotFolder = './../repos/slots'
     files.processFiles(slotFolder, (files)=> {
-        
-        files.map((file)=> {
-            requests.deploySlotRequest(file, (data)=> {
-                console.log(data.version)
+
+        var foo = files.map((file)=> {
+            return requests.deploySlotRequest(file, (data)=> {
+                return data.version
             })
         })
+        return foo
 
     })
 }
 
-deploySlots(branch)
+
+
+deploySlots(branch).then((result)=> {
+    console.log(result)
+})
 
 // deplyBot(branch, foo)
