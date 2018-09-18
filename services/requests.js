@@ -9,20 +9,20 @@ const deployBotRequest = (callback, timeout)=> {
         timeout = 1000;
     }
     bots.getBotVersions((data)=> {
-        // setTimeout(()=> {
-        //     bots.putBot(data.checksum, (data)=> {
-        //         setTimeout(()=> {
-        //             bots.createBotVersion(data.checksum, (data)=> {
-        //                 if(callback)
-        //                 {
-        //                     setTimeout(()=> {
-        //                         callback(data)
-        //                     }, timeout)
-        //                 }
-        //             })
-        //         }, timeout)
-        //     })
-        // }, timeout)
+        setTimeout(()=> {
+            bots.putBot(data.checksum, (data)=> {
+                setTimeout(()=> {
+                    bots.createBotVersion(data.checksum, (data)=> {
+                        if(callback)
+                        {
+                            setTimeout(()=> {
+                                callback(data)
+                            }, timeout)
+                        }
+                    })
+                }, timeout)
+            })
+        }, timeout)
         console.log(data)
     })
 }
@@ -58,20 +58,20 @@ const deploySlotRequest = (slotName, callback, timeout)=> {
         timeout = 1000
     }
     slots.getSlotVersion(slotName, (data)=> {
-        setTimeout(()=> {
-            slots.putSlot(slotName, data.checksum, (data)=> {
-                setTimeout(()=> {
-                    slots.createSlotVersion(slotName, data.checksum, (data)=> {
-                        if(callback)
-                        {
-                            setTimeout(()=> {
-                                callback(data)
-                            }, timeout)
-                        }
-                    })
-                }, timeout)
-            })
-        }, timeout)
+        // setTimeout(()=> {
+        //     slots.putSlot(slotName, data.checksum, (data)=> {
+        //         setTimeout(()=> {
+        //             slots.createSlotVersion(slotName, data.checksum, (data)=> {
+        //                 if(callback)
+        //                 {
+        //                     setTimeout(()=> {
+        //                         callback(data)
+        //                     }, timeout)
+        //                 }
+        //             })
+        //         }, timeout)
+        //     })
+        // }, timeout)
     })
 }
 
