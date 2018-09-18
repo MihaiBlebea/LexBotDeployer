@@ -23,10 +23,14 @@ const getSlotVersion = (slotName, callback)=> {
         version: "$LATEST",
         name: slotName
     }
-    lex.getSlotType(params, function(err, data) {
-        if(err)
+    lex.getSlotType(params, (error, data)=> {
+        if(error)
         {
-            console.log(err, err.stack.code);
+            // console.log(err, err.stack.code);
+            if(callback)
+            {
+                callback(error)
+            }
         } else {
             if(callback)
             {

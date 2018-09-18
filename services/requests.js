@@ -57,21 +57,27 @@ const deploySlotRequest = (slotName, callback, timeout)=> {
     {
         timeout = 1000
     }
+
     slots.getSlotVersion(slotName, (data)=> {
-        // setTimeout(()=> {
-        //     slots.putSlot(slotName, data.checksum, (data)=> {
-        //         setTimeout(()=> {
-        //             slots.createSlotVersion(slotName, data.checksum, (data)=> {
-        //                 if(callback)
-        //                 {
-        //                     setTimeout(()=> {
-        //                         callback(data)
-        //                     }, timeout)
-        //                 }
-        //             })
-        //         }, timeout)
-        //     })
-        // }, timeout)
+        setTimeout(()=> {
+            slots.putSlot(slotName, data.checksum, (data)=> {
+                setTimeout(()=> {
+                    slots.createSlotVersion(slotName, data.checksum, (data)=> {
+                        if(callback)
+                        {
+                            setTimeout(()=> {
+                                callback(data)
+                            }, timeout)
+                        }
+                    })
+                }, timeout)
+            })
+        }, timeout)
+    }, (error)=> {
+        if(error.stack.code)
+        {
+            console.log(error.stack.code)
+        }
     })
 }
 
