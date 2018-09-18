@@ -1,2 +1,12 @@
 Date of deploy: 1537266891844
 Deployed branch: master
+Date of deploy: 1537267040710
+Deployed branch: master
+{ name: 'SlotTypeOne',
+  description: 'Available pizza sauces',
+  enumerationValues: [ { value: 'red' }, { value: 'blue' }, { value: 'white' } ],
+  lastUpdatedDate: 2018-09-18T10:37:28.253Z,
+  createdDate: 2018-09-18T10:37:28.253Z,
+  version: '1',
+  checksum: '2340edfd-4b0d-46c9-a561-c1f4ddcc4a99',
+  valueSelectionStrategy: 'ORIGINAL_VALUE' }
