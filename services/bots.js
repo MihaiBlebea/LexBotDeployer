@@ -62,7 +62,7 @@ const getBotVersions = (botName, callback)=> {
         versionOrAlias: '$LATEST'
     }
     lex.getBot(params, function(error, data) {
-        if(error) console.log(error, error.stack)
+        // if(error) console.log(error, error.stack)
         if(callback)
         {
             callback(data)
