@@ -73,11 +73,6 @@ const deploySlotRequest = (slotName, callback, timeout)=> {
                 }, timeout)
             })
         }, timeout)
-    }, (error)=> {
-        if(error.stack.code)
-        {
-            console.log(error.stack.code)
-        }
     })
 }
 

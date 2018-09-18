@@ -1,2 +1,0 @@
-Date of deploy: 1537267170271
-Deployed branch: master
