@@ -2,6 +2,7 @@
 
 const bots = require('./../services/bots.js')
 const requests = require('./../services/requests')
+const files = require('./../services/files')
 
 
 var branch = process.argv[2]
@@ -29,4 +30,19 @@ const deplyBot = (branch_name, foo)=> {
     }, 2000)
 }
 
-deplyBot(branch, foo)
+const deploySlots = (branch_name)=> {
+    const slotFolder = './../repos/slots'
+    files.processFiles(slotFolder, (files)=> {
+        console.log(files)
+        // files.map((file)=> {
+        //     requests.deploySlotRequest(file, (data)=> {
+        //         console.log(data.version)
+        //     })
+        // })
+
+    })
+}
+
+deploySlots(branch)
+
+// deplyBot(branch, foo)
