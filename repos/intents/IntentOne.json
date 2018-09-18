@@ -11,7 +11,7 @@
                 "contentType": "PlainText"
             }
         ],
-        "responseCard": "foo2"
+        "responseCard": "foo222"
     },
     "confirmationPrompt": {
         "maxAttempts": 1,
