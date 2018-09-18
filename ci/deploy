@@ -14,7 +14,7 @@ const deplyBot = (branch_name, foo)=> {
 
     requests.deploySlotRequest('SlotTypeOne', (data)=> {
         console.log(data.version)
-        requests.deployIntentRequest((data)=> {
+        requests.deployIntentRequest('IntentOne', (data)=> {
             console.log(data)
             // requests.deployBotRequest((data)=> {
             //     console.log(data)
