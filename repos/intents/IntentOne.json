@@ -1,5 +1,5 @@
 {
-    "name": "DocOrderPizza",
+    "name": "IntentOne",
     "conclusionStatement": {
         "messages": [
             {
@@ -11,7 +11,7 @@
                 "contentType": "PlainText"
             }
         ],
-        "responseCard": "foo"
+        "responseCard": "foo2"
     },
     "confirmationPrompt": {
         "maxAttempts": 1,
@@ -46,7 +46,7 @@
     ],
     "slots": [
         {
-            "name": "PizzaSauceType",
+            "name": "SlotTypeOne",
             "description": "The type of sauce to use on the pizza.",
             "priority": 3,
             "sampleUtterances": [

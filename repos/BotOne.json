@@ -2,10 +2,10 @@
     "intents": [
         {
             "intentVersion": "1",
-            "intentName": "MakeAppointment"
+            "intentName": "IntentOne"
         }
     ],
-    "name": "OrderFlowersBot",
+    "name": "BotOne",
     "locale": "en-US",
     "checksum": "a5a29ce4-9df2-4611-bd7f-33d45dcd8699",
     "abortStatement": {
