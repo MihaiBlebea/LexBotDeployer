@@ -54,7 +54,7 @@
                 "I'd like {Sauce} sauce."
             ],
             "slotConstraint": "Required",
-            "slotType": "PizzaSauceType",
+            "slotType": "SlotTypeOne",
             "slotTypeVersion": "2",
             "valueElicitationPrompt": {
                 "maxAttempts": 1,
