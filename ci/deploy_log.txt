@@ -22,3 +22,4 @@ VERSION DATA { name: 'BotOne',
 Bot version eployed 1
 SlotTypeOne
 [ 'SlotTypeOne' ]
+2
