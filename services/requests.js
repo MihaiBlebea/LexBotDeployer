@@ -11,16 +11,16 @@ const deployBotRequest = (botName, callback, timeout)=> {
     bots.getBotVersions(botName, (versionData)=> {
         setTimeout(()=> {
             bots.putBot(botName, versionData, (data)=> {
-                // setTimeout(()=> {
-                //     bots.createBotVersion(botName, data.checksum, (data)=> {
-                //         if(callback)
-                //         {
-                //             setTimeout(()=> {
-                //                 callback(data)
-                //             }, timeout)
-                //         }
-                //     })
-                // }, timeout)
+                setTimeout(()=> {
+                    bots.createBotVersion(botName, data.checksum, (data)=> {
+                        if(callback)
+                        {
+                            setTimeout(()=> {
+                                callback(data)
+                            }, timeout)
+                        }
+                    })
+                }, timeout)
             })
         }, timeout)
     })
