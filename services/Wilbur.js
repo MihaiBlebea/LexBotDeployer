@@ -5,9 +5,7 @@ class Wilbur
     constructor(requests)
     {
         this.requests = requests
-        // this.bots = bots
-        // this.intents = intents
-        // this.slots = slots
+        this.slotVersions = []
     }
 
     deploySlots(files)
@@ -17,7 +15,11 @@ class Wilbur
 
             files.map((file)=> {
                 this.requests.deploySlotRequest(file, (data)=> {
-                    console.log(data.version)
+                    this.slotVersions.push({
+                        name: data.name,
+                        version: data.version
+                    })
+                    console.log(this.selotVersions)
                 })
             })
         })
