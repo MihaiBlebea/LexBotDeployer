@@ -1,0 +1,41 @@
+VERSION DATA { name: 'BotOne',
+  description: 'Bot to order human',
+  intents: [ { intentName: 'IntentOne', intentVersion: '1' } ],
+  clarificationPrompt:
+   { messages: [ [Object] ], maxAttempts: 3, responseCard: null },
+  abortStatement: { messages: [ [Object] ], responseCard: null },
+  status: 'READY',
+  failureReason: null,
+  lastUpdatedDate: 2018-09-19T12:27:12.421Z,
+  createdDate: 2018-09-19T12:26:50.542Z,
+  idleSessionTTLInSeconds: 600,
+  voiceId: 'Salli',
+  checksum: '071131f6-fb0c-46f6-933e-13039978e7c8',
+  version: '$LATEST',
+  locale: 'en-US',
+  childDirected: false }
+VERSION DATA { name: 'BotTwo',
+  description: 'Bot to order human',
+  intents: [ { intentName: 'IntentTwo', intentVersion: '1' } ],
+  clarificationPrompt:
+   { messages: [ [Object] ], maxAttempts: 3, responseCard: null },
+  abortStatement: { messages: [ [Object] ], responseCard: null },
+  status: 'READY',
+  failureReason: null,
+  lastUpdatedDate: 2018-09-19T13:18:15.402Z,
+  createdDate: 2018-09-19T13:17:52.514Z,
+  idleSessionTTLInSeconds: 600,
+  voiceId: 'Salli',
+  checksum: '1999717e-47bf-47e0-a6af-f8beb6ab0094',
+  version: '$LATEST',
+  locale: 'en-US',
+  childDirected: false }
+[ { name: 'SlotTypeOne', version: '2' } ]
+[ { name: 'SlotTypeOne', version: '2' },
+  { name: 'SlotTypeTwo', version: '1' } ]
+[ { name: 'BotOne', version: '1' } ]
+[ { name: 'BotOne', version: '1' },
+  { name: 'BotTwo', version: '1' } ]
+[ { name: 'IntentOne', version: '1' } ]
+[ { name: 'IntentOne', version: '1' },
+  { name: 'IntentTwo', version: '1' } ]

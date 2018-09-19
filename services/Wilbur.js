@@ -17,12 +17,18 @@ class Wilbur
         const slotFolder = './../repos/slots'
         this.files.processFiles(slotFolder, (slotFiles)=> {
 
+            var counter = 0
             slotFiles.map((file)=> {
                 this.requests.deploySlotRequest(file, (data)=> {
                     this.slotVersions.push({
                         name: data.name,
                         version: data.version
                     })
+                    counter++
+                    if(counter === slotFiles.length - 1)
+                    {
+                        this.deployIntents()
+                    }
                     console.log(this.slotVersions)
                 })
             })
