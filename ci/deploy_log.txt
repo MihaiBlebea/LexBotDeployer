@@ -1,9 +1,0 @@
-[ { name: 'SlotTypeTwo', version: '1' } ]
-[ { name: 'SlotTypeTwo', version: '1' },
-  { name: 'SlotTypeOne', version: '1' } ]
-[ { name: 'SlotTypeOne', version: '1' } ]
-[ { name: 'SlotTypeOne', version: '1' },
-  { name: 'SlotTypeTwo', version: '1' } ]
-[ { name: 'IntentOne', version: '2' } ]
-[ { name: 'SlotTypeOne', version: '1' } ]
-[ { name: 'IntentOne', version: '3' } ]
