@@ -10,6 +10,7 @@ var branch = process.argv[2]
 deployer = new Wilbur(requests, files)
 deployer.deploySlots()
 deployer.deployIntents()
+deployer.deployBots()
 
 
 const deployBot = (branch_name)=> {

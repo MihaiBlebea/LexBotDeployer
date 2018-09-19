@@ -9,6 +9,7 @@ class Wilbur
 
         this.slotVersions = []
         this.intentVersions = []
+        this.botVersions = []
     }
 
     deploySlots()
@@ -40,6 +41,23 @@ class Wilbur
                         version: data.version
                     })
                     console.log(this.intentVersions)
+                })
+            })
+        })
+    }
+
+    deployBots()
+    {
+        const slotFolder = './../repos/bots'
+        this.files.processFiles(slotFolder, (botFiles)=> {
+
+            botFiles.map((file)=> {
+                this.requests.deployBotRequest(file, (data)=> {
+                    this.botVersions.push({
+                        name: data.name,
+                        version: data.version
+                    })
+                    console.log(this.botVersions)
                 })
             })
         })
