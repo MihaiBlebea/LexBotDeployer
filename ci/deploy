@@ -3,13 +3,16 @@
 const bots = require('./../services/bots.js')
 const requests = require('./../services/requests')
 const files = require('./../services/files')
-
+const Wilbur = require('./../services/Wilbur')
 
 var branch = process.argv[2]
-var foo = process.argv[3]
+
+deployer = new Wilbur(requests)
+deployer.deploySlots(files)
 
 
-const deployBot = (branch_name, foo)=> {
+
+const deployBot = (branch_name)=> {
     console.log('Date of deploy: ' + Date.now())
     console.log('Deployed branch: ' + branch_name)
 
@@ -22,7 +25,8 @@ const deployBot = (branch_name, foo)=> {
             requests.deployBotRequest('BotOne', (data)=> {
                 console.log('Bot version deployed', data.version)
 
-                return (foo === 'yes') ? process.exit(0) : process.exit(1)
+                return process.exit(0);
+
             }, 2000)
 
         }, 2000)
@@ -46,4 +50,4 @@ const deployBot = (branch_name, foo)=> {
 
 // deploySlots(branch)
 
-deployBot(branch, foo)
+// deployBot(branch)

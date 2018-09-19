@@ -2,14 +2,25 @@
 
 class Wilbur
 {
-    constructor(aws)
+    constructor(requests)
     {
-        this.aws = aws
+        this.requests = requests
+        // this.bots = bots
+        // this.intents = intents
+        // this.slots = slots
     }
 
-    getAws()
+    deploySlots(files)
     {
-        return this.aws
+        const slotFolder = './../repos/slots'
+        files.processFiles(slotFolder, (files)=> {
+
+            files.map((file)=> {
+                this.requests.deploySlotRequest(file, (data)=> {
+                    console.log(data.version)
+                })
+            })
+        })
     }
 }
 
