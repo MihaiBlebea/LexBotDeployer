@@ -40,12 +40,18 @@ class Wilbur
         const slotFolder = './../repos/intents'
         this.files.processFiles(slotFolder, (intentFiles)=> {
 
+            var counter = 0
             intentFiles.map((file)=> {
                 this.requests.deployIntentRequest(file, (data)=> {
                     this.intentVersions.push({
                         name: data.name,
                         version: data.version
                     })
+                    counter++
+                    if(counter === intentFiles.length - 1)
+                    {
+                        this.deployBots()
+                    }
                     console.log(this.intentVersions)
                 })
             })
