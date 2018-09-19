@@ -1,13 +1,28 @@
 #!/usr/bin/env node
 
-const bots = require('./../services/bots.js')
-const requests = require('./../services/requests')
+// const bots = require('./../services/bots.js')
+// const requests = require('./../services/requests')
+const AWS = require('aws-sdk')
 const files = require('./../services/files')
+const versions = require('./../services/versions')
+
+
 const Wilbur = require('./../services/Wilbur')
+const SlotManager = require('./../services/SlotManager')
+const IntentManager = require('./../services/IntentManager')
+const BotManager = require('./../services/BotManager')
+
 
 var branch = process.argv[2]
 
-deployer = new Wilbur(requests, files)
+var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
+
+var slotManager = new SlotManager(lex, versions)
+var intentManager = new IntentManager(lex, versions)
+var botManager = new BotManager(lex, versions)
+
+
+deployer = new Wilbur(files, versions, slotManager, intentManager, botManager)
 deployer.deploySlots()
 // deployer.deployIntents()
 // deployer.deployBots()

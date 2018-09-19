@@ -2,11 +2,17 @@
 
 class Wilbur
 {
-    constructor(requests, files)
+    constructor(files, versions, slotManager, intentManager, botManager)
     {
-        this.requests = requests
+        // Declare dependencies //
         this.files = files
+        this.versions = versions
 
+        this.slotManager = slotManager
+        this.intentManager = intentManager
+        this.botManager = botManager
+
+        // Store resources versions //
         this.slotVersions = []
         this.intentVersions = []
         this.botVersions = []
@@ -19,7 +25,7 @@ class Wilbur
 
             var counter = 0
             slotFiles.map((file)=> {
-                this.requests.deploySlotRequest(file, (data)=> {
+                this.slotManager.deploySlot(file, (data)=> {
                     this.slotVersions.push({
                         name: data.name,
                         version: data.version
@@ -42,7 +48,7 @@ class Wilbur
 
             var counter = 0
             intentFiles.map((file)=> {
-                this.requests.deployIntentRequest(file, (data)=> {
+                this.intentManager.deployIntent(file, this.slotVersions, (data)=> {
                     this.intentVersions.push({
                         name: data.name,
                         version: data.version
@@ -64,7 +70,7 @@ class Wilbur
         this.files.processFiles(slotFolder, (botFiles)=> {
 
             botFiles.map((file)=> {
-                this.requests.deployBotRequest(file, (data)=> {
+                this.botManager.deployBot(file, this.intentVersions, (data)=> {
                     this.botVersions.push({
                         name: data.name,
                         version: data.version

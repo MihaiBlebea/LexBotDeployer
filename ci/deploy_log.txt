@@ -1,76 +1,9 @@
+[ { name: 'SlotTypeTwo', version: '1' } ]
+[ { name: 'SlotTypeTwo', version: '1' },
+  { name: 'SlotTypeOne', version: '1' } ]
 [ { name: 'SlotTypeOne', version: '1' } ]
 [ { name: 'SlotTypeOne', version: '1' },
   { name: 'SlotTypeTwo', version: '1' } ]
-[ { name: 'IntentOne', version: '1' } ]
-[ { name: 'IntentOne', version: '1' },
-  { name: 'IntentTwo', version: '1' } ]
-VERSION DATA { name: 'BotOne',
-  description: 'Bot to order human',
-  intents: [ { intentName: 'IntentOne', intentVersion: '1' } ],
-  clarificationPrompt:
-   { messages: [ [Object] ], maxAttempts: 3, responseCard: null },
-  abortStatement: { messages: [ [Object] ], responseCard: null },
-  status: 'READY',
-  failureReason: null,
-  lastUpdatedDate: 2018-09-19T13:27:03.504Z,
-  createdDate: 2018-09-19T13:26:40.389Z,
-  idleSessionTTLInSeconds: 600,
-  voiceId: 'Salli',
-  checksum: '8c180976-493f-4bfe-ad5d-e8e70cff78cc',
-  version: '$LATEST',
-  locale: 'en-US',
-  childDirected: false }
-VERSION DATA { name: 'BotTwo',
-  description: 'Bot to order human',
-  intents: [ { intentName: 'IntentTwo', intentVersion: '1' } ],
-  clarificationPrompt:
-   { messages: [ [Object] ], maxAttempts: 3, responseCard: null },
-  abortStatement: { messages: [ [Object] ], responseCard: null },
-  status: 'READY',
-  failureReason: null,
-  lastUpdatedDate: 2018-09-19T13:27:01.341Z,
-  createdDate: 2018-09-19T13:26:40.379Z,
-  idleSessionTTLInSeconds: 600,
-  voiceId: 'Salli',
-  checksum: '75872710-4a44-4abb-824c-7948f21afcb4',
-  version: '$LATEST',
-  locale: 'en-US',
-  childDirected: false }
-{ LimitExceededException: The rate of requests exceeds the throughput limit. Retry the request.
-    at Object.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/json.js:48:27)
-    at Request.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/rest_json.js:52:8)
-    at Request.callListeners (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:109:20)
-    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:81:10)
-    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:683:14)
-    at Request.transition (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:22:10)
-    at AcceptorStateMachine.runTo (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:14:12)
-    at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10
-    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:9)
-    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:12)
-  message:
-   'The rate of requests exceeds the throughput limit. Retry the request.',
-  code: 'LimitExceededException',
-  time: 2018-09-19T13:35:38.550Z,
-  requestId: 'e5255daa-bc10-11e8-9792-7b8f724e86f9',
-  statusCode: 429,
-  retryable: false,
-  retryDelay: 9.32411964955544 } 'LimitExceededException: The rate of requests exceeds the throughput limit. Retry the request.\n    at Object.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/json.js:48:27)\n    at Request.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/rest_json.js:52:8)\n    at Request.callListeners (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:109:20)\n    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:81:10)\n    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:683:14)\n    at Request.transition (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:22:10)\n    at AcceptorStateMachine.runTo (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:14:12)\n    at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10\n    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:9)\n    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:12)'
-{ LimitExceededException: The rate of requests exceeds the throughput limit. Retry the request.
-    at Object.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/json.js:48:27)
-    at Request.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/rest_json.js:52:8)
-    at Request.callListeners (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:109:20)
-    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:81:10)
-    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:683:14)
-    at Request.transition (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:22:10)
-    at AcceptorStateMachine.runTo (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:14:12)
-    at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10
-    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:9)
-    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:12)
-  message:
-   'The rate of requests exceeds the throughput limit. Retry the request.',
-  code: 'LimitExceededException',
-  time: 2018-09-19T13:35:38.572Z,
-  requestId: 'e5297c9f-bc10-11e8-8a5d-f17d2fdd0442',
-  statusCode: 429,
-  retryable: false,
-  retryDelay: 27.262105275405712 } 'LimitExceededException: The rate of requests exceeds the throughput limit. Retry the request.\n    at Object.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/json.js:48:27)\n    at Request.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/rest_json.js:52:8)\n    at Request.callListeners (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:109:20)\n    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:81:10)\n    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:683:14)\n    at Request.transition (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:22:10)\n    at AcceptorStateMachine.runTo (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:14:12)\n    at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10\n    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:9)\n    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:12)'
+[ { name: 'IntentOne', version: '2' } ]
+[ { name: 'SlotTypeOne', version: '1' } ]
+[ { name: 'IntentOne', version: '3' } ]

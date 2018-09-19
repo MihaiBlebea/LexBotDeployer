@@ -1,24 +1,21 @@
-const intent = require('./../repos/intents/IntentOne.json')
-
-
-var slotsObj =  [
-    { name: 'SlotTypeOne', version: '6' },
-    { name: 'SlotTypeTwo', version: '6' }
-]
-
-var intentsObj =  [
-    { name: 'IntentOne', version: '1' },
-    { name: 'IntentTwo', version: '1' } 
-]
+// const intent = require('./../repos/intents/IntentOne.json')
+// const bot = require('./../repos/bots/BotOne.json')
+//
+// var slotsObj =  [
+//     { name: 'SlotTypeOne', version: '6' },
+//     { name: 'SlotTypeTwo', version: '6' }
+// ]
+//
+// var intentsObj =  [
+//     { name: 'IntentOne', version: '3' },
+//     { name: 'IntentTwo', version: '1' }
+// ]
 
 const updateIntentSlots = (intent, newSlotVersions)=> {
     var slots = intent.slots
 
     //process slot versions
-    var slotArray = []
-    newSlotVersions.forEach((slot)=> {
-        return slotArray[slot.name] = slot.version
-    })
+    var slotArray = processResourceChildren(newSlotVersions)
 
     newSlots = []
     slots.map((slot)=> {
@@ -42,7 +39,7 @@ const updateBotIntents = (bot, newIntentVersions)=> {
     var intents = bot.intents
 
     //process slot versions
-    var intentArray = processResourceChildren(intents)
+    var intentArray = processResourceChildren(newIntentVersions)
 
     newIntents = []
     intents.map((intent)=> {
@@ -71,6 +68,12 @@ const processResourceChildren = (resources)=> {
 }
 
 
+module.exports = {
+    updateIntentSlots,
+    updateBotIntents
+}
+
+
 // newIntent = updateIntentSlots(intent, slotsObj)
-newBot = updateBotIntents(bot, intentsObj)
-console.log(newBot)
+// newBot = updateBotIntents(bot, intentsObj)
+// console.log(newBot)

@@ -1,6 +1,6 @@
-const bots = require('./bots.js')
-const slots = require('./slots.js')
-const intents = require('./intents.js')
+const bots = require('./bots')
+const slots = require('./slots')
+const intents = require('./intents')
 
 
 const deployBotRequest = (botName, callback, timeout)=> {

@@ -1,4 +1,6 @@
 const AWS = require('aws-sdk')
+const versions = rewquire('./versions')
+
 
 
 const createIntentVersion = (intentName, checksum, callback)=> {
