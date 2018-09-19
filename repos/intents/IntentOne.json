@@ -69,6 +69,31 @@
                     }
                 ]
             }
+        },
+        {
+            "name": "SlotTypeTwo",
+            "description": "The type of sauce to use on the pizza.",
+            "priority": 3,
+            "sampleUtterances": [
+                "Make it {SlotTypeOne} sauce.",
+                "I'd like {SlotTypeOne} sauce."
+            ],
+            "slotConstraint": "Required",
+            "slotType": "SlotTypeTwo",
+            "slotTypeVersion": "1",
+            "valueElicitationPrompt": {
+                "maxAttempts": 1,
+                "messages": [
+                    {
+                        "content": "White or red sauce?",
+                        "contentType": "PlainText"
+                    },
+                    {
+                        "content": "Garlic or tomato sauce?",
+                        "contentType": "PlainText"
+                    }
+                ]
+            }
         }
     ]
 }
