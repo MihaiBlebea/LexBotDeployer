@@ -19,7 +19,7 @@ class Wilbur
                         name: data.name,
                         version: data.version
                     })
-                    console.log(this.selotVersions)
+                    console.log(this.slotVersions)
                 })
             })
         })
