@@ -9,7 +9,7 @@ var branch = process.argv[2]
 var foo = process.argv[3]
 
 
-const deplyBot = (branch_name, foo)=> {
+const deployBot = (branch_name, foo)=> {
     console.log('Date of deploy: ' + Date.now())
     console.log('Deployed branch: ' + branch_name)
 
@@ -20,7 +20,7 @@ const deplyBot = (branch_name, foo)=> {
             console.log('Intent version deployed', data.version)
 
             requests.deployBotRequest('BotOne', (data)=> {
-                console.log('Bot version eployed', data.version)
+                console.log('Bot version deployed', data.version)
 
                 return (foo === 'yes') ? process.exit(0) : process.exit(1)
             }, 2000)
@@ -30,20 +30,20 @@ const deplyBot = (branch_name, foo)=> {
     }, 2000)
 }
 
-const deploySlots = async (branch_name)=> {
-    const slotFolder = './../repos/slots'
-    files.processFiles(slotFolder, (files)=> {
-
-        files.map((file)=> {
-            requests.deploySlotRequest(file, (data)=> {
-                console.log(data.version)
-            })
-        })
-    })
-}
+// const deploySlots = async (branch_name)=> {
+//     const slotFolder = './../repos/slots'
+//     files.processFiles(slotFolder, (files)=> {
+//
+//         files.map((file)=> {
+//             requests.deploySlotRequest(file, (data)=> {
+//                 console.log(data.version)
+//             })
+//         })
+//     })
+// }
 
 
 
 // deploySlots(branch)
 
-deplyBot(branch, foo)
+deployBot(branch, foo)
