@@ -7,9 +7,9 @@ const Wilbur = require('./../services/Wilbur')
 
 var branch = process.argv[2]
 
-deployer = new Wilbur(requests)
-deployer.deploySlots(files)
-
+deployer = new Wilbur(requests, files)
+deployer.deploySlots()
+deployer.deployIntents()
 
 
 const deployBot = (branch_name)=> {
