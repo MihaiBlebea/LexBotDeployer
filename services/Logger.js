@@ -1,17 +1,14 @@
 
-class Logger
-{
-    log(message)
-    {
-        var date = new Date()
-        var hour = date.getHours()
-        var minutes = date.getMinutes()
-        var seconds = date.getSeconds()
-        var miliseconds = date.getMilliseconds()
+const log = (message)=> {
+    
+    var date = new Date()
+    var hour = date.getHours()
+    var minutes = date.getMinutes()
+    var seconds = date.getSeconds()
+    var miliseconds = date.getMilliseconds()
 
-        console.log(`[${hour}:${minutes}:${seconds}:${miliseconds}] : ${message}`)
+    console.log(`[${hour}:${minutes}:${seconds}:${miliseconds}] : ${message}`)
 
-    }
 }
 
-module.exports = Logger
+module.exports = log

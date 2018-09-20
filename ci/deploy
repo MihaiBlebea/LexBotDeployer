@@ -5,7 +5,7 @@
 const AWS = require('aws-sdk')
 const files = require('./../services/files')
 const versions = require('./../services/versions')
-
+const log = require('./../services/logger')
 
 const Wilbur = require('./../services/Wilbur')
 const SlotManager = require('./../services/SlotManager')
@@ -17,7 +17,7 @@ var branch = process.argv[2]
 
 var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
 
-var slotManager = new SlotManager(lex, versions)
+var slotManager = new SlotManager(lex, versions, log)
 var intentManager = new IntentManager(lex, versions)
 var botManager = new BotManager(lex, versions)
 

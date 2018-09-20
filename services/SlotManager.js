@@ -1,12 +1,12 @@
 
 class SlotManager
 {
-    constructor(lex, versions, logger)
+    constructor(lex, versions, log)
     {
         // Declare dependencies
         this.lex = lex
         this.versions = versions
-        this.logger = logger
+        this.log = log
     }
 
     getSlotVersions(slotName, callback)
@@ -19,7 +19,7 @@ class SlotManager
             } else {
                 if(callback)
                 {
-                    this.logger.log(`For slot named ${data.name} version is ${data.version}`)
+                    this.log(`For slot named ${data.name} version is ${data.version}`)
                     callback(data)
                 }
             }
