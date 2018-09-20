@@ -33,7 +33,7 @@ class SlotManager
         }
         this.lex.getSlotType(params, (error, data)=> {
             // if(error) console.log(error.stack)
-            this.log(`For slot named ${data.name} version is ${data.version}`)
+            this.log(`Getting the checksum of the latest version for ${data.name}`)
             if(callback)
             {
                 callback(data)
@@ -56,6 +56,7 @@ class SlotManager
             {
                 console.log(error.stack);
             } else {
+                this.log(`Updating the slot code for ${data.name}`)
                 if(callback)
                 {
                     callback(data)
@@ -75,6 +76,7 @@ class SlotManager
             {
                 console.log(error.stack);
             } else {
+                this.log(`Creating a new version for ${data.name}. New version is ${data.version}`)
                 if(callback)
                 {
                     callback(data)
