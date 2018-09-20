@@ -106,11 +106,13 @@ class SlotManager
         {
             timeout = 1000
         }
+        this.log(`Starting to deploy slot ${slotName}.`)
         this.getSlotVersion(slotName, (versionData)=> {
             setTimeout(()=> {
                 this.putSlot(slotName, versionData, (data)=> {
                     setTimeout(()=> {
                         this.createSlotVersion(slotName, data.checksum, (data)=> {
+                            this.log(`Slot ${slotName} was deployed.`)
                             if(callback)
                             {
                                 setTimeout(()=> {

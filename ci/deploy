@@ -18,8 +18,8 @@ var branch = process.argv[2]
 var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
 
 var slotManager = new SlotManager(lex, versions, log)
-var intentManager = new IntentManager(lex, versions)
-var botManager = new BotManager(lex, versions)
+var intentManager = new IntentManager(lex, versions, log)
+var botManager = new BotManager(lex, versions, log)
 
 
 deployer = new Wilbur(files, versions, slotManager, intentManager, botManager)

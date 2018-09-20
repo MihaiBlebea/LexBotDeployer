@@ -2,11 +2,12 @@
 
 class IntentManager
 {
-    constructor(lex, versions)
+    constructor(lex, versions, log)
     {
         // Declare dependencies
         this.lex = lex
         this.versions = versions
+        this.log = log
     }
 
     createIntentVersion(intentName, checksum, callback)
@@ -20,6 +21,7 @@ class IntentManager
             {
                 console.log(error.stack);
             } else {
+                this.log(`Creating a new version for intent ${data.name}. New version is ${data.version}`)
                 if(callback)
                 {
                     callback(data)
@@ -45,6 +47,7 @@ class IntentManager
             {
                 console.log(error.stack);
             } else {
+                this.log(`Updating the code for intent ${data.name}.`)
                 if(callback)
                 {
                     callback(data)
@@ -79,6 +82,7 @@ class IntentManager
         }
         this.lex.getIntent(params, (error, data)=> {
             // if(err) console.log(err.stack)
+            this.log(`Getting the checksum for the latest version of intent ${data.name}.`)
             if(callback)
             {
                 callback(data)
@@ -92,11 +96,13 @@ class IntentManager
         {
             timeout = 1000
         }
+        this.log(`Starting to deploy intent ${intentName}.`)
         this.getIntentLatestVersion(intentName, (versionData)=> {
             setTimeout(()=> {
                 this.putIntent(intentName, versionData, slotVersions, (data)=> {
                     setTimeout(()=> {
                         this.createIntentVersion(intentName, data.checksum, (data)=> {
+                            this.log(`Intent ${intentName} was deployed.`)
                             if(callback)
                             {
                                 setTimeout(()=> {

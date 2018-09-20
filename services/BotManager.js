@@ -1,11 +1,12 @@
 
 class BotManager
 {
-    constructor(lex, versions)
+    constructor(lex, versions, log)
     {
         // Declare dependencies
         this.lex = lex
         this.versions = versions
+        this.log = log
     }
 
     putBot(botName, versionData, intentVersions, callback)
@@ -25,6 +26,7 @@ class BotManager
             {
                 console.log(error.stack);
             } else {
+                this.log(`Updating the code for the bot ${data.name}.`)
                 callback(data)
             }
         })
@@ -58,6 +60,7 @@ class BotManager
             {
                 console.log(error.stack);
             } else {
+                this.log(`Creating a new version for bot ${data.name}. New bot version is ${data.version}`)
                 if(callback)
                 {
                     callback(data)
@@ -74,6 +77,7 @@ class BotManager
         }
         this.lex.getBot(params, (error, data)=> {
             // if(error) console.log(error, error.stack)
+            this.log(`Getting the checksum for the latest version of bot ${data.name}.`)
             if(callback)
             {
                 callback(data)
@@ -102,11 +106,13 @@ class BotManager
         {
             timeout = 1000;
         }
+        this.log(`Starting to deploy bot ${botName}.`)
         this.getBotVersions(botName, (versionData)=> {
             setTimeout(()=> {
                 this.putBot(botName, versionData, intentVersions, (data)=> {
                     setTimeout(()=> {
                         this.createBotVersion(botName, data.checksum, (data)=> {
+                            this.log(`Bot ${botName} was deployed.`)
                             if(callback)
                             {
                                 setTimeout(()=> {
