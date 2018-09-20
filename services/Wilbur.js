@@ -35,7 +35,6 @@ class Wilbur
                     {
                         this.deployIntents()
                     }
-                    console.log(this.slotVersions)
                 })
             })
         })
@@ -58,7 +57,6 @@ class Wilbur
                     {
                         this.deployBots()
                     }
-                    console.log(this.intentVersions)
                 })
             })
         })
@@ -75,7 +73,6 @@ class Wilbur
                         name: data.name,
                         version: data.version
                     })
-                    console.log(this.botVersions)
                 })
             })
         })
