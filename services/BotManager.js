@@ -116,7 +116,7 @@ class BotManager
         this.lex.putBotAlias(params, (error, data)=> {
             if(error)
             {
-                console.log(err, err.stack);
+                console.log(error, error.stack);
             } else {
                 if(callback)
                 {
