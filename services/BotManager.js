@@ -81,7 +81,7 @@ class BotManager
             {
                 this.log(`Getting the checksum for the latest version of bot ${data.name}.`)
             }
-            
+
             if(callback)
             {
                 callback(data)
@@ -104,6 +104,28 @@ class BotManager
         })
     }
 
+    putBotAlias(params, callback)
+    {
+        // var params = {
+        //     botName: 'STRING_VALUE',
+        //     botVersion: 'STRING_VALUE',
+        //     name: 'STRING_VALUE',
+        //     checksum: 'STRING_VALUE',
+        //     description: 'STRING_VALUE'
+        // };
+        this.lex.putBotAlias(params, (error, data)=> {
+            if(error)
+            {
+                console.log(err, err.stack);
+            } else {
+                if(callback)
+                {
+                    callback(data)
+                }
+            }
+        })
+    }
+
     deployBot(botName, intentVersions, callback, timeout)
     {
         if(!timeout)
@@ -118,12 +140,27 @@ class BotManager
                     setTimeout(()=> {
                         this.createBotVersion(botName, data.checksum, (data)=> {
                             this.log(`Bot ${botName} was deployed.`)
-                            if(callback)
-                            {
-                                setTimeout(()=> {
-                                    callback(data)
-                                }, timeout)
+
+                            var params = {
+                                botName: botName,
+                                botVersion: data.version,
+                                name: 'Testing'
                             }
+
+                            this.putBotAlias(params, (data)=>{
+                                if(callback)
+                                {
+                                    setTimeout(()=> {
+                                        callback(data)
+                                    }, timeout)
+                                }
+                            })
+                            // if(callback)
+                            // {
+                            //     setTimeout(()=> {
+                            //         callback(data)
+                            //     }, timeout)
+                            // }
                         })
                     }, timeout)
                 })

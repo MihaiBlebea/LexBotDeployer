@@ -13,5 +13,8 @@
         "aws-sdk": "^2.312.0",
         "commander": "^2.18.0",
         "inquirer": "^6.2.0"
+    },
+    "devDependencies": {
+        "mocha": "^5.2.0"
     }
 }
