@@ -73,7 +73,7 @@ class Wilbur
                         name: data.name,
                         version: data.version
                     })
-                })
+                }, 2000)
             })
         })
     }
