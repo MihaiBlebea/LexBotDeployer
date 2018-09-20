@@ -35,7 +35,7 @@ class Wilbur
                     {
                         this.deployIntents()
                     }
-                })
+                }, 2000)
             })
         })
     }
@@ -57,7 +57,7 @@ class Wilbur
                     {
                         this.deployBots()
                     }
-                })
+                }, 2000)
             })
         })
     }
