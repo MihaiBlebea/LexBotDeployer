@@ -16,3 +16,28 @@ BadRequestException: Invalid number of intents for bot "BotOne". A bot should ha
     at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:12)
 [ { name: 'IntentTwo', version: '2' },
   { name: 'IntentOne', version: '5' } ]
+[ { name: 'SlotTypeTwo', version: '1' } ]
+[ { name: 'SlotTypeTwo', version: '1' },
+  { name: 'SlotTypeOne', version: '2' } ]
+UnknownEndpoint: Inaccessible host: `models.lex.us-east-1.amazonaws.com'. This service may not be available in the `us-east-1' region.
+    at Request.ENOTFOUND_ERROR (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/event_listeners.js:481:46)
+    at Request.callListeners (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:109:20)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:81:10)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:683:14)
+    at ClientRequest.error (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/event_listeners.js:320:22)
+    at ClientRequest.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/http/node.js:89:19)
+    at ClientRequest.emit (events.js:182:13)
+    at ClientRequest.EventEmitter.emit (domain.js:442:20)
+    at TLSSocket.socketErrorListener (_http_client.js:391:9)
+    at TLSSocket.emit (events.js:182:13)
+UnknownEndpoint: Inaccessible host: `models.lex.us-east-1.amazonaws.com'. This service may not be available in the `us-east-1' region.
+    at Request.ENOTFOUND_ERROR (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/event_listeners.js:481:46)
+    at Request.callListeners (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:109:20)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:81:10)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:683:14)
+    at ClientRequest.error (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/event_listeners.js:320:22)
+    at ClientRequest.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/http/node.js:89:19)
+    at ClientRequest.emit (events.js:182:13)
+    at ClientRequest.EventEmitter.emit (domain.js:442:20)
+    at TLSSocket.socketErrorListener (_http_client.js:391:9)
+    at TLSSocket.emit (events.js:182:13)
