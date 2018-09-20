@@ -57,7 +57,7 @@ class Wilbur
                     {
                         this.deployBots()
                     }
-                }, 2000)
+                }, 3000)
             })
         })
     }
@@ -73,7 +73,7 @@ class Wilbur
                         name: data.name,
                         version: data.version
                     })
-                }, 3000)
+                }, 4000)
             })
         })
     }
