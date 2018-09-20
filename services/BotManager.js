@@ -106,6 +106,7 @@ class BotManager
         {
             timeout = 1000;
         }
+        console.log(timeout)
         this.log(`Starting to deploy bot ${botName}.`)
         this.getBotVersions(botName, (versionData)=> {
             setTimeout(()=> {
