@@ -1,15 +1,3 @@
-// const intent = require('./../repos/intents/IntentOne.json')
-// const bot = require('./../repos/bots/BotOne.json')
-//
-// var slotsObj =  [
-//     { name: 'SlotTypeOne', version: '6' },
-//     { name: 'SlotTypeTwo', version: '6' }
-// ]
-//
-// var intentsObj =  [
-//     { name: 'IntentOne', version: '3' },
-//     { name: 'IntentTwo', version: '1' }
-// ]
 
 const updateIntentSlots = (intent, newSlotVersions)=> {
     var slots = intent.slots
@@ -72,8 +60,3 @@ module.exports = {
     updateIntentSlots,
     updateBotIntents
 }
-
-
-// newIntent = updateIntentSlots(intent, slotsObj)
-// newBot = updateBotIntents(bot, intentsObj)
-// console.log(newBot)
