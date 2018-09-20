@@ -33,7 +33,11 @@ class SlotManager
         }
         this.lex.getSlotType(params, (error, data)=> {
             // if(error) console.log(error.stack)
-            this.log(`Getting the checksum of the latest version for ${data.name}`)
+            if(data !== null)
+            {
+                this.log(`Getting the checksum of the latest version for ${data.name}`)
+            }
+        
             if(callback)
             {
                 callback(data)

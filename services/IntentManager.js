@@ -82,7 +82,11 @@ class IntentManager
         }
         this.lex.getIntent(params, (error, data)=> {
             // if(err) console.log(err.stack)
-            this.log(`Getting the checksum for the latest version of intent ${data.name}.`)
+            if(data !== null)
+            {
+                this.log(`Getting the checksum for the latest version of intent ${data.name}.`)
+            }
+            
             if(callback)
             {
                 callback(data)

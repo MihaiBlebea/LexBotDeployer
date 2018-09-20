@@ -77,7 +77,11 @@ class BotManager
         }
         this.lex.getBot(params, (error, data)=> {
             // if(error) console.log(error, error.stack)
-            this.log(`Getting the checksum for the latest version of bot ${data.name}.`)
+            if(data !== null)
+            {
+                this.log(`Getting the checksum for the latest version of bot ${data.name}.`)
+            }
+            
             if(callback)
             {
                 callback(data)
