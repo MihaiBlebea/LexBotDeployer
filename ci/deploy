@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-// const bots = require('./../services/bots.js')
-// const requests = require('./../services/requests')
+
 const AWS = require('aws-sdk')
 const files = require('./../services/files')
 const versions = require('./../services/versions')
