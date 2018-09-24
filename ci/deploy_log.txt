@@ -1,0 +1,70 @@
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (6ms)
+
+0
+
+  1 passing (10ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[14:18:27:123] : Starting to deploy slot SlotTypeOne.
+[14:18:27:167] : Starting to deploy slot SlotTypeTwo.
+[14:18:31:460] : Updating the slot code for SlotTypeTwo
+[14:18:31:538] : Updating the slot code for SlotTypeOne
+[14:18:34:911] : Creating a new version for SlotTypeTwo. New version is 1
+[14:18:34:911] : Slot SlotTypeTwo was deployed.
+[14:18:34:956] : Creating a new version for SlotTypeOne. New version is 1
+[14:18:34:957] : Slot SlotTypeOne was deployed.
+[14:18:37:913] : Starting to deploy intent IntentOne.
+[14:18:37:915] : Starting to deploy intent IntentTwo.
+[14:18:41:561] : Updating the code for intent IntentTwo.
+[14:18:41:697] : Updating the code for intent IntentOne.
+[14:18:44:995] : Creating a new version for intent IntentTwo. New version is 1
+[14:18:44:996] : Intent IntentTwo was deployed.
+[14:18:45:74] : Creating a new version for intent IntentOne. New version is 1
+[14:18:45:75] : Intent IntentOne was deployed.
+[14:18:48:2] : Starting to deploy bot BotOne.
+[14:18:48:5] : Starting to deploy bot BotTwo.
+[14:18:53:642] : Updating the code for the bot BotOne.
+[14:18:53:711] : Updating the code for the bot BotTwo.
+[14:18:59:33] : Creating a new version for bot BotOne. New bot version is 1
+[14:18:59:33] : Bot BotOne was deployed.
+LimitExceededException: The rate of requests exceeds the throughput limit. Retry the request.
+    at Object.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/json.js:48:27)
+    at Request.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/rest_json.js:52:8)
+    at Request.callListeners (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:109:20)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:81:10)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:683:14)
+    at Request.transition (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:22:10)
+    at AcceptorStateMachine.runTo (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:14:12)
+    at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10
+    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:9)
+    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:12)
