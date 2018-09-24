@@ -3,3 +3,82 @@ FILES /../repos/lambdas/functions
 FILES /../repos/lambdas/functions
 FILES ./../repos/lambdas/functions
 FILES ./repos/lambdas/functions
+
+
+
+
+  Test lambda function
+  Test lambda function
+    1) Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  0 passing (8ms)
+  1 failing
+
+  1) Test lambda function
+       Should return hello World:
+
+      AssertionError [ERR_ASSERTION]: 'hello World2' == 'hello World22'
+      + expected - actual
+
+      -hello World2
+      +hello World22
+      
+      at Context.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/tests/LambdaOneTest.js:7:16)
+
+
+
+1
+{ pass: false }
+
+  1 passing (8ms)
+
+0
+{ pass: true }
+{ Error: Command failed: cd repos/lambdas/functions && pwd && serverless deploy
+/bin/sh: line 0: cd: repos/lambdas/functions: No such file or directory
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Socket.stream.socket.on (internal/child_process.js:380:11)
+    at Socket.emit (events.js:182:13)
+    at Socket.EventEmitter.emit (domain.js:442:20)
+    at Pipe._handle.close (net.js:599:12)
+  killed: false,
+  code: 1,
+  signal: null,
+  cmd: 'cd repos/lambdas/functions && pwd && serverless deploy' }
+[13:34:29:472] : Starting to deploy slot SlotTypeOne.
+[13:34:29:506] : Starting to deploy slot SlotTypeTwo.
+[13:34:30:788] : Getting the checksum of the latest version for SlotTypeTwo
+[13:34:30:798] : Getting the checksum of the latest version for SlotTypeOne
+[13:34:33:330] : Updating the slot code for SlotTypeOne
+[13:34:33:331] : Updating the slot code for SlotTypeTwo
+[13:34:36:71] : Creating a new version for SlotTypeTwo. New version is 1
+[13:34:36:71] : Slot SlotTypeTwo was deployed.
+[13:34:36:95] : Creating a new version for SlotTypeOne. New version is 1
+[13:34:36:96] : Slot SlotTypeOne was deployed.
+[13:34:38:72] : Starting to deploy intent IntentOne.
+[13:34:38:75] : Starting to deploy intent IntentTwo.
+[13:34:38:421] : Getting the checksum for the latest version of intent IntentTwo.
+[13:34:38:422] : Getting the checksum for the latest version of intent IntentOne.
+[13:34:41:739] : Updating the code for intent IntentTwo.
+[13:34:41:760] : Updating the code for intent IntentOne.
+[13:34:45:51] : Creating a new version for intent IntentTwo. New version is 1
+[13:34:45:51] : Intent IntentTwo was deployed.
+[13:34:45:74] : Creating a new version for intent IntentOne. New version is 2
+[13:34:45:74] : Intent IntentOne was deployed.
+[13:34:48:53] : Starting to deploy bot BotOne.
+[13:34:48:55] : Starting to deploy bot BotTwo.
+[13:34:48:347] : Getting the checksum for the latest version of bot BotOne.
+[13:34:48:374] : Getting the checksum for the latest version of bot BotTwo.
+[13:34:52:702] : Updating the code for the bot BotOne.
+[13:34:52:718] : Updating the code for the bot BotTwo.
+[13:34:57:56] : Creating a new version for bot BotOne. New bot version is 2
+[13:34:57:56] : Bot BotOne was deployed.
+[13:34:57:94] : Creating a new version for bot BotTwo. New bot version is 2
+[13:34:57:94] : Bot BotTwo was deployed.

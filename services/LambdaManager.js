@@ -89,7 +89,7 @@ class LambdaManager
 
                     if(result.pass === true)
                     {
-                        exec('cd repos/lambdas/functions && pwd && serverless deploy', (error, stdout, stderr)=> {
+                        exec('cd ../repos/lambdas/functions && pwd && serverless deploy', (error, stdout, stderr)=> {
                             if(error) console.log(error)
 
                             if(callback)
