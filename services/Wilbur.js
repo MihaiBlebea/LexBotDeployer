@@ -19,14 +19,21 @@ class Wilbur
         this.botVersions = []
     }
 
-    deploy()
+    deploy(callback)
     {
+
         this.lambdaManager.deployLambdaServerless((result)=> {
-            this.deploySlots()
+            this.deploySlots(()=> {
+                this.deployIntents(()=> {
+                    this.deployBots(()=> {
+                        callback()
+                    })
+                })
+            })
         })
     }
 
-    deploySlots()
+    deploySlots(callback)
     {
         const slotFolder = './../repos/slots'
         this.files.processFiles(slotFolder, (slotFiles)=> {
@@ -41,14 +48,14 @@ class Wilbur
                     counter++
                     if(counter === slotFiles.length - 1)
                     {
-                        this.deployIntents()
+                        callback()
                     }
                 }, 3000)
             })
         })
     }
 
-    deployIntents()
+    deployIntents(callback)
     {
         const slotFolder = './../repos/intents'
         this.files.processFiles(slotFolder, (intentFiles)=> {
@@ -63,14 +70,14 @@ class Wilbur
                     counter++
                     if(counter === intentFiles.length - 1)
                     {
-                        this.deployBots()
+                        callback()
                     }
                 }, 3000)
             })
         })
     }
 
-    deployBots()
+    deployBots(callback)
     {
         const slotFolder = './../repos/bots'
         this.files.processFiles(slotFolder, (botFiles)=> {
@@ -81,6 +88,7 @@ class Wilbur
                         name: data.name,
                         version: data.version
                     })
+                    callback()
                 }, 5000)
             })
         })

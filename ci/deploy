@@ -24,4 +24,6 @@ var botManager = new BotManager(lex, versions, log)
 var lambdaManager = new LambdaManger(lambda, tester, files)
 
 deployer = new Wilbur(files, versions, slotManager, intentManager, botManager, lambdaManager)
-deployer.deploy()
+deployer.deploy(()=>{
+    process.exit(0)
+})

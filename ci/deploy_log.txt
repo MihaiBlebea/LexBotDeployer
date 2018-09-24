@@ -68,3 +68,70 @@ LimitExceededException: The rate of requests exceeds the throughput limit. Retry
     at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10
     at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:9)
     at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:12)
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (18ms)
+
+0
+
+  1 passing (10ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[14:28:48:133] : Starting to deploy slot SlotTypeOne.
+[14:28:48:176] : Starting to deploy slot SlotTypeTwo.
+[14:28:48:829] : Getting the checksum of the latest version for SlotTypeOne
+[14:28:48:857] : Getting the checksum of the latest version for SlotTypeTwo
+[14:28:52:168] : Updating the slot code for SlotTypeOne
+[14:28:52:169] : Updating the slot code for SlotTypeTwo
+[14:28:55:545] : Creating a new version for SlotTypeOne. New version is 1
+[14:28:55:545] : Slot SlotTypeOne was deployed.
+[14:28:55:546] : Creating a new version for SlotTypeTwo. New version is 1
+[14:28:55:546] : Slot SlotTypeTwo was deployed.
+[14:28:58:547] : Starting to deploy intent IntentOne.
+[14:28:58:549] : Starting to deploy intent IntentTwo.
+[14:28:58:904] : Getting the checksum for the latest version of intent IntentOne.
+[14:28:58:912] : Getting the checksum for the latest version of intent IntentTwo.
+[14:29:2:357] : Updating the code for intent IntentOne.
+[14:29:2:390] : Updating the code for intent IntentTwo.
+[14:29:5:871] : Creating a new version for intent IntentTwo. New version is 1
+[14:29:5:871] : Intent IntentTwo was deployed.
+[14:29:5:878] : Creating a new version for intent IntentOne. New version is 1
+[14:29:5:878] : Intent IntentOne was deployed.
+[14:29:8:876] : Starting to deploy bot BotOne.
+[14:29:8:878] : Starting to deploy bot BotTwo.
+[14:29:9:183] : Getting the checksum for the latest version of bot BotOne.
+[14:29:9:190] : Getting the checksum for the latest version of bot BotTwo.
+[14:29:14:620] : Updating the code for the bot BotOne.
+[14:29:14:621] : Updating the code for the bot BotTwo.
+[14:29:19:979] : Creating a new version for bot BotOne. New bot version is 1
+[14:29:19:979] : Bot BotOne was deployed.
+[14:29:19:987] : Creating a new version for bot BotTwo. New bot version is 1
+[14:29:19:987] : Bot BotTwo was deployed.
