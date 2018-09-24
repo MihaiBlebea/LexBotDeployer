@@ -146,21 +146,21 @@ class BotManager
                                 botVersion: data.version,
                                 name: 'Testing'
                             }
-
-                            this.putBotAlias(params, (data)=>{
-                                if(callback)
-                                {
-                                    setTimeout(()=> {
-                                        callback(data)
-                                    }, timeout)
-                                }
-                            })
-                            // if(callback)
-                            // {
-                            //     setTimeout(()=> {
-                            //         callback(data)
-                            //     }, timeout)
-                            // }
+                            //
+                            // this.putBotAlias(params, (data)=>{
+                            //     if(callback)
+                            //     {
+                            //         setTimeout(()=> {
+                            //             callback(data)
+                            //         }, timeout)
+                            //     }
+                            // })
+                            if(callback)
+                            {
+                                setTimeout(()=> {
+                                    callback(data)
+                                }, timeout)
+                            }
                         })
                     }, timeout)
                 })
