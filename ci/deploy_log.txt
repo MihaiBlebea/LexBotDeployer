@@ -135,3 +135,70 @@ STDERR
 [14:29:19:979] : Bot BotOne was deployed.
 [14:29:19:987] : Creating a new version for bot BotTwo. New bot version is 1
 [14:29:19:987] : Bot BotTwo was deployed.
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (7ms)
+
+0
+
+  1 passing (9ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[14:50:32:238] : Starting to deploy slot SlotTypeOne.
+[14:50:32:282] : Starting to deploy slot SlotTypeTwo.
+[14:50:32:841] : Getting the checksum of the latest version for SlotTypeTwo
+[14:50:32:843] : Getting the checksum of the latest version for SlotTypeOne
+[14:50:36:170] : Updating the slot code for SlotTypeTwo
+[14:50:36:171] : Updating the slot code for SlotTypeOne
+[14:50:39:485] : Creating a new version for SlotTypeTwo. New version is 1
+[14:50:39:485] : Slot SlotTypeTwo was deployed.
+[14:50:39:492] : Creating a new version for SlotTypeOne. New version is 3
+[14:50:39:492] : Slot SlotTypeOne was deployed.
+[14:50:42:488] : Starting to deploy intent IntentOne.
+[14:50:42:492] : Starting to deploy intent IntentTwo.
+[14:50:42:793] : Getting the checksum for the latest version of intent IntentTwo.
+[14:50:42:794] : Getting the checksum for the latest version of intent IntentOne.
+[14:50:46:126] : Updating the code for intent IntentOne.
+[14:50:46:163] : Updating the code for intent IntentTwo.
+[14:50:49:460] : Creating a new version for intent IntentOne. New version is 3
+[14:50:49:460] : Intent IntentOne was deployed.
+[14:50:49:512] : Creating a new version for intent IntentTwo. New version is 2
+[14:50:49:512] : Intent IntentTwo was deployed.
+[14:50:52:463] : Starting to deploy bot BotOne.
+[14:50:52:466] : Starting to deploy bot BotTwo.
+[14:50:52:762] : Getting the checksum for the latest version of bot BotTwo.
+[14:50:52:770] : Getting the checksum for the latest version of bot BotOne.
+[14:50:58:106] : Updating the code for the bot BotTwo.
+[14:50:58:133] : Updating the code for the bot BotOne.
+[14:51:3:463] : Creating a new version for bot BotTwo. New bot version is 2
+[14:51:3:464] : Bot BotTwo was deployed.
+[14:51:3:511] : Creating a new version for bot BotOne. New bot version is 3
+[14:51:3:512] : Bot BotOne was deployed.

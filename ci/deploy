@@ -25,5 +25,6 @@ var lambdaManager = new LambdaManger(lambda, tester, files)
 
 deployer = new Wilbur(files, versions, slotManager, intentManager, botManager, lambdaManager)
 deployer.deploy(()=>{
+    console.log('REACH THE END')
     process.exit(0)
 })
