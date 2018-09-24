@@ -83,9 +83,18 @@ class LambdaManager
                 slotFiles.splice(serverlessFileIndex, 1)
             }
 
+            var counter = 0
+            var passed = true
             slotFiles.map((fileName)=> {
                 this.runUnitTesting(fileName, (result)=> {
-                    if(result.pass === true)
+
+                    if(result.pass === false)
+                    {
+                        passed = false
+                    }
+
+                    counter++
+                    if(counter === slotFiles.length - 1 && passed === true)
                     {
                         exec('cd ../repos/lambdas/functions && pwd && serverless deploy', (error, stdout, stderr)=> {
                             if(error) console.log(error)
