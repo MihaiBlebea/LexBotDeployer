@@ -85,8 +85,6 @@ class LambdaManager
 
             slotFiles.map((fileName)=> {
                 this.runUnitTesting(fileName, (result)=> {
-                    console.log(result)
-
                     if(result.pass === true)
                     {
                         exec('cd ../repos/lambdas/functions && pwd && serverless deploy', (error, stdout, stderr)=> {
