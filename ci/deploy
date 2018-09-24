@@ -13,7 +13,14 @@ const IntentManager = require('./../services/IntentManager')
 const BotManager = require('./../services/BotManager')
 const LambdaManger = require('./../services/LambdaManager')
 
+
 var branch = process.argv[2]
+
+var config = new AWS.Config({
+    accessKeyId: 'AKID',
+    secretAccessKey: 'SECRET',
+    region: 'us-west-1'
+})
 
 var lambda = new AWS.Lambda({ region: 'us-east-1', maxRetries: 15 })
 var lex = new AWS.LexModelBuildingService({ region: 'us-east-1', maxRetries: 15 })
