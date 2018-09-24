@@ -1,3 +1,5 @@
+const { exec } = require('child_process')
+
 
 class SlotManager
 {
@@ -25,7 +27,7 @@ class SlotManager
         })
     }
 
-    getSlotVersion(slotName, callback)
+    getSlotVersionNonCli(slotName, callback)
     {
         var params = {
             version: "$LATEST",
@@ -37,10 +39,26 @@ class SlotManager
             {
                 this.log(`Getting the checksum of the latest version for ${data.name}`)
             }
-        
+
             if(callback)
             {
                 callback(data)
+            }
+        })
+    }
+
+    getSlotVersion(slotName, callback)
+    {
+        exec(`aws lex-models get-slot-type \
+                --region eu-west-1 \
+                --name ${slotName} \
+                --slot-type-version "\$LATEST"`, (error, stdout, stderr)=> {
+            if(error) console.log(error)
+            console.log('STDOUT', stdout)
+            console.log('STDERR', stderr)
+            if(callback)
+            {
+                callback(stdout)
             }
         })
     }

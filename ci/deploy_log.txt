@@ -202,3 +202,139 @@ STDERR
 [14:51:3:464] : Bot BotTwo was deployed.
 [14:51:3:511] : Creating a new version for bot BotOne. New bot version is 3
 [14:51:3:512] : Bot BotOne was deployed.
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (7ms)
+
+0
+
+  1 passing (10ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[14:55:22:103] : Starting to deploy slot SlotTypeOne.
+[14:55:22:152] : Starting to deploy slot SlotTypeTwo.
+[14:55:22:681] : Getting the checksum of the latest version for SlotTypeOne
+[14:55:22:683] : Getting the checksum of the latest version for SlotTypeTwo
+[14:55:25:987] : Updating the slot code for SlotTypeTwo
+[14:55:25:998] : Updating the slot code for SlotTypeOne
+[14:55:29:314] : Creating a new version for SlotTypeTwo. New version is 1
+[14:55:29:314] : Slot SlotTypeTwo was deployed.
+[14:55:29:333] : Creating a new version for SlotTypeOne. New version is 5
+[14:55:29:333] : Slot SlotTypeOne was deployed.
+[14:55:32:319] : Starting to deploy intent IntentOne.
+[14:55:32:321] : Starting to deploy intent IntentTwo.
+[14:55:32:621] : Getting the checksum for the latest version of intent IntentOne.
+[14:55:32:622] : Getting the checksum for the latest version of intent IntentTwo.
+[14:55:35:941] : Updating the code for intent IntentTwo.
+[14:55:36:9] : Updating the code for intent IntentOne.
+[14:55:39:277] : Creating a new version for intent IntentTwo. New version is 3
+[14:55:39:277] : Intent IntentTwo was deployed.
+[14:55:39:396] : Creating a new version for intent IntentOne. New version is 5
+[14:55:39:396] : Intent IntentOne was deployed.
+[14:55:42:282] : Starting to deploy bot BotOne.
+[14:55:42:285] : Starting to deploy bot BotTwo.
+[14:55:42:603] : Getting the checksum for the latest version of bot BotOne.
+[14:55:42:604] : Getting the checksum for the latest version of bot BotTwo.
+[14:55:47:976] : Updating the code for the bot BotTwo.
+[14:55:47:997] : Updating the code for the bot BotOne.
+[14:55:53:368] : Creating a new version for bot BotTwo. New bot version is 3
+[14:55:53:368] : Bot BotTwo was deployed.
+[14:55:53:419] : Creating a new version for bot BotOne. New bot version is 5
+[14:55:53:419] : Bot BotOne was deployed.
+REACH THE END
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (13ms)
+
+0
+
+  1 passing (10ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[15:40:44:958] : Starting to deploy slot SlotTypeOne.
+[15:40:45:1] : Starting to deploy slot SlotTypeTwo.
+[15:40:45:518] : Getting the checksum of the latest version for SlotTypeTwo
+[15:40:45:520] : Getting the checksum of the latest version for SlotTypeOne
+[15:40:48:864] : Updating the slot code for SlotTypeTwo
+[15:40:48:878] : Updating the slot code for SlotTypeOne
+[15:40:52:190] : Creating a new version for SlotTypeTwo. New version is 1
+[15:40:52:191] : Slot SlotTypeTwo was deployed.
+[15:40:52:208] : Creating a new version for SlotTypeOne. New version is 7
+[15:40:52:208] : Slot SlotTypeOne was deployed.
+[15:40:55:197] : Starting to deploy intent IntentOne.
+[15:40:55:199] : Starting to deploy intent IntentTwo.
+[15:40:55:496] : Getting the checksum for the latest version of intent IntentOne.
+[15:40:55:517] : Getting the checksum for the latest version of intent IntentTwo.
+[15:40:58:823] : Updating the code for intent IntentOne.
+[15:40:58:853] : Updating the code for intent IntentTwo.
+[15:41:2:216] : Creating a new version for intent IntentOne. New version is 7
+[15:41:2:216] : Intent IntentOne was deployed.
+[15:41:2:247] : Creating a new version for intent IntentTwo. New version is 4
+[15:41:2:247] : Intent IntentTwo was deployed.
+[15:41:5:222] : Starting to deploy bot BotOne.
+[15:41:5:225] : Starting to deploy bot BotTwo.
+[15:41:5:515] : Getting the checksum for the latest version of bot BotTwo.
+[15:41:5:584] : Getting the checksum for the latest version of bot BotOne.
+[15:41:10:843] : Updating the code for the bot BotTwo.
+[15:41:10:907] : Updating the code for the bot BotOne.
+[15:41:16:160] : Creating a new version for bot BotTwo. New bot version is 4
+[15:41:16:160] : Bot BotTwo was deployed.
+[15:41:16:226] : Creating a new version for bot BotOne. New bot version is 7
+[15:41:16:226] : Bot BotOne was deployed.
+REACH THE END
