@@ -43,7 +43,7 @@ class Wilbur
                     {
                         this.deployIntents()
                     }
-                }, 2000)
+                }, 3000)
             })
         })
     }
