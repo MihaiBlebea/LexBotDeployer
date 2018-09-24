@@ -91,7 +91,8 @@ class LambdaManager
                     {
                         exec('cd ../repos/lambdas/functions && pwd && serverless deploy', (error, stdout, stderr)=> {
                             if(error) console.log(error)
-
+                            console.log(stdout)
+                            console.log(stderr)
                             if(callback)
                             {
                                 callback(stdout)
