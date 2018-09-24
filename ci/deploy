@@ -5,64 +5,23 @@ const AWS = require('aws-sdk')
 const files = require('./../services/files')
 const versions = require('./../services/versions')
 const log = require('./../services/logger')
+const tester = require('./../services/tester')
 
 const Wilbur = require('./../services/Wilbur')
 const SlotManager = require('./../services/SlotManager')
 const IntentManager = require('./../services/IntentManager')
 const BotManager = require('./../services/BotManager')
-
+const LambdaManger = require('./../services/LambdaManager')
 
 var branch = process.argv[2]
 
+var lambda = new AWS.Lambda({ region: 'us-east-1' })
 var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
 
 var slotManager = new SlotManager(lex, versions, log)
 var intentManager = new IntentManager(lex, versions, log)
 var botManager = new BotManager(lex, versions, log)
+var lambdaManager = new LambdaManger(lambda, tester, files)
 
-
-deployer = new Wilbur(files, versions, slotManager, intentManager, botManager)
-deployer.deploySlots()
-// deployer.deployIntents()
-// deployer.deployBots()
-
-
-// const deployBot = (branch_name)=> {
-//     console.log('Date of deploy: ' + Date.now())
-//     console.log('Deployed branch: ' + branch_name)
-//
-//     requests.deploySlotRequest('SlotTypeOne', (data)=> {
-//         console.log('Slot version deployed', data.version)
-//
-//         requests.deployIntentRequest('IntentOne', (data)=> {
-//             console.log('Intent version deployed', data.version)
-//
-//             requests.deployBotRequest('BotOne', (data)=> {
-//                 console.log('Bot version deployed', data.version)
-//
-//                 return process.exit(0);
-//
-//             }, 2000)
-//
-//         }, 2000)
-//
-//     }, 2000)
-// }
-
-// const deploySlots = async (branch_name)=> {
-//     const slotFolder = './../repos/slots'
-//     files.processFiles(slotFolder, (files)=> {
-//
-//         files.map((file)=> {
-//             requests.deploySlotRequest(file, (data)=> {
-//                 console.log(data.version)
-//             })
-//         })
-//     })
-// }
-
-
-
-// deploySlots(branch)
-
-// deployBot(branch)
+deployer = new Wilbur(files, versions, slotManager, intentManager, botManager, lambdaManager)
+deployer.deploy()

@@ -2,7 +2,7 @@
 
 class Wilbur
 {
-    constructor(files, versions, slotManager, intentManager, botManager)
+    constructor(files, versions, slotManager, intentManager, botManager, lambdaManager)
     {
         // Declare dependencies //
         this.files = files
@@ -11,11 +11,19 @@ class Wilbur
         this.slotManager = slotManager
         this.intentManager = intentManager
         this.botManager = botManager
+        this.lambdaManager = lambdaManager
 
         // Store resources versions //
         this.slotVersions = []
         this.intentVersions = []
         this.botVersions = []
+    }
+
+    deploy()
+    {
+        this.lambdaManager.deployLambdaServerless((result)=> {
+            this.deploySlots()
+        })
     }
 
     deploySlots()

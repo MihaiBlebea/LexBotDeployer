@@ -8,3 +8,5 @@ provider:
 functions:
     hello:
         handler: LambdaOne.hello
+    goodbye:
+        handler: LambdaTwo.goodbye

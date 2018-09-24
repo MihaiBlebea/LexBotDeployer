@@ -1,30 +1,5 @@
-[10:52:18:508] : Starting to deploy slot SlotTypeOne.
-[10:52:18:547] : Starting to deploy slot SlotTypeTwo.
-[10:52:19:516] : Getting the checksum of the latest version for SlotTypeOne
-[10:52:19:523] : Getting the checksum of the latest version for SlotTypeTwo
-[10:52:22:270] : Updating the slot code for SlotTypeOne
-[10:52:22:275] : Updating the slot code for SlotTypeTwo
-[10:52:25:27] : Creating a new version for SlotTypeTwo. New version is 1
-[10:52:25:28] : Slot SlotTypeTwo was deployed.
-[10:52:25:46] : Creating a new version for SlotTypeOne. New version is 1
-[10:52:25:46] : Slot SlotTypeOne was deployed.
-[10:52:27:32] : Starting to deploy intent IntentOne.
-[10:52:27:34] : Starting to deploy intent IntentTwo.
-[10:52:27:772] : Getting the checksum for the latest version of intent IntentTwo.
-[10:52:27:773] : Getting the checksum for the latest version of intent IntentOne.
-[10:52:31:370] : Updating the code for intent IntentTwo.
-[10:52:31:396] : Updating the code for intent IntentOne.
-[10:52:34:836] : Creating a new version for intent IntentTwo. New version is 1
-[10:52:34:836] : Intent IntentTwo was deployed.
-[10:52:34:874] : Creating a new version for intent IntentOne. New version is 2
-[10:52:34:874] : Intent IntentOne was deployed.
-[10:52:37:839] : Starting to deploy bot BotOne.
-[10:52:37:842] : Starting to deploy bot BotTwo.
-[10:52:38:305] : Getting the checksum for the latest version of bot BotTwo.
-[10:52:38:306] : Getting the checksum for the latest version of bot BotOne.
-[10:52:42:844] : Updating the code for the bot BotTwo.
-[10:52:42:955] : Updating the code for the bot BotOne.
-[10:52:47:458] : Creating a new version for bot BotTwo. New bot version is 2
-[10:52:47:458] : Bot BotTwo was deployed.
-[10:52:47:562] : Creating a new version for bot BotOne. New bot version is 2
-[10:52:47:562] : Bot BotOne was deployed.
+FILES /../repos/lambdas/functions
+FILES /../repos/lambdas/functions
+FILES /../repos/lambdas/functions
+FILES ./../repos/lambdas/functions
+FILES ./repos/lambdas/functions
