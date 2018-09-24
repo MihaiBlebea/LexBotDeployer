@@ -104,7 +104,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/demo/dev/1537793353728-2018-09-24T12:49:13.728Z/demo.zip"
+          "S3Key": "serverless/demo/dev/1537793685597-2018-09-24T12:54:45.597Z/demo.zip"
         },
         "FunctionName": "demo-dev-hello",
         "Handler": "LambdaOne.hello",
@@ -140,7 +140,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/demo/dev/1537793353728-2018-09-24T12:49:13.728Z/demo.zip"
+          "S3Key": "serverless/demo/dev/1537793685597-2018-09-24T12:54:45.597Z/demo.zip"
         },
         "FunctionName": "demo-dev-goodbye",
         "Handler": "LambdaTwo.goodbye",

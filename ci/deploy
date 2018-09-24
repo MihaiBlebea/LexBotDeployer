@@ -15,8 +15,8 @@ const LambdaManger = require('./../services/LambdaManager')
 
 var branch = process.argv[2]
 
-var lambda = new AWS.Lambda({ region: 'us-east-1' })
-var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
+var lambda = new AWS.Lambda({ region: 'us-east-1', maxRetries: 15 })
+var lex = new AWS.LexModelBuildingService({ region: 'us-east-1', maxRetries: 15 })
 
 var slotManager = new SlotManager(lex, versions, log)
 var intentManager = new IntentManager(lex, versions, log)
