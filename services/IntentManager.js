@@ -1,3 +1,4 @@
+const { exec } = require('child_process')
 
 
 class IntentManager
@@ -10,24 +11,61 @@ class IntentManager
         this.log = log
     }
 
+    // createIntentVersion(intentName, checksum, callback)
+    // {
+    //     var params = {
+    //         name: intentName,
+    //         checksum: checksum
+    //     }
+    //     this.lex.createIntentVersion(params, (error, data)=> {
+    //         if(error)
+    //         {
+    //             console.log(error.stack);
+    //         } else {
+    //             this.log(`Creating a new version for intent ${data.name}. New version is ${data.version}`)
+    //             if(callback)
+    //             {
+    //                 callback(data)
+    //             }
+    //         }
+    //     })
+    // }
+
     createIntentVersion(intentName, checksum, callback)
     {
-        var params = {
-            name: intentName,
-            checksum: checksum
-        }
-        this.lex.createIntentVersion(params, (error, data)=> {
-            if(error)
+        exec(`aws lex-models create-intent-version \
+                    --region us-east-1 \
+                    --name ${intentName} \
+                    --checksum "${checksum}"`, (error, stdout, stderr)=> {
+            if(error) console.log(error)
+            var data = JSON.parse(stdout)
+            if(data !== null)
             {
-                console.log(error.stack);
-            } else {
-                this.log(`Creating a new version for intent ${data.name}. New version is ${data.version}`)
-                if(callback)
-                {
-                    callback(data)
-                }
+                this.log(`Getting the checksum of the latest version for ${data.name}`)
+            }
+            if(callback)
+            {
+                callback(data)
             }
         })
+
+
+        // var params = {
+        //     name: intentName,
+        //     checksum: checksum
+        // }
+        // this.lex.createIntentVersion(params, (error, data)=> {
+        //     if(error)
+        //     {
+        //         console.log(error.stack);
+        //     } else {
+        //         this.log(`Creating a new version for intent ${data.name}. New version is ${data.version}`)
+        //         if(callback)
+        //         {
+        //             callback(data)
+        //         }
+        //     }
+        // })
     }
 
     putIntent(intentName, versionData, slotVersions, callback)
@@ -56,42 +94,78 @@ class IntentManager
         })
     }
 
-    getIntentVersions(intentName, callback)
-    {
-        var params = {
-            name: intentName
-        }
-        this.lex.getIntentVersions(params, (error, data)=> {
-            if(error)
-            {
-                console.log(error.stack);
-            } else {
-                if(callback)
-                {
-                    callback(data)
-                }
-            }
-        })
-    }
+    // getIntentVersions(intentName, callback)
+    // {
+    //     var params = {
+    //         name: intentName
+    //     }
+    //     this.lex.getIntentVersions(params, (error, data)=> {
+    //         if(error)
+    //         {
+    //             console.log(error.stack);
+    //         } else {
+    //             if(callback)
+    //             {
+    //                 callback(data)
+    //             }
+    //         }
+    //     })
+    // }
+
+    // getIntentLatestVersion(intentName, callback)
+    // {
+    //     var params = {
+    //         version: '$LATEST',
+    //         name: intentName
+    //     }
+    //     this.lex.getIntent(params, (error, data)=> {
+    //         // if(err) console.log(err.stack)
+    //         if(data !== null)
+    //         {
+    //             this.log(`Getting the checksum for the latest version of intent ${data.name}.`)
+    //         }
+    //
+    //         if(callback)
+    //         {
+    //             callback(data)
+    //         }
+    //     })
+    // }
 
     getIntentLatestVersion(intentName, callback)
     {
-        var params = {
-            version: '$LATEST',
-            name: intentName
-        }
-        this.lex.getIntent(params, (error, data)=> {
-            // if(err) console.log(err.stack)
+        exec(`aws lex-models get-intent \
+                    --region us-east-1 \
+                    --name ${intentName} \
+                    --intent-version "\\$LATEST"`, (error, stdout, stderr)=> {
+            if(error) console.log(error)
+            var data = JSON.parse(stdout)
             if(data !== null)
             {
-                this.log(`Getting the checksum for the latest version of intent ${data.name}.`)
+                this.log(`Getting the checksum of the latest version for ${data.name}`)
             }
-            
             if(callback)
             {
                 callback(data)
             }
         })
+
+        // var params = {
+        //     version: '$LATEST',
+        //     name: intentName
+        // }
+        // this.lex.getIntent(params, (error, data)=> {
+        //     // if(err) console.log(err.stack)
+        //     if(data !== null)
+        //     {
+        //         this.log(`Getting the checksum for the latest version of intent ${data.name}.`)
+        //     }
+        //
+        //     if(callback)
+        //     {
+        //         callback(data)
+        //     }
+        // })
     }
 
     deployIntent(intentName, slotVersions, callback, timeout)

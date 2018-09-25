@@ -1095,3 +1095,213 @@ STDERR
 }
 
 
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (8ms)
+
+0
+
+  1 passing (10ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[13:37:57:243] : Starting to deploy slot SlotTypeOne.
+[13:37:57:248] : Starting to deploy slot SlotTypeTwo.
+[13:37:58:764] : Getting the checksum of the latest version for SlotTypeOne
+[13:37:59:50] : Getting the checksum of the latest version for SlotTypeTwo
+[13:38:2:651] : Updating the slot code for SlotTypeOne
+[13:38:2:890] : Updating the slot code for SlotTypeTwo
+{
+    "name": "SlotTypeOne",
+    "description": "Available pizza sauces",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        },
+        {
+            "value": "blue"
+        },
+        {
+            "value": "white"
+        },
+        {
+            "value": "marron"
+        }
+    ],
+    "lastUpdatedDate": 1537879037.992,
+    "createdDate": 1537879037.992,
+    "version": "9",
+    "checksum": "e3e5025e-91ef-4706-92ee-3e91f940840f",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[13:38:7:99] : Creating a new version for SlotTypeOne. New version is 9
+[13:38:7:99] : Slot SlotTypeOne was deployed.
+{
+    "name": "SlotTypeTwo",
+    "description": "Available pizza sauces two",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        }
+    ],
+    "lastUpdatedDate": 1537795114.868,
+    "createdDate": 1537795114.868,
+    "version": "1",
+    "checksum": "e160124c-9bbf-471a-95f6-e6605f3b7e85",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[13:38:7:403] : Creating a new version for SlotTypeTwo. New version is 1
+[13:38:7:403] : Slot SlotTypeTwo was deployed.
+[13:38:10:103] : Starting to deploy intent IntentOne.
+[13:38:10:107] : Starting to deploy intent IntentTwo.
+[13:38:10:876] : Getting the checksum for the latest version of intent IntentTwo.
+[13:38:10:881] : Getting the checksum for the latest version of intent IntentOne.
+[13:38:14:458] : Updating the code for intent IntentTwo.
+[13:38:14:584] : Updating the code for intent IntentOne.
+[13:38:18:166] : Creating a new version for intent IntentOne. New version is 11
+[13:38:18:166] : Intent IntentOne was deployed.
+[13:38:19:203] : Creating a new version for intent IntentTwo. New version is 7
+[13:38:19:204] : Intent IntentTwo was deployed.
+[13:38:21:170] : Starting to deploy bot BotOne.
+[13:38:21:172] : Starting to deploy bot BotTwo.
+[13:38:21:724] : Getting the checksum for the latest version of bot BotOne.
+[13:38:21:727] : Getting the checksum for the latest version of bot BotTwo.
+[13:38:27:278] : Updating the code for the bot BotTwo.
+[13:38:27:383] : Updating the code for the bot BotOne.
+[13:38:32:851] : Creating a new version for bot BotTwo. New bot version is 7
+[13:38:32:851] : Bot BotTwo was deployed.
+[13:38:33:448] : Creating a new version for bot BotOne. New bot version is 11
+[13:38:33:448] : Bot BotOne was deployed.
+REACH THE END
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (7ms)
+
+0
+
+  1 passing (10ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[13:46:49:507] : Starting to deploy slot SlotTypeOne.
+[13:46:49:513] : Starting to deploy slot SlotTypeTwo.
+[13:46:51:111] : Getting the checksum of the latest version for SlotTypeTwo
+[13:46:51:113] : Getting the checksum of the latest version for SlotTypeOne
+[13:46:55:10] : Updating the slot code for SlotTypeOne
+[13:46:55:13] : Updating the slot code for SlotTypeTwo
+{
+    "name": "SlotTypeOne",
+    "description": "Available pizza sauces",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        },
+        {
+            "value": "blue"
+        },
+        {
+            "value": "white"
+        },
+        {
+            "value": "marron"
+        }
+    ],
+    "lastUpdatedDate": 1537879037.992,
+    "createdDate": 1537879037.992,
+    "version": "9",
+    "checksum": "e3e5025e-91ef-4706-92ee-3e91f940840f",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[13:46:59:598] : Creating a new version for SlotTypeOne. New version is 9
+[13:46:59:598] : Slot SlotTypeOne was deployed.
+{
+    "name": "SlotTypeTwo",
+    "description": "Available pizza sauces two",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        }
+    ],
+    "lastUpdatedDate": 1537795114.868,
+    "createdDate": 1537795114.868,
+    "version": "1",
+    "checksum": "e160124c-9bbf-471a-95f6-e6605f3b7e85",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[13:46:59:600] : Creating a new version for SlotTypeTwo. New version is 1
+[13:46:59:600] : Slot SlotTypeTwo was deployed.
+[13:47:2:600] : Starting to deploy intent IntentOne.
