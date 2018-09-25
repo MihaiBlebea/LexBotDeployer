@@ -56,14 +56,18 @@ class BotManager
                     --region us-east-1 \
                     --name ${botName} \
                     --checksum "${checksum}"`, (error, stdout, stderr)=> {
-            if(error) console.log(error)
-            console.log(stdout)
-            console.log(stderr)
-            var data = JSON.parse(stdout)
-            this.log(`Creating a new version for ${data.name}. New version is ${data.version}`)
-            if(callback)
+            if(error)
             {
-                callback(data)
+                console.log(error)
+            } else {
+                console.log(stdout)
+                console.log(stderr)
+                var data = JSON.parse(stdout)
+                this.log(`Creating a new version for ${data.name}. New version is ${data.version}`)
+                if(callback)
+                {
+                    callback(data)
+                }
             }
         })
 
@@ -186,9 +190,9 @@ class BotManager
 
         this.log(`Starting to deploy bot ${botName}.`)
         this.getBotVersions(botName, (versionData)=> {
-            setTimeout(()=> {
+        
                 this.putBot(botName, versionData, intentVersions, (data)=> {
-                    setTimeout(()=> {
+                
                         this.createBotVersion(botName, data.checksum, (data)=> {
                             this.log(`Bot ${botName} was deployed.`)
 
@@ -200,14 +204,14 @@ class BotManager
 
                             if(callback)
                             {
-                                setTimeout(()=> {
+                        
                                     callback(data)
-                                }, timeout)
+                        
                             }
                         })
-                    }, timeout)
+            
                 })
-            }, timeout)
+        
         })
     }
 }
