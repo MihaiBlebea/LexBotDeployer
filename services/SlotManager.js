@@ -54,6 +54,10 @@ class SlotManager
                 --name ${slotName} \
                 --slot-type-version "\\$LATEST"`, (error, stdout, stderr)=> {
             if(error) console.log(error)
+            if(stdout !== null)
+            {
+                this.log(`Getting the checksum of the latest version for ${stdout.name}`)
+            }
             if(callback)
             {
                 callback(stdout)
