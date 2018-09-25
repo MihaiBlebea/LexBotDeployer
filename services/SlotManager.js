@@ -54,20 +54,20 @@ class SlotManager
                 --name ${slotName} \
                 --slot-type-version "\\$LATEST"`, (error, stdout, stderr)=> {
             if(error) console.log(error)
+            var data = JSON.parse(stdout)
             if(stdout !== null)
             {
-                this.log(`Getting the checksum of the latest version for ${stdout.name}`)
+                this.log(`Getting the checksum of the latest version for ${data.name}`)
             }
             if(callback)
             {
-                callback(JSON.parse(stdout))
+                callback(data)
             }
         })
     }
 
     putSlot(slotName, versionData, callback)
     {
-        console.log('CHECKSUM', versionData.checksum)
         var slotFileJson = require('./../repos/slots/' + slotName + '.json')
         if(versionData !== null)
         {
@@ -112,16 +112,18 @@ class SlotManager
 
     createSlotVersion(slotName, checksum, callback)
     {
-
         exec(`aws lex-models create-slot-type-version
                     --name ${slotName}
                     --checksum ${checksum}`, (error, stdout, stderr)=> {
             if(error) console.log(error)
-            this.log(`Creating a new version for ${stdout.name}. New version is ${stdout.version}`)
-            if(callback)
-            {
-                callback(stdout)
-            }
+            console.log(stdout)
+            console.log(stderr)
+            // var data = JSON.parse(stdout)
+            // this.log(`Creating a new version for ${data.name}. New version is ${data.version}`)
+            // if(callback)
+            // {
+            //     callback(data)
+            // }
         })
 
 

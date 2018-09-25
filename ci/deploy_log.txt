@@ -267,3 +267,360 @@ PreconditionFailedException: SlotType 'SlotTypeTwo' already exists. If you are t
     at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10
     at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:9)
     at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:12)
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (8ms)
+
+0
+
+  1 passing (10ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[12:15:55:658] : Starting to deploy slot SlotTypeOne.
+[12:15:55:664] : Starting to deploy slot SlotTypeTwo.
+[12:15:56:938] : Getting the checksum of the latest version for undefined
+[12:15:56:975] : Getting the checksum of the latest version for undefined
+CHECKSUM e160124c-9bbf-471a-95f6-e6605f3b7e85
+CHECKSUM 3f5863dd-9370-4dbd-82e7-f36129db7623
+[12:16:0:580] : Updating the slot code for SlotTypeTwo
+[12:16:0:582] : Updating the slot code for SlotTypeOne
+{ Error: Command failed: aws lex-models create-slot-type-version
+                    --name SlotTypeOne
+                    --checksum e3e5025e-91ef-4706-92ee-3e91f940840f
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+aws: error: the following arguments are required: --name
+/bin/sh: line 1: --name: command not found
+/bin/sh: line 2: --checksum: command not found
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
+  killed: false,
+  code: 127,
+  signal: null,
+  cmd:
+   'aws lex-models create-slot-type-version\n                    --name SlotTypeOne\n                    --checksum e3e5025e-91ef-4706-92ee-3e91f940840f' }
+[12:16:4:189] : Creating a new version for undefined. New version is undefined
+[12:16:4:189] : Slot SlotTypeOne was deployed.
+{ Error: Command failed: aws lex-models create-slot-type-version
+                    --name SlotTypeTwo
+                    --checksum e160124c-9bbf-471a-95f6-e6605f3b7e85
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+aws: error: the following arguments are required: --name
+/bin/sh: line 1: --name: command not found
+/bin/sh: line 2: --checksum: command not found
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
+  killed: false,
+  code: 127,
+  signal: null,
+  cmd:
+   'aws lex-models create-slot-type-version\n                    --name SlotTypeTwo\n                    --checksum e160124c-9bbf-471a-95f6-e6605f3b7e85' }
+[12:16:4:190] : Creating a new version for undefined. New version is undefined
+[12:16:4:190] : Slot SlotTypeTwo was deployed.
+[12:16:7:193] : Starting to deploy intent IntentOne.
+[12:16:7:199] : Starting to deploy intent IntentTwo.
+[12:16:7:808] : Getting the checksum for the latest version of intent IntentTwo.
+[12:16:7:814] : Getting the checksum for the latest version of intent IntentOne.
+[12:16:11:433] : Updating the code for intent IntentTwo.
+[12:16:11:551] : Updating the code for intent IntentOne.
+[12:16:14:904] : Creating a new version for intent IntentTwo. New version is 6
+[12:16:14:904] : Intent IntentTwo was deployed.
+[12:16:15:38] : Creating a new version for intent IntentOne. New version is 10
+[12:16:15:39] : Intent IntentOne was deployed.
+[12:16:17:907] : Starting to deploy bot BotOne.
+[12:16:17:911] : Starting to deploy bot BotTwo.
+[12:16:18:381] : Getting the checksum for the latest version of bot BotOne.
+[12:16:18:384] : Getting the checksum for the latest version of bot BotTwo.
+[12:16:23:868] : Updating the code for the bot BotTwo.
+[12:16:24:0] : Updating the code for the bot BotOne.
+[12:16:29:363] : Creating a new version for bot BotTwo. New bot version is 6
+[12:16:29:363] : Bot BotTwo was deployed.
+[12:16:29:512] : Creating a new version for bot BotOne. New bot version is 10
+[12:16:29:512] : Bot BotOne was deployed.
+REACH THE END
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (6ms)
+
+0
+
+  1 passing (9ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[12:18:19:729] : Starting to deploy slot SlotTypeOne.
+[12:18:19:734] : Starting to deploy slot SlotTypeTwo.
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (7ms)
+
+0
+
+  1 passing (10ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[12:18:43:971] : Starting to deploy slot SlotTypeOne.
+[12:18:43:976] : Starting to deploy slot SlotTypeTwo.
+[12:18:45:299] : Getting the checksum of the latest version for SlotTypeOne
+[12:18:45:317] : Getting the checksum of the latest version for SlotTypeTwo
+[12:18:49:33] : Updating the slot code for SlotTypeTwo
+[12:18:49:35] : Updating the slot code for SlotTypeOne
+{ Error: Command failed: aws lex-models create-slot-type-version
+                    --name SlotTypeTwo
+                    --checksum e160124c-9bbf-471a-95f6-e6605f3b7e85
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+aws: error: the following arguments are required: --name
+/bin/sh: line 1: --name: command not found
+/bin/sh: line 2: --checksum: command not found
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
+  killed: false,
+  code: 127,
+  signal: null,
+  cmd:
+   'aws lex-models create-slot-type-version\n                    --name SlotTypeTwo\n                    --checksum e160124c-9bbf-471a-95f6-e6605f3b7e85' }
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (8ms)
+
+0
+
+  1 passing (11ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[12:19:33:114] : Starting to deploy slot SlotTypeOne.
+[12:19:33:120] : Starting to deploy slot SlotTypeTwo.
+[12:19:34:375] : Getting the checksum of the latest version for SlotTypeOne
+[12:19:34:409] : Getting the checksum of the latest version for SlotTypeTwo
+[12:19:38:287] : Updating the slot code for SlotTypeOne
+[12:19:38:289] : Updating the slot code for SlotTypeTwo
+{ Error: Command failed: aws lex-models create-slot-type-version
+                    --name SlotTypeOne
+                    --checksum e3e5025e-91ef-4706-92ee-3e91f940840f
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+aws: error: the following arguments are required: --name
+/bin/sh: line 1: --name: command not found
+/bin/sh: line 2: --checksum: command not found
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Socket.stream.socket.on (internal/child_process.js:380:11)
+    at Socket.emit (events.js:182:13)
+    at Socket.EventEmitter.emit (domain.js:442:20)
+    at Pipe._handle.close (net.js:599:12)
+  killed: false,
+  code: 127,
+  signal: null,
+  cmd:
+   'aws lex-models create-slot-type-version\n                    --name SlotTypeOne\n                    --checksum e3e5025e-91ef-4706-92ee-3e91f940840f' }
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (19ms)
+
+0
+
+  1 passing (22ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[12:20:32:372] : Starting to deploy slot SlotTypeOne.
+[12:20:32:377] : Starting to deploy slot SlotTypeTwo.
+[12:20:33:795] : Getting the checksum of the latest version for SlotTypeOne
+[12:20:33:797] : Getting the checksum of the latest version for SlotTypeTwo
+[12:20:37:555] : Updating the slot code for SlotTypeTwo
+[12:20:37:557] : Updating the slot code for SlotTypeOne
+{ Error: Command failed: aws lex-models create-slot-type-version
+                    --name SlotTypeTwo
+                    --checksum e160124c-9bbf-471a-95f6-e6605f3b7e85
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+aws: error: the following arguments are required: --name
+/bin/sh: line 1: --name: command not found
+/bin/sh: line 2: --checksum: command not found
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
+  killed: false,
+  code: 127,
+  signal: null,
+  cmd:
+   'aws lex-models create-slot-type-version\n                    --name SlotTypeTwo\n                    --checksum e160124c-9bbf-471a-95f6-e6605f3b7e85' }
+
