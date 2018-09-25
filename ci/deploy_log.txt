@@ -1096,3 +1096,730 @@ REACH THE END
 [14:43:36:872] : Creating a new version for BotTwo. New version is 11
 [14:43:36:872] : Bot BotTwo was deployed.
 REACH THE END
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (10ms)
+
+0
+
+  1 passing (12ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[14:45:31:223] : Starting to deploy slot SlotTypeOne.
+[14:45:31:228] : Starting to deploy slot SlotTypeTwo.
+[14:45:32:683] : Getting the checksum of the latest version for SlotTypeOne
+[14:45:32:734] : Getting the checksum of the latest version for SlotTypeTwo
+[14:45:33:566] : Updating the slot code for SlotTypeOne
+[14:45:33:572] : Updating the slot code for SlotTypeTwo
+{
+    "name": "SlotTypeOne",
+    "description": "Available pizza sauces",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        },
+        {
+            "value": "blue"
+        },
+        {
+            "value": "white"
+        },
+        {
+            "value": "marron"
+        }
+    ],
+    "lastUpdatedDate": 1537883134.858,
+    "createdDate": 1537883134.858,
+    "version": "17",
+    "checksum": "dbf99c9b-ed62-40b3-99b8-a8a57de638b8",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[14:45:35:10] : Creating a new version for SlotTypeOne. New version is 17
+[14:45:35:10] : Slot SlotTypeOne was deployed.
+[14:45:35:11] : Starting to deploy intent IntentOne.
+[14:45:35:15] : Starting to deploy intent IntentTwo.
+{
+    "name": "SlotTypeTwo",
+    "description": "Available pizza sauces two",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        }
+    ],
+    "lastUpdatedDate": 1537795114.868,
+    "createdDate": 1537795114.868,
+    "version": "1",
+    "checksum": "e160124c-9bbf-471a-95f6-e6605f3b7e85",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[14:45:35:20] : Creating a new version for SlotTypeTwo. New version is 1
+[14:45:35:20] : Slot SlotTypeTwo was deployed.
+[14:45:36:415] : Getting the checksum of the latest version for IntentOne
+[14:45:36:426] : Getting the checksum of the latest version for IntentTwo
+[14:45:37:232] : Updating the code for intent IntentTwo.
+[14:45:37:281] : Updating the code for intent IntentOne.
+[14:45:38:640] : Getting the checksum of the latest version for IntentTwo
+[14:45:38:640] : Intent IntentTwo was deployed.
+[14:45:38:640] : Starting to deploy bot BotOne.
+[14:45:38:644] : Starting to deploy bot BotTwo.
+[14:45:38:705] : Getting the checksum of the latest version for IntentOne
+[14:45:38:706] : Intent IntentOne was deployed.
+{
+    "name": "BotTwo",
+    "description": "Bot to order human",
+    "intents": [
+        {
+            "intentName": "IntentOne",
+            "intentVersion": "18"
+        }
+    ],
+    "clarificationPrompt": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "I didn't understand you, what would you like to do?"
+            }
+        ],
+        "maxAttempts": 3
+    },
+    "abortStatement": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "Sorry, I'm not able to assist at this time"
+            }
+        ]
+    },
+    "status": "READY",
+    "lastUpdatedDate": 1537882433.258,
+    "createdDate": 1537795133.577,
+    "idleSessionTTLInSeconds": 600,
+    "voiceId": "Salli",
+    "checksum": "1b4c6951-b32d-4cc8-b9d2-b413e808f424",
+    "version": "$LATEST",
+    "locale": "en-US",
+    "childDirected": false
+}
+
+
+[14:45:40:51] : Creating a new version for BotTwo. New version is $LATEST
+{
+    "name": "BotOne",
+    "description": "Bot to order human",
+    "intents": [
+        {
+            "intentName": "IntentOne",
+            "intentVersion": "1"
+        }
+    ],
+    "clarificationPrompt": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "I didn't understand you, what would you like to do?"
+            }
+        ],
+        "maxAttempts": 3
+    },
+    "abortStatement": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "Sorry, I'm not able to assist at this time"
+            }
+        ]
+    },
+    "status": "READY",
+    "lastUpdatedDate": 1537883071.551,
+    "createdDate": 1537795133.575,
+    "idleSessionTTLInSeconds": 600,
+    "voiceId": "Salli",
+    "checksum": "df093502-a048-41a7-b86a-5163dc1fbe8c",
+    "version": "$LATEST",
+    "locale": "en-US",
+    "childDirected": false
+}
+
+
+[14:45:40:60] : Creating a new version for BotOne. New version is $LATEST
+[14:45:40:598] : Updating the code for the bot BotOne.
+[14:45:41:379] : Updating the code for the bot BotTwo.
+{
+    "name": "BotTwo",
+    "description": "Bot to order human",
+    "intents": [
+        {
+            "intentName": "IntentOne",
+            "intentVersion": "20"
+        }
+    ],
+    "clarificationPrompt": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "I didn't understand you, what would you like to do?"
+            }
+        ],
+        "maxAttempts": 3
+    },
+    "abortStatement": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "Sorry, I'm not able to assist at this time"
+            }
+        ]
+    },
+    "status": "BUILDING",
+    "lastUpdatedDate": 1537883142.624,
+    "createdDate": 1537883142.624,
+    "idleSessionTTLInSeconds": 600,
+    "voiceId": "Salli",
+    "checksum": "ec53c84c-8f58-4324-8262-375c84c64e4d",
+    "version": "12",
+    "locale": "en-US",
+    "childDirected": false
+}
+
+
+[14:45:42:766] : Creating a new version for BotTwo. New version is 12
+[14:45:42:766] : Bot BotTwo was deployed.
+REACH THE END
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (9ms)
+
+0
+
+  1 passing (10ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[16:11:48:543] : Starting to deploy slot SlotTypeOne.
+[16:11:48:549] : Starting to deploy slot SlotTypeTwo.
+{ Error: Command failed: aws lex-models get-slot-type                 --region us-east-1                 --name SlotTypeOne                 --slot-type-version "\$LATEST"
+
+An error occurred (NotFoundException) when calling the GetSlotType operation: The specified resource 'SlotTypeOne' does not exist. Choose another resource.
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
+  killed: false,
+  code: 255,
+  signal: null,
+  cmd:
+   'aws lex-models get-slot-type                 --region us-east-1                 --name SlotTypeOne                 --slot-type-version "\\$LATEST"' }
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (7ms)
+
+0
+
+  1 passing (9ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[16:12:6:69] : Starting to deploy slot SlotTypeOne.
+[16:12:6:74] : Starting to deploy slot SlotTypeTwo.
+{ Error: Command failed: aws lex-models get-slot-type                 --region us-east-1                 --name SlotTypeTwo                 --slot-type-version "\$LATEST"
+
+An error occurred (NotFoundException) when calling the GetSlotType operation: The specified resource 'SlotTypeTwo' does not exist. Choose another resource.
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
+  killed: false,
+  code: 255,
+  signal: null,
+  cmd:
+   'aws lex-models get-slot-type                 --region us-east-1                 --name SlotTypeTwo                 --slot-type-version "\\$LATEST"' }
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (8ms)
+
+0
+
+  1 passing (9ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[16:12:28:960] : Starting to deploy slot SlotTypeOne.
+[16:12:28:965] : Starting to deploy slot SlotTypeTwo.
+{ Error: Command failed: aws lex-models get-slot-type                 --region us-east-1                 --name SlotTypeOne                 --slot-type-version "\$LATEST"
+
+An error occurred (NotFoundException) when calling the GetSlotType operation: The specified resource 'SlotTypeOne' does not exist. Choose another resource.
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
+  killed: false,
+  code: 255,
+  signal: null,
+  cmd:
+   'aws lex-models get-slot-type                 --region us-east-1                 --name SlotTypeOne                 --slot-type-version "\\$LATEST"' }
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (9ms)
+
+0
+
+  1 passing (14ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[16:35:24:230] : Starting to deploy slot SlotTypeOne.
+[16:35:24:235] : Starting to deploy slot SlotTypeTwo.
+{ Error: Command failed: aws lex-models get-slot-type                 --region us-east-1                 --name SlotTypeTwo                 --slot-type-version "\$LATEST"
+
+An error occurred (NotFoundException) when calling the GetSlotType operation: The specified resource 'SlotTypeTwo' does not exist. Choose another resource.
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
+  killed: false,
+  code: 255,
+  signal: null,
+  cmd:
+   'aws lex-models get-slot-type                 --region us-east-1                 --name SlotTypeTwo                 --slot-type-version "\\$LATEST"' }
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (6ms)
+
+0
+
+  1 passing (9ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[16:36:48:68] : Starting to deploy slot SlotTypeOne.
+[16:36:48:73] : Starting to deploy slot SlotTypeTwo.
+{ Error: Command failed: aws lex-models get-slot-type                 --region us-east-1                 --name SlotTypeTwo                 --slot-type-version "\$LATEST"
+
+An error occurred (NotFoundException) when calling the GetSlotType operation: The specified resource 'SlotTypeTwo' does not exist. Choose another resource.
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
+  killed: false,
+  code: 255,
+  signal: null,
+  cmd:
+   'aws lex-models get-slot-type                 --region us-east-1                 --name SlotTypeTwo                 --slot-type-version "\\$LATEST"' }
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (7ms)
+
+0
+
+  1 passing (10ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[16:37:50:123] : Starting to deploy slot SlotTypeOne.
+[16:37:50:128] : Starting to deploy slot SlotTypeTwo.
+{ Error: Command failed: aws lex-models get-slot-type                 --region us-east-1                 --name SlotTypeOne                 --slot-type-version "\$LATEST"
+
+An error occurred (NotFoundException) when calling the GetSlotType operation: The specified resource 'SlotTypeOne' does not exist. Choose another resource.
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
+  killed: false,
+  code: 255,
+  signal: null,
+  cmd:
+   'aws lex-models get-slot-type                 --region us-east-1                 --name SlotTypeOne                 --slot-type-version "\\$LATEST"' }
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (10ms)
+
+0
+
+  1 passing (13ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[16:38:21:973] : Starting to deploy slot SlotTypeOne.
+[16:38:21:978] : Starting to deploy slot SlotTypeTwo.
+{ Error: Command failed: aws lex-models get-slot-type                 --region us-east-1                 --name SlotTypeTwo                 --slot-type-version "\$LATEST"
+
+An error occurred (NotFoundException) when calling the GetSlotType operation: The specified resource 'SlotTypeTwo' does not exist. Choose another resource.
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
+  killed: false,
+  code: 255,
+  signal: null,
+  cmd:
+   'aws lex-models get-slot-type                 --region us-east-1                 --name SlotTypeTwo                 --slot-type-version "\\$LATEST"' }
+{ Error: Command failed: aws lex-models get-slot-type                 --region us-east-1                 --name SlotTypeOne                 --slot-type-version "\$LATEST"
+
+An error occurred (NotFoundException) when calling the GetSlotType operation: The specified resource 'SlotTypeOne' does not exist. Choose another resource.
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Socket.stream.socket.on (internal/child_process.js:380:11)
+    at Socket.emit (events.js:182:13)
+    at Socket.EventEmitter.emit (domain.js:442:20)
+    at Pipe._handle.close (net.js:599:12)
+  killed: false,
+  code: 255,
+  signal: null,
+  cmd:
+   'aws lex-models get-slot-type                 --region us-east-1                 --name SlotTypeOne                 --slot-type-version "\\$LATEST"' }
+[16:38:23:478] : Updating the slot code for SlotTypeTwo
+[16:38:23:484] : Updating the slot code for SlotTypeOne
+{
+    "name": "SlotTypeTwo",
+    "description": "Available pizza sauces two",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        }
+    ],
+    "lastUpdatedDate": 1537889904.401,
+    "createdDate": 1537889904.401,
+    "version": "1",
+    "checksum": "16580b90-1cd0-4cd6-a36c-b4c5341bf289",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[16:38:24:516] : Creating a new version for SlotTypeTwo. New version is 1
+[16:38:24:516] : Slot SlotTypeTwo was deployed.
+[16:38:24:517] : Starting to deploy intent IntentOne.
+[16:38:24:521] : Starting to deploy intent IntentTwo.
+{
+    "name": "SlotTypeOne",
+    "description": "Available pizza sauces",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        },
+        {
+            "value": "blue"
+        },
+        {
+            "value": "white"
+        },
+        {
+            "value": "marron"
+        }
+    ],
+    "lastUpdatedDate": 1537889904.44,
+    "createdDate": 1537889904.44,
+    "version": "1",
+    "checksum": "59ff9699-1651-4918-b043-a4daabd0cca2",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[16:38:24:563] : Creating a new version for SlotTypeOne. New version is 1
+[16:38:24:563] : Slot SlotTypeOne was deployed.
+{ Error: Command failed: aws lex-models get-intent                     --region us-east-1                     --name IntentOne                     --intent-version "\$LATEST"
+
+An error occurred (NotFoundException) when calling the GetIntent operation: The specified resource 'IntentOne' does not exist. Choose another resource.
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
+  killed: false,
+  code: 255,
+  signal: null,
+  cmd:
+   'aws lex-models get-intent                     --region us-east-1                     --name IntentOne                     --intent-version "\\$LATEST"' }
+{ Error: Command failed: aws lex-models get-intent                     --region us-east-1                     --name IntentTwo                     --intent-version "\$LATEST"
+
+An error occurred (NotFoundException) when calling the GetIntent operation: The specified resource 'IntentTwo' does not exist. Choose another resource.
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Socket.stream.socket.on (internal/child_process.js:380:11)
+    at Socket.emit (events.js:182:13)
+    at Socket.EventEmitter.emit (domain.js:442:20)
+    at Pipe._handle.close (net.js:599:12)
+  killed: false,
+  code: 255,
+  signal: null,
+  cmd:
+   'aws lex-models get-intent                     --region us-east-1                     --name IntentTwo                     --intent-version "\\$LATEST"' }
+[16:38:25:900] : Updating the code for intent IntentOne.
+[16:38:25:921] : Updating the code for intent IntentTwo.
+[16:38:26:917] : Getting the checksum of the latest version for IntentOne
+[16:38:26:917] : Intent IntentOne was deployed.
+[16:38:26:918] : Starting to deploy bot BotOne.
+[16:38:26:922] : Starting to deploy bot BotTwo.
+[16:38:27:30] : Getting the checksum of the latest version for IntentTwo
+[16:38:27:30] : Intent IntentTwo was deployed.
+{ Error: Command failed: aws lex-models get-bot                     --region us-east-1                     --name BotOne                     --version-or-alias "\$LATEST"
+
+An error occurred (NotFoundException) when calling the GetBot operation: The specified resource 'BotOne' does not exist. Choose another resource.
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
+  killed: false,
+  code: 255,
+  signal: null,
+  cmd:
+   'aws lex-models get-bot                     --region us-east-1                     --name BotOne                     --version-or-alias "\\$LATEST"' }
+
+
+An error occurred (NotFoundException) when calling the GetBot operation: The specified resource 'BotOne' does not exist. Choose another resource.
+

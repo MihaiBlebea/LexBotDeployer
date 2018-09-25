@@ -54,10 +54,10 @@ class SlotManager
                 --name ${slotName} \
                 --slot-type-version "\\$LATEST"`, (error, stdout, stderr)=> {
             if(error) console.log(error)
-            var data = JSON.parse(stdout)
-            if(stdout !== null)
+            var data = null
+            if(stdout)
             {
-                this.log(`Getting the checksum of the latest version for ${data.name}`)
+                data = JSON.parse(stdout)
             }
             if(callback)
             {
@@ -119,7 +119,11 @@ class SlotManager
             if(error) console.log(error)
             console.log(stdout)
             console.log(stderr)
-            var data = JSON.parse(stdout)
+            var data = null
+            if(stdout)
+            {
+                data = JSON.parse(stdout)
+            }
             this.log(`Creating a new version for ${data.name}. New version is ${data.version}`)
             if(callback)
             {

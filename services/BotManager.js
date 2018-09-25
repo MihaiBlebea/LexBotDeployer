@@ -62,7 +62,11 @@ class BotManager
             } else {
                 console.log(stdout)
                 console.log(stderr)
-                var data = JSON.parse(stdout)
+                var data = null
+                if(stdout)
+                {
+                    data = JSON.parse(stdout)
+                }
                 this.log(`Creating a new version for ${data.name}. New version is ${data.version}`)
                 if(callback)
                 {
@@ -120,8 +124,11 @@ class BotManager
             if(error) console.log(error)
             console.log(stdout)
             console.log(stderr)
-            var data = JSON.parse(stdout)
-            this.log(`Creating a new version for ${data.name}. New version is ${data.version}`)
+            var data = null
+            if(stdout)
+            {
+                data = JSON.parse(stdout)
+            }
             if(callback)
             {
                 callback(data)

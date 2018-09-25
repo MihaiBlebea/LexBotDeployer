@@ -38,7 +38,11 @@ class IntentManager
                     --name ${intentName} \
                     --checksum "${checksum}"`, (error, stdout, stderr)=> {
             if(error) console.log(error)
-            var data = JSON.parse(stdout)
+            var data = null
+            if(stdout)
+            {
+                data = JSON.parse(stdout)
+            }
             if(data !== null)
             {
                 this.log(`Getting the checksum of the latest version for ${data.name}`)
@@ -139,7 +143,11 @@ class IntentManager
                     --name ${intentName} \
                     --intent-version "\\$LATEST"`, (error, stdout, stderr)=> {
             if(error) console.log(error)
-            var data = JSON.parse(stdout)
+            var data = null
+            if(stdout)
+            {
+                data = JSON.parse(stdout)
+            }
             if(data !== null)
             {
                 this.log(`Getting the checksum of the latest version for ${data.name}`)
