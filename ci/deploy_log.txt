@@ -1305,3 +1305,118 @@ STDERR
 [13:46:59:600] : Creating a new version for SlotTypeTwo. New version is 1
 [13:46:59:600] : Slot SlotTypeTwo was deployed.
 [13:47:2:600] : Starting to deploy intent IntentOne.
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (9ms)
+
+0
+
+  1 passing (10ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[13:48:17:111] : Starting to deploy slot SlotTypeOne.
+[13:48:17:117] : Starting to deploy slot SlotTypeTwo.
+[13:48:18:749] : Getting the checksum of the latest version for SlotTypeTwo
+[13:48:18:751] : Getting the checksum of the latest version for SlotTypeOne
+[13:48:22:702] : Updating the slot code for SlotTypeTwo
+[13:48:22:704] : Updating the slot code for SlotTypeOne
+{
+    "name": "SlotTypeOne",
+    "description": "Available pizza sauces",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        },
+        {
+            "value": "blue"
+        },
+        {
+            "value": "white"
+        },
+        {
+            "value": "marron"
+        }
+    ],
+    "lastUpdatedDate": 1537879037.992,
+    "createdDate": 1537879037.992,
+    "version": "9",
+    "checksum": "e3e5025e-91ef-4706-92ee-3e91f940840f",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[13:48:27:204] : Creating a new version for SlotTypeOne. New version is 9
+[13:48:27:204] : Slot SlotTypeOne was deployed.
+{
+    "name": "SlotTypeTwo",
+    "description": "Available pizza sauces two",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        }
+    ],
+    "lastUpdatedDate": 1537795114.868,
+    "createdDate": 1537795114.868,
+    "version": "1",
+    "checksum": "e160124c-9bbf-471a-95f6-e6605f3b7e85",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[13:48:27:205] : Creating a new version for SlotTypeTwo. New version is 1
+[13:48:27:205] : Slot SlotTypeTwo was deployed.
+[13:48:30:211] : Starting to deploy intent IntentOne.
+[13:48:30:215] : Starting to deploy intent IntentTwo.
+[13:48:31:671] : Getting the checksum of the latest version for IntentTwo
+[13:48:31:672] : Getting the checksum of the latest version for IntentOne
+[13:48:35:947] : Updating the code for intent IntentOne.
+[13:48:35:948] : Updating the code for intent IntentTwo.
+[13:48:40:515] : Getting the checksum of the latest version for IntentOne
+[13:48:40:515] : Intent IntentOne was deployed.
+[13:48:40:521] : Getting the checksum of the latest version for IntentTwo
+[13:48:40:521] : Intent IntentTwo was deployed.
+[13:48:43:519] : Starting to deploy bot BotOne.
+[13:48:43:522] : Starting to deploy bot BotTwo.
+[13:48:44:83] : Getting the checksum for the latest version of bot BotOne.
+[13:48:45:31] : Getting the checksum for the latest version of bot BotTwo.
+[13:48:49:623] : Updating the code for the bot BotOne.
+[13:48:50:590] : Updating the code for the bot BotTwo.
+[13:48:55:183] : Creating a new version for bot BotOne. New bot version is 11
+[13:48:55:183] : Bot BotOne was deployed.
+[13:48:56:177] : Creating a new version for bot BotTwo. New bot version is 7
+[13:48:56:177] : Bot BotTwo was deployed.
+REACH THE END
