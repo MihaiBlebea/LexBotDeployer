@@ -1667,3 +1667,118 @@ LimitExceededException: The rate of requests exceeds the throughput limit. Retry
     at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10
     at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:9)
     at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:12)
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (8ms)
+
+0
+
+  1 passing (9ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[13:50:57:895] : Starting to deploy slot SlotTypeOne.
+[13:50:57:899] : Starting to deploy slot SlotTypeTwo.
+[13:50:59:482] : Getting the checksum of the latest version for SlotTypeTwo
+[13:50:59:483] : Getting the checksum of the latest version for SlotTypeOne
+[13:51:0:555] : Updating the slot code for SlotTypeTwo
+[13:51:0:557] : Updating the slot code for SlotTypeOne
+{
+    "name": "SlotTypeOne",
+    "description": "Available pizza sauces",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        },
+        {
+            "value": "blue"
+        },
+        {
+            "value": "white"
+        },
+        {
+            "value": "marron"
+        }
+    ],
+    "lastUpdatedDate": 1537879037.992,
+    "createdDate": 1537879037.992,
+    "version": "9",
+    "checksum": "e3e5025e-91ef-4706-92ee-3e91f940840f",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[13:51:2:185] : Creating a new version for SlotTypeOne. New version is 9
+[13:51:2:185] : Slot SlotTypeOne was deployed.
+[13:51:2:196] : Starting to deploy intent IntentOne.
+[13:51:2:200] : Starting to deploy intent IntentTwo.
+{
+    "name": "SlotTypeTwo",
+    "description": "Available pizza sauces two",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        }
+    ],
+    "lastUpdatedDate": 1537795114.868,
+    "createdDate": 1537795114.868,
+    "version": "1",
+    "checksum": "e160124c-9bbf-471a-95f6-e6605f3b7e85",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[13:51:2:596] : Creating a new version for SlotTypeTwo. New version is 1
+[13:51:2:597] : Slot SlotTypeTwo was deployed.
+[13:51:3:990] : Getting the checksum of the latest version for IntentTwo
+[13:51:4:13] : Getting the checksum of the latest version for IntentOne
+[13:51:4:903] : Updating the code for intent IntentTwo.
+[13:51:4:908] : Updating the code for intent IntentOne.
+[13:51:7:22] : Getting the checksum of the latest version for IntentTwo
+[13:51:7:22] : Intent IntentTwo was deployed.
+[13:51:7:32] : Getting the checksum of the latest version for IntentOne
+[13:51:7:33] : Intent IntentOne was deployed.
+[13:51:7:33] : Starting to deploy bot BotOne.
+[13:51:7:36] : Starting to deploy bot BotTwo.
+[13:51:7:614] : Getting the checksum for the latest version of bot BotOne.
+[13:51:7:620] : Getting the checksum for the latest version of bot BotTwo.
+[13:51:8:216] : Updating the code for the bot BotTwo.
+[13:51:8:219] : Updating the code for the bot BotOne.
+[13:51:8:811] : Creating a new version for bot BotTwo. New bot version is 7
+[13:51:8:811] : Bot BotTwo was deployed.
+[13:51:8:819] : Creating a new version for bot BotOne. New bot version is 11
+[13:51:8:820] : Bot BotOne was deployed.
+REACH THE END
