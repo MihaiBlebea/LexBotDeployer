@@ -27,41 +27,72 @@ class SlotManager
         })
     }
 
-    getSlotVersionNonCli(slotName, callback)
-    {
-        var params = {
-            version: "$LATEST",
-            name: slotName
-        }
-        this.lex.getSlotType(params, (error, data)=> {
-            // if(error) console.log(error.stack)
-            if(data !== null)
-            {
-                this.log(`Getting the checksum of the latest version for ${data.name}`)
-            }
-
-            if(callback)
-            {
-                callback(data)
-            }
-        })
-    }
+    // getSlotVersionNonCli(slotName, callback)
+    // {
+    //     var params = {
+    //         version: "$LATEST",
+    //         name: slotName
+    //     }
+    //     this.lex.getSlotType(params, (error, data)=> {
+    //         // if(error) console.log(error.stack)
+    //         if(data !== null)
+    //         {
+    //             this.log(`Getting the checksum of the latest version for ${data.name}`)
+    //         }
+    //
+    //         if(callback)
+    //         {
+    //             callback(data)
+    //         }
+    //     })
+    // }
 
     getSlotVersion(slotName, callback)
     {
         exec(`aws lex-models get-slot-type \
-                --region eu-west-1 \
+                --region us-east-1 \
                 --name ${slotName} \
-                --slot-type-version "\$LATEST"`, (error, stdout, stderr)=> {
+                --slot-type-version "\\$LATEST"`, (error, stdout, stderr)=> {
             if(error) console.log(error)
-            console.log('STDOUT', stdout)
-            console.log('STDERR', stderr)
             if(callback)
             {
                 callback(stdout)
             }
         })
     }
+
+//     put-slot-type
+// --name <value>
+// [--description <value>]
+// [--enumeration-values <value>]
+// [--checksum <value>]
+// [--value-selection-strategy <value>]
+// [--create-version | --no-create-version]
+// [--cli-input-json <value>]
+
+    // putSlot(slotName, versionData, callback)
+    // {
+    //     var slotFileJson = require('./../repos/slots/' + slotName + '.json')
+    //     if(versionData !== null)
+    //     {
+    //         slotFileJson = {
+    //             ...slotFileJson,
+    //             checksum: versionData.checksum
+    //         }
+    //     }
+    //     this.lex.putSlotType(slotFileJson, (error, data)=> {
+    //         if(error)
+    //         {
+    //             console.log(error.stack);
+    //         } else {
+    //             this.log(`Updating the slot code for ${data.name}`)
+    //             if(callback)
+    //             {
+    //                 callback(data)
+    //             }
+    //         }
+    //     })
+    // }
 
     putSlot(slotName, versionData, callback)
     {
@@ -73,18 +104,29 @@ class SlotManager
                 checksum: versionData.checksum
             }
         }
-        this.lex.putSlotType(slotFileJson, (error, data)=> {
-            if(error)
+
+        exec(`aws lex-models put-slot-type \
+                    --name ${slotName} \
+                    --enumeration-values "${slotFileJson}"`, (error, stdout, stderr)=> {
+            if(error) console.log(error)
+            if(callback)
             {
-                console.log(error.stack);
-            } else {
-                this.log(`Updating the slot code for ${data.name}`)
-                if(callback)
-                {
-                    callback(data)
-                }
+                callback(stdout)
             }
         })
+
+        // this.lex.putSlotType(slotFileJson, (error, data)=> {
+        //     if(error)
+        //     {
+        //         console.log(error.stack);
+        //     } else {
+        //         this.log(`Updating the slot code for ${data.name}`)
+        //         if(callback)
+        //         {
+        //             callback(data)
+        //         }
+        //     }
+        // })
     }
 
     createSlotVersion(slotName, checksum, callback)
