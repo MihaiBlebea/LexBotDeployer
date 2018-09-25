@@ -1,0 +1,92 @@
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (13ms)
+
+0
+
+  1 passing (15ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[11:11:13:868] : Starting to deploy slot SlotTypeOne.
+[11:11:13:873] : Starting to deploy slot SlotTypeTwo.
+{ Error: Command failed: aws lex-models put-slot-type                     --name SlotTypeTwo                     --enumeration-values "[object Object]"
+
+Expecting value: line 1 column 2 (char 1)
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
+  killed: false,
+  code: 255,
+  signal: null,
+  cmd:
+   'aws lex-models put-slot-type                     --name SlotTypeTwo                     --enumeration-values "[object Object]"' }
+{ Error: Command failed: aws lex-models put-slot-type                     --name SlotTypeOne                     --enumeration-values "[object Object]"
+
+Expecting value: line 1 column 2 (char 1)
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
+  killed: false,
+  code: 255,
+  signal: null,
+  cmd:
+   'aws lex-models put-slot-type                     --name SlotTypeOne                     --enumeration-values "[object Object]"' }
+[11:11:22:697] : Creating a new version for SlotTypeTwo. New version is 1
+[11:11:22:697] : Slot SlotTypeTwo was deployed.
+[11:11:22:699] : Creating a new version for SlotTypeOne. New version is 8
+[11:11:22:699] : Slot SlotTypeOne was deployed.
+[11:11:25:702] : Starting to deploy intent IntentOne.
+[11:11:25:705] : Starting to deploy intent IntentTwo.
+[11:11:26:642] : Getting the checksum for the latest version of intent IntentOne.
+[11:11:26:654] : Getting the checksum for the latest version of intent IntentTwo.
+[11:11:30:520] : Updating the code for intent IntentOne.
+[11:11:30:544] : Updating the code for intent IntentTwo.
+[11:11:34:30] : Creating a new version for intent IntentOne. New version is 9
+[11:11:34:30] : Intent IntentOne was deployed.
+[11:11:34:156] : Creating a new version for intent IntentTwo. New version is 5
+[11:11:34:156] : Intent IntentTwo was deployed.
+[11:11:37:35] : Starting to deploy bot BotOne.
+[11:11:37:38] : Starting to deploy bot BotTwo.
+[11:11:37:546] : Getting the checksum for the latest version of bot BotOne.
+[11:11:37:590] : Getting the checksum for the latest version of bot BotTwo.
+[11:11:43:60] : Updating the code for the bot BotOne.
+[11:11:43:95] : Updating the code for the bot BotTwo.
+[11:11:48:588] : Creating a new version for bot BotOne. New bot version is 9
+[11:11:48:588] : Bot BotOne was deployed.
+[11:11:48:698] : Creating a new version for bot BotTwo. New bot version is 5
+[11:11:48:698] : Bot BotTwo was deployed.
+REACH THE END

@@ -16,6 +16,16 @@ const getSlotType = (slotName, callback)=> {
     })
 }
 
+exec(`aws lex-models put-slot-type \
+            --name ${slotName} \
+            --cli-input-json file://repos/slots/SlotTypeOne.json `, (error, stdout, stderr)=> {
+    if(error) console.log(error)
+    if(callback)
+    {
+        callback(stdout)
+    }
+})
+
 
 getSlotType('SlotTypeOne', ()=> {
     console.log('ceva')

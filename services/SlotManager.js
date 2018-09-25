@@ -61,39 +61,6 @@ class SlotManager
         })
     }
 
-//     put-slot-type
-// --name <value>
-// [--description <value>]
-// [--enumeration-values <value>]
-// [--checksum <value>]
-// [--value-selection-strategy <value>]
-// [--create-version | --no-create-version]
-// [--cli-input-json <value>]
-
-    // putSlot(slotName, versionData, callback)
-    // {
-    //     var slotFileJson = require('./../repos/slots/' + slotName + '.json')
-    //     if(versionData !== null)
-    //     {
-    //         slotFileJson = {
-    //             ...slotFileJson,
-    //             checksum: versionData.checksum
-    //         }
-    //     }
-    //     this.lex.putSlotType(slotFileJson, (error, data)=> {
-    //         if(error)
-    //         {
-    //             console.log(error.stack);
-    //         } else {
-    //             this.log(`Updating the slot code for ${data.name}`)
-    //             if(callback)
-    //             {
-    //                 callback(data)
-    //             }
-    //         }
-    //     })
-    // }
-
     putSlot(slotName, versionData, callback)
     {
         var slotFileJson = require('./../repos/slots/' + slotName + '.json')
@@ -104,49 +71,71 @@ class SlotManager
                 checksum: versionData.checksum
             }
         }
-
-        exec(`aws lex-models put-slot-type \
-                    --name ${slotName} \
-                    --enumeration-values "${slotFileJson}"`, (error, stdout, stderr)=> {
-            if(error) console.log(error)
-            if(callback)
-            {
-                callback(stdout)
-            }
-        })
-
-        // this.lex.putSlotType(slotFileJson, (error, data)=> {
-        //     if(error)
-        //     {
-        //         console.log(error.stack);
-        //     } else {
-        //         this.log(`Updating the slot code for ${data.name}`)
-        //         if(callback)
-        //         {
-        //             callback(data)
-        //         }
-        //     }
-        // })
-    }
-
-    createSlotVersion(slotName, checksum, callback)
-    {
-        var params = {
-            name: slotName,
-            checksum: checksum
-        }
-        this.lex.createSlotTypeVersion(params, (error, data)=> {
+        this.lex.putSlotType(slotFileJson, (error, data)=> {
             if(error)
             {
                 console.log(error.stack);
             } else {
-                this.log(`Creating a new version for ${data.name}. New version is ${data.version}`)
+                this.log(`Updating the slot code for ${data.name}`)
                 if(callback)
                 {
                     callback(data)
                 }
             }
         })
+    }
+
+    // createSlotVersion(slotName, checksum, callback)
+    // {
+    //     var params = {
+    //         name: slotName,
+    //         checksum: checksum
+    //     }
+    //     this.lex.createSlotTypeVersion(params, (error, data)=> {
+    //         if(error)
+    //         {
+    //             console.log(error.stack);
+    //         } else {
+    //             this.log(`Creating a new version for ${data.name}. New version is ${data.version}`)
+    //             if(callback)
+    //             {
+    //                 callback(data)
+    //             }
+    //         }
+    //     })
+    // }
+
+    createSlotVersion(slotName, checksum, callback)
+    {
+
+        exec(`aws lex-models create-slot-type-version
+                    --name ${slotName}
+                    --checksum ${checksum}`, (error, stdout, stderr)=> {
+            if(error) console.log(error)
+            this.log(`Creating a new version for ${stdout.name}. New version is ${stdout.version}`)
+            if(callback)
+            {
+                callback(stdout)
+            }
+        })
+
+
+        // var params = {
+        //     name: slotName,
+        //     checksum: checksum
+        // }
+        // this.lex.createSlotTypeVersion(params, (error, data)=> {
+        //     if(error)
+        //     {
+        //         console.log(error.stack);
+        //     } else {
+        //         this.log(`Creating a new version for ${data.name}. New version is ${data.version}`)
+        //         if(callback)
+        //         {
+        //             callback(data)
+        //         }
+        //     }
+        // })
     }
 
     deleteSlot(slotName)
