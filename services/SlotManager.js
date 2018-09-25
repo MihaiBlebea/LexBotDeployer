@@ -67,7 +67,7 @@ class SlotManager
 
     putSlot(slotName, versionData, callback)
     {
-        console.log('CHECKSUM', versionData)
+        console.log('CHECKSUM', versionData.checksum)
         var slotFileJson = require('./../repos/slots/' + slotName + '.json')
         if(versionData !== null)
         {
