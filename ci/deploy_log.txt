@@ -225,3 +225,230 @@ STDERR
 [13:56:39:106] : Creating a new version for BotTwo. New version is 7
 [13:56:39:106] : Bot BotTwo was deployed.
 REACH THE END
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (7ms)
+
+0
+
+  1 passing (10ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[13:57:7:388] : Starting to deploy slot SlotTypeOne.
+[13:57:7:393] : Starting to deploy slot SlotTypeTwo.
+[13:57:8:417] : Getting the checksum of the latest version for SlotTypeOne
+[13:57:8:676] : Getting the checksum of the latest version for SlotTypeTwo
+[13:57:9:625] : Updating the slot code for SlotTypeTwo
+[13:57:9:959] : Updating the slot code for SlotTypeOne
+{
+    "name": "SlotTypeTwo",
+    "description": "Available pizza sauces two",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        }
+    ],
+    "lastUpdatedDate": 1537795114.868,
+    "createdDate": 1537795114.868,
+    "version": "1",
+    "checksum": "e160124c-9bbf-471a-95f6-e6605f3b7e85",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[13:57:10:665] : Creating a new version for SlotTypeTwo. New version is 1
+[13:57:10:665] : Slot SlotTypeTwo was deployed.
+[13:57:10:676] : Starting to deploy intent IntentOne.
+[13:57:10:680] : Starting to deploy intent IntentTwo.
+[13:57:12:51] : Getting the checksum of the latest version for IntentOne
+{
+    "name": "SlotTypeOne",
+    "description": "Available pizza sauces",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        },
+        {
+            "value": "blue"
+        },
+        {
+            "value": "white"
+        },
+        {
+            "value": "marron"
+        }
+    ],
+    "lastUpdatedDate": 1537879037.992,
+    "createdDate": 1537879037.992,
+    "version": "9",
+    "checksum": "e3e5025e-91ef-4706-92ee-3e91f940840f",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[13:57:12:221] : Creating a new version for SlotTypeOne. New version is 9
+[13:57:12:221] : Slot SlotTypeOne was deployed.
+[13:57:14:417] : Updating the code for intent IntentOne.
+[13:57:15:756] : Getting the checksum of the latest version for IntentOne
+[13:57:15:757] : Intent IntentOne was deployed.
+[13:57:15:771] : Starting to deploy bot BotOne.
+[13:57:15:775] : Starting to deploy bot BotTwo.
+[13:57:16:96] : Getting the checksum of the latest version for IntentTwo
+[13:57:16:414] : Updating the code for intent IntentTwo.
+{
+    "name": "BotOne",
+    "description": "Bot to order human2222",
+    "intents": [
+        {
+            "intentName": "IntentOne",
+            "intentVersion": "11"
+        }
+    ],
+    "clarificationPrompt": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "I didn't understand you, what would you like to do?"
+            }
+        ],
+        "maxAttempts": 3
+    },
+    "abortStatement": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "Sorry, I'm not able to assist at this time"
+            }
+        ]
+    },
+    "status": "READY",
+    "lastUpdatedDate": 1537879129.19,
+    "createdDate": 1537795133.575,
+    "idleSessionTTLInSeconds": 600,
+    "voiceId": "Salli",
+    "checksum": "5a5011bc-add2-43bf-a729-78154db2e7ac",
+    "version": "$LATEST",
+    "locale": "en-US",
+    "childDirected": false
+}
+
+
+[13:57:16:866] : Creating a new version for BotOne. New version is $LATEST
+[13:57:17:504] : Updating the code for the bot BotOne.
+{
+    "name": "BotTwo",
+    "description": "Bot to order human",
+    "intents": [
+        {
+            "intentName": "IntentOne",
+            "intentVersion": "11"
+        }
+    ],
+    "clarificationPrompt": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "I didn't understand you, what would you like to do?"
+            }
+        ],
+        "maxAttempts": 3
+    },
+    "abortStatement": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "Sorry, I'm not able to assist at this time"
+            }
+        ]
+    },
+    "status": "READY",
+    "lastUpdatedDate": 1537879137.186,
+    "createdDate": 1537795133.577,
+    "idleSessionTTLInSeconds": 600,
+    "voiceId": "Salli",
+    "checksum": "18207f05-a568-4eca-b108-ca67500ae63b",
+    "version": "$LATEST",
+    "locale": "en-US",
+    "childDirected": false
+}
+
+
+[13:57:17:781] : Creating a new version for BotTwo. New version is $LATEST
+[13:57:17:923] : Getting the checksum of the latest version for IntentTwo
+[13:57:17:923] : Intent IntentTwo was deployed.
+[13:57:18:284] : Updating the code for the bot BotTwo.
+{
+    "name": "BotOne",
+    "description": "Bot to order human2222",
+    "intents": [
+        {
+            "intentName": "IntentOne",
+            "intentVersion": "12"
+        }
+    ],
+    "clarificationPrompt": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "I didn't understand you, what would you like to do?"
+            }
+        ],
+        "maxAttempts": 3
+    },
+    "abortStatement": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "Sorry, I'm not able to assist at this time"
+            }
+        ]
+    },
+    "status": "BUILDING",
+    "lastUpdatedDate": 1537880239.763,
+    "createdDate": 1537880239.763,
+    "idleSessionTTLInSeconds": 600,
+    "voiceId": "Salli",
+    "checksum": "2a209a5c-691b-4d5a-8c58-10d430d0f3f5",
+    "version": "12",
+    "locale": "en-US",
+    "childDirected": false
+}
+
+
+[13:57:19:920] : Creating a new version for BotOne. New version is 12
+[13:57:19:921] : Bot BotOne was deployed.
+REACH THE END
