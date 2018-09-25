@@ -1535,3 +1535,135 @@ STDERR
 [13:49:38:855] : Creating a new version for bot BotOne. New bot version is 11
 [13:49:38:855] : Bot BotOne was deployed.
 REACH THE END
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (7ms)
+
+0
+
+  1 passing (11ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[13:50:11:799] : Starting to deploy slot SlotTypeOne.
+[13:50:11:804] : Starting to deploy slot SlotTypeTwo.
+[13:50:13:420] : Getting the checksum of the latest version for SlotTypeTwo
+[13:50:13:422] : Getting the checksum of the latest version for SlotTypeOne
+[13:50:15:307] : Updating the slot code for SlotTypeOne
+[13:50:15:332] : Updating the slot code for SlotTypeTwo
+{
+    "name": "SlotTypeOne",
+    "description": "Available pizza sauces",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        },
+        {
+            "value": "blue"
+        },
+        {
+            "value": "white"
+        },
+        {
+            "value": "marron"
+        }
+    ],
+    "lastUpdatedDate": 1537879037.992,
+    "createdDate": 1537879037.992,
+    "version": "9",
+    "checksum": "e3e5025e-91ef-4706-92ee-3e91f940840f",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[13:50:17:941] : Creating a new version for SlotTypeOne. New version is 9
+[13:50:17:941] : Slot SlotTypeOne was deployed.
+{
+    "name": "SlotTypeTwo",
+    "description": "Available pizza sauces two",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        }
+    ],
+    "lastUpdatedDate": 1537795114.868,
+    "createdDate": 1537795114.868,
+    "version": "1",
+    "checksum": "e160124c-9bbf-471a-95f6-e6605f3b7e85",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[13:50:17:957] : Creating a new version for SlotTypeTwo. New version is 1
+[13:50:17:957] : Slot SlotTypeTwo was deployed.
+[13:50:18:942] : Starting to deploy intent IntentOne.
+[13:50:18:947] : Starting to deploy intent IntentTwo.
+[13:50:20:441] : Getting the checksum of the latest version for IntentTwo
+[13:50:20:465] : Getting the checksum of the latest version for IntentOne
+[13:50:21:994] : Updating the code for intent IntentTwo.
+[13:50:23:135] : Updating the code for intent IntentOne.
+[13:50:24:463] : Getting the checksum of the latest version for IntentTwo
+[13:50:24:463] : Intent IntentTwo was deployed.
+[13:50:25:470] : Starting to deploy bot BotOne.
+[13:50:25:473] : Starting to deploy bot BotTwo.
+[13:50:25:700] : Getting the checksum of the latest version for IntentOne
+[13:50:25:700] : Intent IntentOne was deployed.
+[13:50:26:70] : Getting the checksum for the latest version of bot BotOne.
+[13:50:26:91] : Getting the checksum for the latest version of bot BotTwo.
+[13:50:27:635] : Updating the code for the bot BotOne.
+[13:50:27:640] : Updating the code for the bot BotTwo.
+LimitExceededException: The rate of requests exceeds the throughput limit. Retry the request.
+    at Object.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/json.js:48:27)
+    at Request.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/rest_json.js:52:8)
+    at Request.callListeners (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:109:20)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:81:10)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:683:14)
+    at Request.transition (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:22:10)
+    at AcceptorStateMachine.runTo (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:14:12)
+    at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10
+    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:9)
+    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:12)
+LimitExceededException: The rate of requests exceeds the throughput limit. Retry the request.
+    at Object.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/json.js:48:27)
+    at Request.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/rest_json.js:52:8)
+    at Request.callListeners (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:109:20)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:81:10)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:683:14)
+    at Request.transition (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:22:10)
+    at AcceptorStateMachine.runTo (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:14:12)
+    at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10
+    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:9)
+    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:12)
