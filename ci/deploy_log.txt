@@ -902,3 +902,106 @@ An error occurred (PreconditionFailedException) when calling the CreateSlotTypeV
 
 An error occurred (PreconditionFailedException) when calling the CreateSlotTypeVersion operation: The checksum value doesn't match for the resource named 'SlotTypeOne'.
 
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (8ms)
+
+0
+
+  1 passing (10ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[13:36:2:726] : Starting to deploy slot SlotTypeOne.
+[13:36:2:731] : Starting to deploy slot SlotTypeTwo.
+[13:36:5:290] : Getting the checksum of the latest version for SlotTypeOne
+[13:36:5:312] : Getting the checksum of the latest version for SlotTypeTwo
+[13:36:9:210] : Updating the slot code for SlotTypeOne
+[13:36:9:235] : Updating the slot code for SlotTypeTwo
+{ Error: Command failed: aws lex-models create-slot-type-version                     --region region us-east-1                     --name SlotTypeOne                     --checksum e3e5025e-91ef-4706-92ee-3e91f940840f
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+
+Unknown options: us-east-1
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
+  killed: false,
+  code: 255,
+  signal: null,
+  cmd:
+   'aws lex-models create-slot-type-version                     --region region us-east-1                     --name SlotTypeOne                     --checksum e3e5025e-91ef-4706-92ee-3e91f940840f' }
+
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+
+Unknown options: us-east-1
+
+{ Error: Command failed: aws lex-models create-slot-type-version                     --region region us-east-1                     --name SlotTypeTwo                     --checksum e160124c-9bbf-471a-95f6-e6605f3b7e85
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+
+Unknown options: us-east-1
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
+  killed: false,
+  code: 255,
+  signal: null,
+  cmd:
+   'aws lex-models create-slot-type-version                     --region region us-east-1                     --name SlotTypeTwo                     --checksum e160124c-9bbf-471a-95f6-e6605f3b7e85' }
+
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+
+Unknown options: us-east-1
+
