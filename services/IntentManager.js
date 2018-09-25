@@ -176,21 +176,15 @@ class IntentManager
         }
         this.log(`Starting to deploy intent ${intentName}.`)
         this.getIntentLatestVersion(intentName, (versionData)=> {
-            setTimeout(()=> {
-                this.putIntent(intentName, versionData, slotVersions, (data)=> {
-                    setTimeout(()=> {
-                        this.createIntentVersion(intentName, data.checksum, (data)=> {
-                            this.log(`Intent ${intentName} was deployed.`)
-                            if(callback)
-                            {
-                                setTimeout(()=> {
-                                    callback(data)
-                                }, timeout)
-                            }
-                        })
-                    }, timeout)
+            this.putIntent(intentName, versionData, slotVersions, (data)=> {
+                this.createIntentVersion(intentName, data.checksum, (data)=> {
+                    this.log(`Intent ${intentName} was deployed.`)
+                    if(callback)
+                    {
+                        callback(data)
+                    }
                 })
-            }, timeout)
+            })
         })
     }
 }

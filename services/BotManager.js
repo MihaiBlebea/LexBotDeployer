@@ -190,28 +190,20 @@ class BotManager
 
         this.log(`Starting to deploy bot ${botName}.`)
         this.getBotVersions(botName, (versionData)=> {
-        
-                this.putBot(botName, versionData, intentVersions, (data)=> {
-                
-                        this.createBotVersion(botName, data.checksum, (data)=> {
-                            this.log(`Bot ${botName} was deployed.`)
-
-                            var params = {
-                                botName: botName,
-                                botVersion: data.version,
-                                name: 'Testing'
-                            }
-
-                            if(callback)
-                            {
-                        
-                                    callback(data)
-                        
-                            }
-                        })
-            
+            this.putBot(botName, versionData, intentVersions, (data)=> {
+                this.createBotVersion(botName, data.checksum, (data)=> {
+                    this.log(`Bot ${botName} was deployed.`)
+                    var params = {
+                        botName: botName,
+                        botVersion: data.version,
+                        name: 'Testing'
+                    }
+                    if(callback)
+                    {
+                        callback(data)
+                    }
                 })
-        
+            })
         })
     }
 }
