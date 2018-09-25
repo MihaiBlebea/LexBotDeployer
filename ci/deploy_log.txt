@@ -624,3 +624,120 @@ aws: error: the following arguments are required: --name
   cmd:
    'aws lex-models create-slot-type-version\n                    --name SlotTypeTwo\n                    --checksum e160124c-9bbf-471a-95f6-e6605f3b7e85' }
 
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (7ms)
+
+0
+
+  1 passing (9ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[12:21:55:82] : Starting to deploy slot SlotTypeOne.
+[12:21:55:88] : Starting to deploy slot SlotTypeTwo.
+[12:21:56:323] : Getting the checksum of the latest version for SlotTypeTwo
+[12:21:56:331] : Getting the checksum of the latest version for SlotTypeOne
+[12:22:0:101] : Updating the slot code for SlotTypeTwo
+[12:22:0:104] : Updating the slot code for SlotTypeOne
+{ Error: Command failed: aws lex-models create-slot-type-version
+                    --name SlotTypeOne
+                    --checksum e3e5025e-91ef-4706-92ee-3e91f940840f
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+aws: error: the following arguments are required: --name
+/bin/sh: line 1: --name: command not found
+/bin/sh: line 2: --checksum: command not found
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Socket.stream.socket.on (internal/child_process.js:380:11)
+    at Socket.emit (events.js:182:13)
+    at Socket.EventEmitter.emit (domain.js:442:20)
+    at Pipe._handle.close (net.js:599:12)
+  killed: false,
+  code: 127,
+  signal: null,
+  cmd:
+   'aws lex-models create-slot-type-version\n                    --name SlotTypeOne\n                    --checksum e3e5025e-91ef-4706-92ee-3e91f940840f' }
+
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+aws: error: the following arguments are required: --name
+/bin/sh: line 1: --name: command not found
+/bin/sh: line 2: --checksum: command not found
+
+{ Error: Command failed: aws lex-models create-slot-type-version
+                    --name SlotTypeTwo
+                    --checksum e160124c-9bbf-471a-95f6-e6605f3b7e85
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+aws: error: the following arguments are required: --name
+/bin/sh: line 1: --name: command not found
+/bin/sh: line 2: --checksum: command not found
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Socket.stream.socket.on (internal/child_process.js:380:11)
+    at Socket.emit (events.js:182:13)
+    at Socket.EventEmitter.emit (domain.js:442:20)
+    at Pipe._handle.close (net.js:599:12)
+  killed: false,
+  code: 127,
+  signal: null,
+  cmd:
+   'aws lex-models create-slot-type-version\n                    --name SlotTypeTwo\n                    --checksum e160124c-9bbf-471a-95f6-e6605f3b7e85' }
+
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+aws: error: the following arguments are required: --name
+/bin/sh: line 1: --name: command not found
+/bin/sh: line 2: --checksum: command not found
+

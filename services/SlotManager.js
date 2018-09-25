@@ -112,8 +112,8 @@ class SlotManager
 
     createSlotVersion(slotName, checksum, callback)
     {
-        exec(`aws lex-models create-slot-type-version
-                    --name ${slotName}
+        exec(`aws lex-models create-slot-type-version \
+                    --name ${slotName} \
                     --checksum ${checksum}`, (error, stdout, stderr)=> {
             if(error) console.log(error)
             console.log(stdout)
