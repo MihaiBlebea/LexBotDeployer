@@ -1113,3 +1113,240 @@ STDERR
 [14:6:15:524] : Creating a new version for BotTwo. New version is 9
 [14:6:15:524] : Bot BotTwo was deployed.
 REACH THE END
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (7ms)
+
+0
+
+  1 passing (9ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[14:8:34:432] : Starting to deploy slot SlotTypeOne.
+[14:8:34:437] : Starting to deploy slot SlotTypeTwo.
+[14:8:35:955] : Getting the checksum of the latest version for SlotTypeOne
+[14:8:36:5] : Getting the checksum of the latest version for SlotTypeTwo
+[14:8:36:910] : Updating the slot code for SlotTypeTwo
+[14:8:36:916] : Updating the slot code for SlotTypeOne
+{
+    "name": "SlotTypeTwo",
+    "description": "Available pizza sauces two",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        }
+    ],
+    "lastUpdatedDate": 1537795114.868,
+    "createdDate": 1537795114.868,
+    "version": "1",
+    "checksum": "e160124c-9bbf-471a-95f6-e6605f3b7e85",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[14:8:38:364] : Creating a new version for SlotTypeTwo. New version is 1
+[14:8:38:364] : Slot SlotTypeTwo was deployed.
+[14:8:38:365] : Starting to deploy intent IntentOne.
+[14:8:38:368] : Starting to deploy intent IntentTwo.
+{
+    "name": "SlotTypeOne",
+    "description": "Available pizza sauces",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        },
+        {
+            "value": "blue"
+        },
+        {
+            "value": "white"
+        },
+        {
+            "value": "marron"
+        }
+    ],
+    "lastUpdatedDate": 1537880636.905,
+    "createdDate": 1537880636.905,
+    "version": "11",
+    "checksum": "b2fb921c-d4cb-4e82-8ecf-e9262fc824d1",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[14:8:38:372] : Creating a new version for SlotTypeOne. New version is 11
+[14:8:38:372] : Slot SlotTypeOne was deployed.
+[14:8:39:778] : Getting the checksum of the latest version for IntentOne
+[14:8:39:788] : Getting the checksum of the latest version for IntentTwo
+[14:8:40:604] : Updating the code for intent IntentTwo.
+[14:8:40:611] : Updating the code for intent IntentOne.
+[14:8:42:78] : Getting the checksum of the latest version for IntentTwo
+[14:8:42:78] : Intent IntentTwo was deployed.
+[14:8:42:79] : Starting to deploy bot BotOne.
+[14:8:42:83] : Starting to deploy bot BotTwo.
+[14:8:42:128] : Getting the checksum of the latest version for IntentOne
+[14:8:42:128] : Intent IntentOne was deployed.
+{
+    "name": "BotOne",
+    "description": "Bot to order human2222",
+    "intents": [
+        {
+            "intentName": "IntentOne",
+            "intentVersion": "14"
+        }
+    ],
+    "clarificationPrompt": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "I didn't understand you, what would you like to do?"
+            }
+        ],
+        "maxAttempts": 3
+    },
+    "abortStatement": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "Sorry, I'm not able to assist at this time"
+            }
+        ]
+    },
+    "status": "READY",
+    "lastUpdatedDate": 1537880665.024,
+    "createdDate": 1537795133.575,
+    "idleSessionTTLInSeconds": 600,
+    "voiceId": "Salli",
+    "checksum": "566d9fba-d270-4a6f-8177-0e0b35c24b07",
+    "version": "$LATEST",
+    "locale": "en-US",
+    "childDirected": false
+}
+
+
+[14:8:43:640] : Creating a new version for BotOne. New version is $LATEST
+[14:8:44:206] : Updating the code for the bot BotOne.
+{
+    "name": "BotTwo",
+    "description": "Bot to order human",
+    "intents": [
+        {
+            "intentName": "IntentOne",
+            "intentVersion": "14"
+        }
+    ],
+    "clarificationPrompt": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "I didn't understand you, what would you like to do?"
+            }
+        ],
+        "maxAttempts": 3
+    },
+    "abortStatement": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "Sorry, I'm not able to assist at this time"
+            }
+        ]
+    },
+    "status": "READY",
+    "lastUpdatedDate": 1537880675.155,
+    "createdDate": 1537795133.577,
+    "idleSessionTTLInSeconds": 600,
+    "voiceId": "Salli",
+    "checksum": "cc649764-5790-49bd-ba14-ed3fab209bac",
+    "version": "$LATEST",
+    "locale": "en-US",
+    "childDirected": false
+}
+
+
+[14:8:45:373] : Creating a new version for BotTwo. New version is $LATEST
+LimitExceededException: The rate of requests exceeds the throughput limit. Retry the request.
+    at Object.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/json.js:48:27)
+    at Request.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/rest_json.js:52:8)
+    at Request.callListeners (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:109:20)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:81:10)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:683:14)
+    at Request.transition (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:22:10)
+    at AcceptorStateMachine.runTo (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:14:12)
+    at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10
+    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:9)
+    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:12)
+{
+    "name": "BotOne",
+    "description": "Bot to order human2222",
+    "intents": [
+        {
+            "intentName": "IntentOne",
+            "intentVersion": "14"
+        }
+    ],
+    "clarificationPrompt": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "I didn't understand you, what would you like to do?"
+            }
+        ],
+        "maxAttempts": 3
+    },
+    "abortStatement": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "Sorry, I'm not able to assist at this time"
+            }
+        ]
+    },
+    "status": "READY",
+    "lastUpdatedDate": 1537880688.929,
+    "createdDate": 1537880646.577,
+    "idleSessionTTLInSeconds": 600,
+    "voiceId": "Salli",
+    "checksum": "566d9fba-d270-4a6f-8177-0e0b35c24b07",
+    "version": "14",
+    "locale": "en-US",
+    "childDirected": false
+}
+
+
+[14:8:47:694] : Creating a new version for BotOne. New version is 14
+[14:8:47:695] : Bot BotOne was deployed.
+REACH THE END
