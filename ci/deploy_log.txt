@@ -1005,3 +1005,93 @@ To see help text, you can run:
 
 Unknown options: us-east-1
 
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (8ms)
+
+0
+
+  1 passing (10ms)
+
+0
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Service files not changed. Skipping deployment...
+Service Information
+service: demo
+stage: dev
+region: us-east-1
+stack: demo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: demo-dev-hello
+  goodbye: demo-dev-goodbye
+
+STDERR 
+[13:37:8:124] : Starting to deploy slot SlotTypeOne.
+[13:37:8:129] : Starting to deploy slot SlotTypeTwo.
+[13:37:9:611] : Getting the checksum of the latest version for SlotTypeOne
+[13:37:9:630] : Getting the checksum of the latest version for SlotTypeTwo
+[13:37:13:510] : Updating the slot code for SlotTypeTwo
+[13:37:13:547] : Updating the slot code for SlotTypeOne
+{
+    "name": "SlotTypeTwo",
+    "description": "Available pizza sauces two",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        }
+    ],
+    "lastUpdatedDate": 1537795114.868,
+    "createdDate": 1537795114.868,
+    "version": "1",
+    "checksum": "e160124c-9bbf-471a-95f6-e6605f3b7e85",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+{
+    "name": "SlotTypeOne",
+    "description": "Available pizza sauces",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        },
+        {
+            "value": "blue"
+        },
+        {
+            "value": "white"
+        },
+        {
+            "value": "marron"
+        }
+    ],
+    "lastUpdatedDate": 1537879037.992,
+    "createdDate": 1537879037.992,
+    "version": "9",
+    "checksum": "e3e5025e-91ef-4706-92ee-3e91f940840f",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
