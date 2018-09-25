@@ -168,12 +168,8 @@ class IntentManager
         // })
     }
 
-    deployIntent(intentName, slotVersions, callback, timeout)
+    deployIntent(intentName, slotVersions, callback)
     {
-        if(!timeout)
-        {
-            timeout = 1000
-        }
         this.log(`Starting to deploy intent ${intentName}.`)
         this.getIntentLatestVersion(intentName, (versionData)=> {
             this.putIntent(intentName, versionData, slotVersions, (data)=> {

@@ -50,7 +50,7 @@ class Wilbur
                     {
                         callback()
                     }
-                }, 10)
+                })
             })
         })
     }
@@ -72,7 +72,7 @@ class Wilbur
                     {
                         callback()
                     }
-                }, 10)
+                })
             })
         })
     }
@@ -89,7 +89,7 @@ class Wilbur
                         version: data.version
                     })
                     callback()
-                }, 10)
+                })
             })
         })
     }

@@ -186,7 +186,7 @@ class SlotManager
     //         }, timeout)
     //     })
     // }
-    deploySlot(slotName, callback, timeout)
+    deploySlot(slotName, callback)
     {
         this.log(`Starting to deploy slot ${slotName}.`)
         this.getSlotVersion(slotName, (versionData)=> {

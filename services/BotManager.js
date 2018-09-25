@@ -181,13 +181,8 @@ class BotManager
         })
     }
 
-    deployBot(botName, intentVersions, callback, timeout)
+    deployBot(botName, intentVersions, callback)
     {
-        if(!timeout)
-        {
-            timeout = 1000;
-        }
-
         this.log(`Starting to deploy bot ${botName}.`)
         this.getBotVersions(botName, (versionData)=> {
             this.putBot(botName, versionData, intentVersions, (data)=> {
