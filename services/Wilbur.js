@@ -22,7 +22,7 @@ class Wilbur
     deploy(callback)
     {
 
-        this.lambdaManager.deployLambdaServerless((result)=> {
+        // this.lambdaManager.deployLambdaServerless((result)=> {
             this.deploySlots(()=> {
                 this.deployIntents(()=> {
                     this.deployBots(()=> {
@@ -30,7 +30,7 @@ class Wilbur
                     })
                 })
             })
-        })
+        // })
     }
 
     deploySlots(callback)
