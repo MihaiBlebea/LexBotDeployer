@@ -1,4 +1,4 @@
 
 module.exports.hello = (event, context, callback)=> {
-    return 'hello World2277'
+    return 'hello World222'
 }
