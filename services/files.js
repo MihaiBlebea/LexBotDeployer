@@ -3,8 +3,11 @@ const changedGitFiles = require('changed-git-files')
 
 
 const extractFiles = (folder, callback)=> {
-    fs.readdir(folder, (err, files) => {
-        callback(files)
+    fs.readdir(folder, (err, files)=> {
+        if(callback)
+        {
+            callback(files)
+        }
     })
 }
 
@@ -17,17 +20,38 @@ const processFiles = (folderFiles, callback)=> {
         let fileNames = files.map((file)=> {
             return getFileName(file)
         })
-        callback(fileNames)
+        if(callback)
+        {
+            callback(fileNames)
+        }
     })
 }
 
 const getChangedFiles = (callback)=> {
     changedGitFiles((error, results)=> {
         if(error) console.log(error)
-        console.log(results)
-
-        callback(results)
+        if(callback)
+        {
+            callback(results)
+        }
     })
+}
+
+const getChangedLambdasFiles = (changedFiles, callback)=> {
+    if(changedFiles.length > 0)
+    {
+        result = []
+        changedFiles.map((file)=> {
+            if(file.status === 'Modified' && file.filename.includes('/repos/lambdas/functions/'))
+            {
+                result.push(file.filename)
+            }
+        })
+        if(callback)
+        {
+            callback(result)
+        }
+    }
 }
 
 
