@@ -3,3 +3,10 @@ ALL FILES [ { filename: 'repos/lambdas/functions/LambdaThree.js',
 CHANGED LAMBDAS FILES [ { filename: 'repos/lambdas/functions/LambdaThree.js',
     status: 'Deleted' } ]
 CHANGED BOTS FILES []
+ALL FILES [ { filename: 'services/LambdaManager.js', status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Added' } ]
+CHANGED LAMBDAS FILES [ { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' } ]
+CHANGED BOTS FILES []

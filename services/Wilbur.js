@@ -36,7 +36,7 @@ class Wilbur
             {
                 // Trigger the delete resource flow
             }
-
+            console.log('MODIFIED FILES', modifiedFiles)
             if(modifiedFiles > 0)
             {
                 this.deployLambdaStuff(modifiedFiles, (result)=> {
