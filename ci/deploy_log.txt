@@ -1,0 +1,253 @@
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return hello World
+    ✓ Should return Goodbye World33
+
+
+
+  1 passing (17ms)
+
+0
+
+  1 passing (20ms)
+
+0
+{ filename: 'repos/lambdas/functions/LambdaTwo.js',
+  status: 'Modified' }
+{ filename: 'repos/lambdas/functions/.serverless/serverless-state.json',
+  status: 'Modified' }
+{ filename:
+   'repos/lambdas/functions/.serverless/cloudformation-template-update-stack.json',
+  status: 'Modified' }
+{ filename: 'ci/deploy_log.txt', status: 'Deleted' }
+CHANGED LAMBDAS FILES [ 'repos/lambdas/functions/LambdaTwo.js' ]
+{ Error: Command failed: cd ../repos/lambdas/functions && pwd && serverless deploy
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
+  killed: false,
+  code: 1,
+  signal: null,
+  cmd: 'cd ../repos/lambdas/functions && pwd && serverless deploy' }
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Uploading CloudFormation file to S3...
+Serverless: Uploading artifacts...
+Serverless: Uploading service .zip file to S3 (413 B)...
+Serverless: Validating template...
+Serverless: Updating Stack...
+Serverless: Checking Stack update progress...
+......
+Serverless: Operation failed!
+ 
+  Serverless Error ---------------------------------------
+ 
+  An error occurred: GoodbyeLambdaFunction - Function not found: arn:aws:lambda:us-east-1:216849691610:function:demo-dev-goodbye (Service: AWSLambda; Status Code: 404; Error Code: ResourceNotFoundException; Request ID: 24194077-c171-11e8-873e-5989d1a62ea2).
+ 
+  Get Support --------------------------------------------
+     Docs:          docs.serverless.com
+     Bugs:          github.com/serverless/serverless/issues
+     Issues:        forum.serverless.com
+ 
+  Your Environment Information -----------------------------
+     OS:                     darwin
+     Node Version:           10.9.0
+     Serverless Version:     1.32.0
+ 
+
+STDERR 
+[10:47:14:274] : Starting to deploy slot SlotTypeOne.
+[10:47:14:279] : Starting to deploy slot SlotTypeTwo.
+[10:47:16:816] : Updating the slot code for SlotTypeTwo
+[10:47:16:822] : Updating the slot code for SlotTypeOne
+{
+    "name": "SlotTypeTwo",
+    "description": "Available pizza sauces two",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        }
+    ],
+    "lastUpdatedDate": 1537889904.401,
+    "createdDate": 1537889904.401,
+    "version": "1",
+    "checksum": "16580b90-1cd0-4cd6-a36c-b4c5341bf289",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[10:47:18:594] : Creating a new version for SlotTypeTwo. New version is 1
+[10:47:18:595] : Slot SlotTypeTwo was deployed.
+[10:47:18:595] : Starting to deploy intent IntentOne.
+[10:47:18:601] : Starting to deploy intent IntentTwo.
+{
+    "name": "SlotTypeOne",
+    "description": "Available pizza sauces",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        },
+        {
+            "value": "blue"
+        },
+        {
+            "value": "white"
+        },
+        {
+            "value": "marron"
+        }
+    ],
+    "lastUpdatedDate": 1537953429.984,
+    "createdDate": 1537953429.984,
+    "version": "3",
+    "checksum": "0fa3c505-ec2a-4b66-a871-c2e07aaef9d8",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[10:47:18:619] : Creating a new version for SlotTypeOne. New version is 3
+[10:47:18:619] : Slot SlotTypeOne was deployed.
+[10:47:20:363] : Getting the checksum of the latest version for IntentOne
+[10:47:20:380] : Getting the checksum of the latest version for IntentTwo
+[10:47:21:101] : Updating the code for intent IntentOne.
+[10:47:21:160] : Updating the code for intent IntentTwo.
+[10:47:22:850] : Getting the checksum of the latest version for IntentOne
+[10:47:22:851] : Intent IntentOne was deployed.
+[10:47:22:852] : Starting to deploy bot BotOne.
+[10:47:22:857] : Starting to deploy bot BotTwo.
+[10:47:22:884] : Getting the checksum of the latest version for IntentTwo
+[10:47:22:884] : Intent IntentTwo was deployed.
+{
+    "name": "BotOne",
+    "description": "Bot to order human2222",
+    "intents": [
+        {
+            "intentName": "IntentOne",
+            "intentVersion": "3"
+        }
+    ],
+    "clarificationPrompt": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "I didn't understand you, what would you like to do?"
+            }
+        ],
+        "maxAttempts": 3
+    },
+    "abortStatement": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "Sorry, I'm not able to assist at this time"
+            }
+        ]
+    },
+    "status": "READY",
+    "lastUpdatedDate": 1537954149.856,
+    "createdDate": 1537889940.328,
+    "idleSessionTTLInSeconds": 600,
+    "voiceId": "Salli",
+    "checksum": "d051fa52-b7fe-45e6-8141-716cac74a2d6",
+    "version": "$LATEST",
+    "locale": "en-US",
+    "childDirected": false
+}
+
+
+{
+    "name": "BotTwo",
+    "description": "Bot to order human",
+    "intents": [
+        {
+            "intentName": "IntentOne",
+            "intentVersion": "3"
+        }
+    ],
+    "clarificationPrompt": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "I didn't understand you, what would you like to do?"
+            }
+        ],
+        "maxAttempts": 3
+    },
+    "abortStatement": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "Sorry, I'm not able to assist at this time"
+            }
+        ]
+    },
+    "status": "READY",
+    "lastUpdatedDate": 1537954159.047,
+    "createdDate": 1537889940.331,
+    "idleSessionTTLInSeconds": 600,
+    "voiceId": "Salli",
+    "checksum": "144d8bb0-e59a-41c8-94d7-f4dc886c087b",
+    "version": "$LATEST",
+    "locale": "en-US",
+    "childDirected": false
+}
+
+
+[10:47:24:954] : Updating the code for the bot BotOne.
+[10:47:24:968] : Updating the code for the bot BotTwo.
+{
+    "name": "BotTwo",
+    "description": "Bot to order human",
+    "intents": [
+        {
+            "intentName": "IntentOne",
+            "intentVersion": "3"
+        }
+    ],
+    "clarificationPrompt": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "I didn't understand you, what would you like to do?"
+            }
+        ],
+        "maxAttempts": 3
+    },
+    "abortStatement": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "Sorry, I'm not able to assist at this time"
+            }
+        ]
+    },
+    "status": "READY",
+    "lastUpdatedDate": 1537954181.943,
+    "createdDate": 1537954130.333,
+    "idleSessionTTLInSeconds": 600,
+    "voiceId": "Salli",
+    "checksum": "144d8bb0-e59a-41c8-94d7-f4dc886c087b",
+    "version": "2",
+    "locale": "en-US",
+    "childDirected": false
+}
+
+
+[10:47:26:633] : Creating a new version for BotTwo. New version is 2
+[10:47:26:634] : Bot BotTwo was deployed.
+REACH THE END
