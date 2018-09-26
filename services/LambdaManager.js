@@ -32,6 +32,7 @@ class LambdaManager
             var counter = 0
             var passed = true
             this.runUnitTesting(file, (result)=> {
+                console.log(result)
                 if(result.pass === false)
                 {
                     passed = false
@@ -39,7 +40,7 @@ class LambdaManager
 
                 var jsFileName = this.getFileName(file)
                 var folderPath = file.replace(jsFileName, '');
-
+                console.log(folderPath)
                 counter++
                 if(counter === files.length - 1 && passed === true)
                 {

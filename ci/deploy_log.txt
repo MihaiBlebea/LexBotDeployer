@@ -111,3 +111,29 @@ ALL FILES [ { filename: 'repos/lambdas/tests/LambdaOne.js',
   1 passing (3ms)
 
 0
+ALL FILES [ { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+
+
+  Test lambda function
+    1) Should return hello World
+
+
+  0 passing (5ms)
+  1 failing
+
+  1) Test lambda function
+       Should return hello World:
+
+      AssertionError [ERR_ASSERTION]: 'hello World2222' == 'hello World222'
+      + expected - actual
+
+      -hello World2222
+      +hello World222
+      
+      at Context.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/tests/LambdaOne.js:7:16)
+
+
+
+1
