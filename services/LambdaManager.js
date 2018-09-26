@@ -40,11 +40,11 @@ class LambdaManager
 
                 var jsFileName = this.getFileName(file)
                 var folderPath = file.replace('/' + jsFileName, '');
-                console.log(folderPath)
+
                 counter++
                 if(counter === files.length && passed === true)
                 {
-                    exec('pwd', (error, stdout, stderr)=> {
+                    exec('echo pwd', (error, stdout, stderr)=> {
                         if(error) console.log(error)
                         console.log('STDOUT', stdout)
                         console.log('STDERR', stderr)
