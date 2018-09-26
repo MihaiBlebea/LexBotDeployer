@@ -1,4 +1,5 @@
 const fs = require('fs')
+const changedGitFiles = require('changed-git-files')
 
 
 const extractFiles = (folder, callback)=> {
@@ -20,8 +21,18 @@ const processFiles = (folderFiles, callback)=> {
     })
 }
 
+const getChangedFiles = (callback)=> {
+    changedGitFiles((error, results)=> {
+        if(error) console.log(error)
+        console.log(results)
+
+        callback(results)
+    })
+}
+
 
 module.exports = {
     extractFiles,
-    processFiles
+    processFiles,
+    getChangedFiles
 }

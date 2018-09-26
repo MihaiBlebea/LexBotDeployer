@@ -16,7 +16,7 @@ const LambdaManger = require('./../services/LambdaManager')
 
 var branch = process.argv[2]
 
-
+// Init dependencies //
 var lambda = new AWS.Lambda({ region: 'us-east-1' })
 var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
 
@@ -24,6 +24,12 @@ var slotManager = new SlotManager(lex, versions, log)
 var intentManager = new IntentManager(lex, versions, log)
 var botManager = new BotManager(lex, versions, log)
 var lambdaManager = new LambdaManger(lambda, tester, files)
+
+
+// Call methods //
+files.getChangedFiles((result)=> {
+    console.log(result)
+})
 
 deployer = new Wilbur(files, versions, slotManager, intentManager, botManager, lambdaManager)
 deployer.deploy(()=>{
