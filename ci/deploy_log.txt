@@ -1,0 +1,5 @@
+ALL FILES [ { filename: 'repos/lambdas/functions/LambdaThree.js',
+    status: 'Deleted' } ]
+CHANGED LAMBDAS FILES [ { filename: 'repos/lambdas/functions/LambdaThree.js',
+    status: 'Deleted' } ]
+CHANGED BOTS FILES []

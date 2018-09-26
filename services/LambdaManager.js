@@ -20,12 +20,14 @@ class LambdaManager
 
     deployLambdaServerless(files, callback)
     {
+        console.log('LAMBDA DEPLOY STARTED')
         files.map((file)=> {
 
             var counter = 0
             var passed = true
             this.runUnitTesting(file, (result)=> {
 
+                console.log('TEST WAS RUN')
                 if(result.pass === false)
                 {
                     passed = false
