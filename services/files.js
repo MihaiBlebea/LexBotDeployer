@@ -59,5 +59,6 @@ const getChangedLambdasFiles = (changedFiles, callback)=> {
 module.exports = {
     extractFiles,
     processFiles,
+    getChangedFiles,
     getChangedLambdasFiles
 }

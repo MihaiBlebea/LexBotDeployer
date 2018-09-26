@@ -27,8 +27,10 @@ var lambdaManager = new LambdaManger(lambda, tester, files)
 
 
 // Call methods //
-files.getChangedLambdasFiles((result)=> {
-    console.log(result)
+files.getChangedFiles((changedFiles)=> {
+    files.getChangedLambdasFiles(changedFiles, (result)=> {
+        console.log(result)
+    })
 })
 
 deployer = new Wilbur(files, versions, slotManager, intentManager, botManager, lambdaManager)
