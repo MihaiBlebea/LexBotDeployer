@@ -43,9 +43,7 @@ const getChangedLambdasFiles = (changedFiles, callback)=> {
     {
         result = []
         changedFiles.map((file)=> {
-            if(['Added', 'Modified'].includes(file.status) &&
-               file.filename.includes('repos/lambdas/functions/') &&
-               file.filename.includes('repos/lambdas/functions/.serverless') === false)
+            if(file.filename.includes('repos/lambdas/functions/') && file.filename.includes('repos/lambdas/functions/.serverless') === false)
             {
                 result.push(file.filename)
             }
@@ -62,9 +60,7 @@ const getChangedBotsFiles = (changedFiles, callback)=> {
     {
         result = []
         changedFiles.map((file)=> {
-            if(['Added', 'Modified'].includes(file.status) &&
-               file.filename.includes('repos/') &&
-               file.filename.includes('repos/lambdas/') === false)
+            if(file.filename.includes('repos/') && file.filename.includes('repos/lambdas/') === false)
             {
                 result.push(file.filename)
             }

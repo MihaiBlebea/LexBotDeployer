@@ -1,0 +1,34 @@
+
+
+  1) Uncaught error outside test suite
+  Test lambda function
+    ✓ Should return hello World
+
+
+  1 passing (15ms)
+  1 failing
+
+  1) Uncaught error outside test suite:
+     Uncaught Error: Cannot find module '/Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/tests/LambdaThreeTest.js'
+      at Function.Module._resolveFilename (internal/modules/cjs/loader.js:581:15)
+      at Function.Module._load (internal/modules/cjs/loader.js:507:25)
+      at Module.require (internal/modules/cjs/loader.js:637:17)
+      at require (internal/modules/cjs/helpers.js:20:18)
+      at Array.forEach (<anonymous>)
+      at Object.testLambda (/Users/mihai.blebea/Projects/LexBots/withNode/services/tester.js:11:11)
+      at LambdaManager.runUnitTesting (/Users/mihai.blebea/Projects/LexBots/withNode/services/LambdaManager.js:18:21)
+
+
+
+1
+ALL FILES [ { filename: 'services/files.js', status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaThree.js',
+    status: 'Added' },
+  { filename: 'repos/lambdas/functions/.serverless/serverless-state.json',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/.serverless/cloudformation-template-update-stack.json',
+    status: 'Modified' },
+  { filename: 'repos/bots/BotThree.json', status: 'Deleted' } ]
+CHANGED LAMBDAS FILES [ 'repos/lambdas/functions/LambdaThree.js' ]
+CHANGED BOTS FILES []

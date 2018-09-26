@@ -27,6 +27,8 @@ var lambdaManager = new LambdaManger(lambda, tester, files)
 
 
 // Call methods //
+
+// Get the changed files from git //
 files.getChangedFiles((changedFiles)=> {
     files.getChangedLambdasFiles(changedFiles, (result)=> {
         console.log('CHANGED LAMBDAS FILES', result)
