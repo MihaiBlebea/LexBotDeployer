@@ -42,16 +42,18 @@ const getChangedLambdasFiles = (changedFiles, callback)=> {
     {
         console.log('CHANGED FILES', changedFiles)
         result = []
-        // changedFiles.map((file)=> {
-        //     if(file.status === 'Modified' && file.filename.includes('/repos/lambdas/functions/'))
-        //     {
-        //         result.push(file.filename)
-        //     }
-        // })
-        // if(callback)
-        // {
-        //     callback(result)
-        // }
+        changedFiles.map((file)=> {
+            if(file.status === 'Modified' &&
+               file.filename.includes('/repos/lambdas/functions/') &&
+               file.filename.includes('/repos/lambdas/functions/.serverless') === false)
+            {
+                result.push(file.filename)
+            }
+        })
+        if(callback)
+        {
+            callback(result)
+        }
     }
 }
 
