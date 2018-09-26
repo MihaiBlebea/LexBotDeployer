@@ -118,7 +118,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/demo/dev/1537954937373-2018-09-26T09:42:17.373Z/demo.zip"
+                "S3Key": "serverless/demo/dev/1537955167614-2018-09-26T09:46:07.614Z/demo.zip"
               },
               "FunctionName": "demo-dev-hello",
               "Handler": "LambdaOne.hello",
@@ -154,7 +154,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/demo/dev/1537954937373-2018-09-26T09:42:17.373Z/demo.zip"
+                "S3Key": "serverless/demo/dev/1537955167614-2018-09-26T09:46:07.614Z/demo.zip"
               },
               "FunctionName": "demo-dev-goodbye",
               "Handler": "LambdaTwo.goodbye",
@@ -248,7 +248,7 @@
     "artifact": "/Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions/.serverless/demo.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/demo/dev/1537954937373-2018-09-26T09:42:17.373Z",
+    "artifactDirectoryName": "serverless/demo/dev/1537955167614-2018-09-26T09:46:07.614Z",
     "artifact": "demo.zip"
   }
 }
