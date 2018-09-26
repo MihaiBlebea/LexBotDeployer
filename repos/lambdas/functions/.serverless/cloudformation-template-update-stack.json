@@ -104,7 +104,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/demo/dev/1537954870136-2018-09-26T09:41:10.136Z/demo.zip"
+          "S3Key": "serverless/demo/dev/1537954937373-2018-09-26T09:42:17.373Z/demo.zip"
         },
         "FunctionName": "demo-dev-hello",
         "Handler": "LambdaOne.hello",
@@ -123,14 +123,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "HelloLambdaVersiontRLxHO3r6fP2wKI1TbFcEU4K0fLaB8eErFmWD18tGU": {
+    "HelloLambdaVersionhdO8HgEECNiyzvK3DOZeqwmzjhpqKpZdiXThx8pwMo": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "HelloLambdaFunction"
         },
-        "CodeSha256": "OX5cZMO4uCIQ9pmZLBO/iF+18cz9DSCYSCimlLMdfQY="
+        "CodeSha256": "ex3azUObDR4R5eG5pIyHP0bhgLaa2/WKBIeRRvB1iLg="
       }
     },
     "GoodbyeLambdaFunction": {
@@ -140,7 +140,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/demo/dev/1537954870136-2018-09-26T09:41:10.136Z/demo.zip"
+          "S3Key": "serverless/demo/dev/1537954937373-2018-09-26T09:42:17.373Z/demo.zip"
         },
         "FunctionName": "demo-dev-goodbye",
         "Handler": "LambdaTwo.goodbye",
@@ -159,14 +159,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "GoodbyeLambdaVersionLfAoapU7u0fU5kzYsw2nzEl2FXpidWZTLVMPDuYnok": {
+    "GoodbyeLambdaVersionbE6Jm11gbD45WR4DApxuCFxeYWLrBN3fxQMUlFjoRzU": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GoodbyeLambdaFunction"
         },
-        "CodeSha256": "OX5cZMO4uCIQ9pmZLBO/iF+18cz9DSCYSCimlLMdfQY="
+        "CodeSha256": "ex3azUObDR4R5eG5pIyHP0bhgLaa2/WKBIeRRvB1iLg="
       }
     }
   },
@@ -179,13 +179,13 @@
     "HelloLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "HelloLambdaVersiontRLxHO3r6fP2wKI1TbFcEU4K0fLaB8eErFmWD18tGU"
+        "Ref": "HelloLambdaVersionhdO8HgEECNiyzvK3DOZeqwmzjhpqKpZdiXThx8pwMo"
       }
     },
     "GoodbyeLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GoodbyeLambdaVersionLfAoapU7u0fU5kzYsw2nzEl2FXpidWZTLVMPDuYnok"
+        "Ref": "GoodbyeLambdaVersionbE6Jm11gbD45WR4DApxuCFxeYWLrBN3fxQMUlFjoRzU"
       }
     }
   }
