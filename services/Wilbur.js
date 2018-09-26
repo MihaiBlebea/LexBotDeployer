@@ -26,7 +26,6 @@ class Wilbur
     deploy(changedFiles, callback)
     {
         this.files.getChangedLambdasFiles(changedFiles, (files)=> {
-            console.log('CHANGED LAMBDAS FILES', files)
 
             // Check if we have any deleted files
             var deletedFiles = this.hasDeletedFiles(files)
@@ -36,11 +35,10 @@ class Wilbur
             {
                 // Trigger the delete resource flow
             }
-            console.log('MODIFIED FILES', modifiedFiles)
-            if(modifiedFiles > 0)
+
+            if(modifiedFiles.length > 0)
             {
                 this.deployLambdaStuff(modifiedFiles, (result)=> {
-                    console.log('LAMBDA STUFF WAS DEPLOYED')
                     if(callback)
                     {
                         callback()
@@ -50,7 +48,6 @@ class Wilbur
         })
 
         this.files.getChangedBotsFiles(changedFiles, (files)=> {
-            console.log('CHANGED BOTS FILES', files)
 
             // Check if we have any deleted files
             var deletedFiles = this.hasDeletedFiles(files)
@@ -64,7 +61,6 @@ class Wilbur
             if(deletedFiles.length !== files.length)
             {
                 this.deployBotStuff(()=> {
-                    console.log('BOTS STUFF WAS DEPLOYED')
                     if(callback)
                     {
                         callback()

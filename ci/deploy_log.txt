@@ -10,3 +10,29 @@ ALL FILES [ { filename: 'services/LambdaManager.js', status: 'Modified' },
 CHANGED LAMBDAS FILES [ { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
     status: 'Modified' } ]
 CHANGED BOTS FILES []
+ALL FILES [ { filename: 'services/Wilbur.js', status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+CHANGED LAMBDAS FILES [ { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' } ]
+MODIFIED FILES [ 'repos/lambdas/functions/LambdaOne/LambdaOne.js' ]
+CHANGED BOTS FILES []
+ALL FILES [ { filename: 'services/Wilbur.js', status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+CHANGED LAMBDAS FILES [ { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' } ]
+MODIFIED FILES [ 'repos/lambdas/functions/LambdaOne/LambdaOne.js' ]
+LAMBDA DEPLOY STARTED
+ALL FILES [ { filename: 'services/Wilbur.js', status: 'Modified' },
+  { filename: 'services/LambdaManager.js', status: 'Modified' },
+  { filename: 'repos/lambdas/tests/LambdaTwoTest.js',
+    status: undefined },
+  { filename: 'repos/lambdas/tests/LambdaOneTest.js',
+    status: undefined },
+  { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+TEST NAME undefined

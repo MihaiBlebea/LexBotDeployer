@@ -15,19 +15,18 @@ class LambdaManager
 
     runUnitTesting(lambdaName, callback)
     {
-        this.tester.testLambda('./../' + lambdaName + 'Test.js', callback)
+        var splitLambdaName = lambdaName.split('/')
+        var testName = splitLambdaName[splitLambdaName.length - 1]
+        this.tester.testLambda('./../repos/lambdas/tests/' + testName, callback)
     }
 
     deployLambdaServerless(files, callback)
     {
-        console.log('LAMBDA DEPLOY STARTED')
         files.map((file)=> {
 
             var counter = 0
             var passed = true
             this.runUnitTesting(file, (result)=> {
-
-                console.log('TEST WAS RUN')
                 if(result.pass === false)
                 {
                     passed = false
