@@ -13,10 +13,15 @@ class LambdaManager
         this.files = files
     }
 
+    getFileName(fileName)
+    {
+        var splitLambdaName = fileName.split('/')
+        return splitLambdaName[splitLambdaName.length - 1]
+    }
+
     runUnitTesting(lambdaName, callback)
     {
-        var splitLambdaName = lambdaName.split('/')
-        var testName = splitLambdaName[splitLambdaName.length - 1]
+        var testName = this.getFileName(lambdaName)
         this.tester.testLambda('./../repos/lambdas/tests/' + testName, callback)
     }
 
@@ -32,10 +37,13 @@ class LambdaManager
                     passed = false
                 }
 
+                var jsFileName = this.getFileName(file)
+                var folderPath = file.replace(jsFileName, '');
+
                 counter++
                 if(counter === files.length - 1 && passed === true)
                 {
-                    exec('cd ../repos/lambdas/functions && pwd && serverless deploy', (error, stdout, stderr)=> {
+                    exec('cd ../' + folderPath + ' && pwd && serverless deploy', (error, stdout, stderr)=> {
                         if(error) console.log(error)
                         console.log('STDOUT', stdout)
                         console.log('STDERR', stderr)
