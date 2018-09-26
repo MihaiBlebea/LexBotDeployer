@@ -17,19 +17,108 @@ class Wilbur
         this.slotVersions = []
         this.intentVersions = []
         this.botVersions = []
+
+        // Class attributes
+
     }
 
-    deploy(callback)
+    // Main point of entry in the app, bootstrap the app //
+    deploy(changedFiles, callback)
     {
+        this.files.getChangedLambdasFiles(changedFiles, (files)=> {
+            console.log('CHANGED LAMBDAS FILES', files)
 
-        this.lambdaManager.deployLambdaServerless((result)=> {
-            this.deploySlots(()=> {
-                this.deployIntents(()=> {
-                    this.deployBots(()=> {
+            // Check if we have any deleted files
+            var deletedFiles = this.hasDeletedFiles(files)
+            var modifiedFiles = this.hasModifiedFiles(files)
+
+            if(deletedFiles.length > 0)
+            {
+                // Trigger the delete resource flow
+            }
+
+            if(modifiedFiles > 0)
+            {
+                this.deployLambdaStuff(modifiedFiles, (result)=> {
+                    console.log('LAMBDA STUFF WAS DEPLOYED')
+                    if(callback)
+                    {
                         callback()
-                    })
+                    }
+                })
+            }
+        })
+
+        this.files.getChangedBotsFiles(changedFiles, (files)=> {
+            console.log('CHANGED BOTS FILES', files)
+
+            // Check if we have any deleted files
+            var deletedFiles = this.hasDeletedFiles(files)
+
+            if(deletedFiles.length > 0)
+            {
+                // Trigger the delete resource flow
+            }
+
+            // Check if all changed files are flagged as deleted
+            if(deletedFiles.length !== files.length)
+            {
+                this.deployBotStuff(()=> {
+                    console.log('BOTS STUFF WAS DEPLOYED')
+                    if(callback)
+                    {
+                        callback()
+                    }
+                })
+            }
+        })
+    }
+
+    hasDeletedFiles(files)
+    {
+        result = []
+        files.map((file)=> {
+            if(file.status === 'Deleted')
+            {
+                result.push(file.filename)
+            }
+        })
+        return result
+    }
+
+    hasModifiedFiles(files)
+    {
+        result = []
+        files.map((file)=> {
+            if(['Modified', 'Added'].includes(file.status))
+            {
+                result.push(file.filename)
+            }
+        })
+        return result
+    }
+
+    deployBotStuff(callback)
+    {
+        this.deploySlots(()=> {
+            this.deployIntents(()=> {
+                this.deployBots(()=> {
+                    if(callback)
+                    {
+                        callback()
+                    }
                 })
             })
+        })
+    }
+
+    deployLambdaStuff(files, callback)
+    {
+        this.lambdaManager.deployLambdaServerless(files, (result)=> {
+            if(callback)
+            {
+                callback(result)
+            }
         })
     }
 

@@ -30,17 +30,9 @@ var lambdaManager = new LambdaManger(lambda, tester, files)
 
 // Get the changed files from git //
 files.getChangedFiles((changedFiles)=> {
-    files.getChangedLambdasFiles(changedFiles, (result)=> {
-        console.log('CHANGED LAMBDAS FILES', result)
+    deployer = new Wilbur(files, versions, slotManager, intentManager, botManager, lambdaManager)
+    deployer.deploy(changedFiles, ()=> {
+        console.log('JOB DONE')
+        process.exit(0)
     })
-
-    files.getChangedBotsFiles(changedFiles, (result)=> {
-        console.log('CHANGED BOTS FILES', result)
-    })
-})
-
-deployer = new Wilbur(files, versions, slotManager, intentManager, botManager, lambdaManager)
-deployer.deploy(()=>{
-    console.log('REACH THE END')
-    process.exit(0)
 })
