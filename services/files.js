@@ -30,6 +30,7 @@ const processFiles = (folderFiles, callback)=> {
 const getChangedFiles = (callback)=> {
     changedGitFiles((error, results)=> {
         if(error) console.log(error)
+        console.log('ALL FILES', results)
         if(callback)
         {
             callback(results)
@@ -42,10 +43,28 @@ const getChangedLambdasFiles = (changedFiles, callback)=> {
     {
         result = []
         changedFiles.map((file)=> {
-            console.log(file)
             if(file.status === 'Modified' &&
                file.filename.includes('repos/lambdas/functions/') &&
                file.filename.includes('repos/lambdas/functions/.serverless') === false)
+            {
+                result.push(file.filename)
+            }
+        })
+        if(callback)
+        {
+            callback(result)
+        }
+    }
+}
+
+const getChangedBotsFiles = (changedFiles, callback)=> {
+    if(changedFiles.length > 0)
+    {
+        result = []
+        changedFiles.map((file)=> {
+            if(file.status === 'Modified' &&
+               file.filename.includes('repos/') &&
+               file.filename.includes('repos/lambdas/') === false)
             {
                 result.push(file.filename)
             }
@@ -62,5 +81,6 @@ module.exports = {
     extractFiles,
     processFiles,
     getChangedFiles,
-    getChangedLambdasFiles
+    getChangedLambdasFiles,
+    getChangedBotsFiles
 }

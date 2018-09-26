@@ -31,6 +31,10 @@ files.getChangedFiles((changedFiles)=> {
     files.getChangedLambdasFiles(changedFiles, (result)=> {
         console.log('CHANGED LAMBDAS FILES', result)
     })
+
+    files.getChangedBotsFiles(changedFiles, (result)=> {
+        console.log('CHANGED BOTS FILES', result)
+    })
 })
 
 deployer = new Wilbur(files, versions, slotManager, intentManager, botManager, lambdaManager)
