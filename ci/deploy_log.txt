@@ -152,3 +152,18 @@ ALL FILES [ { filename: 'services/LambdaManager.js', status: 'Modified' },
 0
 { pass: true }
 repos/lambdas/functions/LambdaOne/
+ALL FILES [ { filename: 'services/LambdaManager.js', status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+
+
+  Test lambda function
+    ✓ Should return hello World
+
+
+  1 passing (3ms)
+
+0
+{ pass: true }
+repos/lambdas/functions/LambdaOne/LambdaOne/
