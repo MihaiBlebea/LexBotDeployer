@@ -38,7 +38,7 @@ class LambdaManager
                     passed = false
                 }
 
-                var folderPath = file.replace('.js', '/');
+                var folderPath = file.replace('.js', '');
                 counter++
                 console.log(counter, files.length, passed)
                 if(counter === files.length && passed === true)
