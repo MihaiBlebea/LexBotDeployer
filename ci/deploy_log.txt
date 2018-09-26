@@ -303,3 +303,59 @@ Serverless: Operation failed!
 
 STDERR 
 JOB DONE
+ALL FILES [ { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+
+
+  Test lambda function
+    ✓ Should return hello World
+
+
+  1 passing (3ms)
+
+0
+{ pass: true }
+repos/lambdas/functions/LambdaOne
+{ Error: Command failed: cd ../repos/lambdas/functions/LambdaOne && pwd && serverless deploy
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
+  killed: false,
+  code: 1,
+  signal: null,
+  cmd:
+   'cd ../repos/lambdas/functions/LambdaOne && pwd && serverless deploy' }
+STDOUT /Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions/LambdaOne
+Serverless: WARNING: Missing "tenant" and "app" properties in serverless.yml. Without these properties, you can not publish the service to the Serverless Platform.
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Uploading CloudFormation file to S3...
+Serverless: Uploading artifacts...
+Serverless: Uploading service .zip file to S3 (238 B)...
+Serverless: Validating template...
+Serverless: Updating Stack...
+Serverless: Checking Stack update progress...
+......
+Serverless: Operation failed!
+ 
+  Serverless Error ---------------------------------------
+ 
+  An error occurred: HelloLambdaFunction - Function not found: arn:aws:lambda:us-east-1:216849691610:function:demo-dev-hello (Service: AWSLambda; Status Code: 404; Error Code: ResourceNotFoundException; Request ID: a936ae1c-c199-11e8-843c-1b07f7ce8ad1).
+ 
+  Get Support --------------------------------------------
+     Docs:          docs.serverless.com
+     Bugs:          github.com/serverless/serverless/issues
+     Issues:        forum.serverless.com
+ 
+  Your Environment Information -----------------------------
+     OS:                     darwin
+     Node Version:           10.9.0
+     Serverless Version:     1.32.0
+ 
+
+STDERR 
+JOB DONE
