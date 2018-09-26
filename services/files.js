@@ -40,7 +40,6 @@ const getChangedFiles = (callback)=> {
 const getChangedLambdasFiles = (changedFiles, callback)=> {
     if(changedFiles.length > 0)
     {
-        console.log('CHANGED FILES', changedFiles)
         result = []
         changedFiles.map((file)=> {
             if(file.status === 'Modified' &&
