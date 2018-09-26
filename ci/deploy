@@ -27,7 +27,7 @@ var lambdaManager = new LambdaManger(lambda, tester, files)
 
 
 // Call methods //
-files.getChangedFiles((result)=> {
+files.getChangedLambdasFiles((result)=> {
     console.log(result)
 })
 
