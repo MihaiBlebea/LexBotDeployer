@@ -106,7 +106,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/demo/dev/1538038268381-2018-09-27T08:51:08.381Z/demo.zip"
+                "S3Key": "serverless/demo/dev/1538038539975-2018-09-27T08:55:39.975Z/demo.zip"
               },
               "FunctionName": "demo-dev-hello",
               "Handler": "LambdaTwo.goodbye",
@@ -125,14 +125,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "HelloLambdaVersion624kSVMoYEhr8EDiWhcgeJlB6zarM8jiSmZRDtZIWs": {
+          "HelloLambdaVersionySYyDCNJTPpMzN8V9xCS39KAnIripJxrjxXFcEKkN0": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "HelloLambdaFunction"
               },
-              "CodeSha256": "jcdSMJbBTo1NSE7HetwqPKTV3ocPSxqTP6Xusd7W/ic="
+              "CodeSha256": "ohuBBAxqmYUTJ+p8cJH5wUlAmtV8Y14JjDzo8nhJ5CI="
             }
           }
         },
@@ -145,7 +145,7 @@
           "HelloLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "HelloLambdaVersion624kSVMoYEhr8EDiWhcgeJlB6zarM8jiSmZRDtZIWs"
+              "Ref": "HelloLambdaVersionySYyDCNJTPpMzN8V9xCS39KAnIripJxrjxXFcEKkN0"
             }
           }
         }
@@ -184,7 +184,7 @@
     "artifact": "/Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions/LambdaTwo/.serverless/demo.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/demo/dev/1538038268381-2018-09-27T08:51:08.381Z",
+    "artifactDirectoryName": "serverless/demo/dev/1538038539975-2018-09-27T08:55:39.975Z",
     "artifact": "demo.zip"
   }
 }
