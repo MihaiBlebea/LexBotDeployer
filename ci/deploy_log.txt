@@ -195,3 +195,42 @@ STDOUT
 
 STDERR 
 JOB DONE
+ALL FILES [ { filename: 'repos/lambdas/functions/LambdaTwo/serverless.yml',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/serverless-state.json',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/.serverless/demo.zip',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-update-stack.json',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/serverless.yml',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+LAMBDA [ 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js',
+  'repos/lambdas/functions/LambdaOne/LambdaOne.js' ]
+TEST NAME LambdaTwo.js
+
+
+TEST NAME LambdaOne.js
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return Goodbye World33
+    ✓ Should return hello World
+
+
+
+  1 passing (6ms)
+
+0
+
+  1 passing (4ms)
+
+0
