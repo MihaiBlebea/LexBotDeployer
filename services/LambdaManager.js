@@ -42,9 +42,9 @@ class LambdaManager
                 var folderPath = file.replace('/' + jsFileName, '');
 
                 counter++
+                console.log(__dirname)
                 if(counter === files.length && passed === true)
                 {
-                    console.log('../' + folderPath)
                     exec('cd ../' + folderPath + ' && serverless deploy', (error, stdout, stderr)=> {
                         if(error) console.log(error)
                         console.log('STDOUT', stdout)

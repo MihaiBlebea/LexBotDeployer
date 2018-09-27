@@ -52,3 +52,42 @@ Serverless: Operation failed!
 
 STDERR 
 JOB DONE
+ALL FILES [ { filename: 'services/LambdaManager.js', status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/serverless-state.json',
+    status: 'Added' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/.serverless/demo.zip',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-update-stack.json',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-create-stack.json',
+    status: 'Added' },
+  { filename: 'ci/deploy_log.txt', status: 'Added' } ]
+
+
+  1) Uncaught error outside test suite
+  Test lambda function
+    ✓ Should return Goodbye World33
+
+
+  1 passing (5ms)
+  1 failing
+
+  1) Uncaught error outside test suite:
+     Uncaught Error: Cannot find module '/Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/tests/serverless-state.json'
+      at Function.Module._resolveFilename (internal/modules/cjs/loader.js:581:15)
+      at Function.Module._load (internal/modules/cjs/loader.js:507:25)
+      at Module.require (internal/modules/cjs/loader.js:637:17)
+      at require (internal/modules/cjs/helpers.js:20:18)
+      at Array.forEach (<anonymous>)
+      at Object.testLambda (/Users/mihai.blebea/Projects/LexBots/withNode/services/tester.js:11:11)
+      at LambdaManager.runUnitTesting (/Users/mihai.blebea/Projects/LexBots/withNode/services/LambdaManager.js:25:21)
+
+
+
+1
+{ pass: false }
