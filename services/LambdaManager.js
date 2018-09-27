@@ -22,7 +22,6 @@ class LambdaManager
     runUnitTesting(lambdaName, callback)
     {
         var testName = this.getFileName(lambdaName)
-        console.log('TEST NAME', testName)
         this.tester.testLambda('./../repos/lambdas/tests/' + testName, callback)
     }
 
@@ -53,7 +52,7 @@ class LambdaManager
                 }
             })
 
-            console.log(counter, files.length - 1)
+
             if(counter == files.length - 1)
             {
                 callback()
