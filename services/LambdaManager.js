@@ -22,6 +22,7 @@ class LambdaManager
     runUnitTesting(lambdaName, callback)
     {
         var testName = this.getFileName(lambdaName)
+        console.log('TEST NAME', testName)
         this.tester.testLambda('./../repos/lambdas/tests/' + testName, callback)
     }
 
@@ -41,7 +42,7 @@ class LambdaManager
                 var folderPath = file.replace('/' + jsFileName, '');
 
                 counter++
-                
+
                 if(counter === files.length - 1 && passed === true)
                 {
                     exec('cd ../' + folderPath + ' && serverless deploy', (error, stdout, stderr)=> {

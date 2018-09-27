@@ -110,6 +110,7 @@ class Wilbur
 
     deployLambdaStuff(files, callback)
     {
+        console.log('LAMBDA', files)
         this.lambdaManager.deployLambdaServerless(files, (result)=> {
             if(callback)
             {
