@@ -108,3 +108,29 @@ FILES TO BE TESTED [ 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js',
 
 0
 { pass: true }
+ALL FILES [ { filename: 'services/LambdaManager.js', status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return Goodbye World33
+    ✓ Should return hello World
+
+
+
+  1 passing (5ms)
+
+0
+1 2
+
+  1 passing (4ms)
+
+0
+1 2
