@@ -120,3 +120,17 @@ TEST NAME LambdaTwo.js
   1 passing (4ms)
 
 0
+ALL FILES [ { filename: 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js',
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+LAMBDA [ 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js' ]
+TEST NAME LambdaTwo.js
+
+
+  Test lambda function
+    ✓ Should return Goodbye World33
+
+
+  1 passing (4ms)
+
+0
