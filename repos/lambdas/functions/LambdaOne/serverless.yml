@@ -1,6 +1,9 @@
 
 service: demo
 
+app: myapp-dev
+tenant: mihaiblebea
+
 provider:
   name: aws
   runtime: nodejs8.10
