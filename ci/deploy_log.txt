@@ -1,0 +1,27 @@
+ALL FILES [ { filename: 'services/LambdaManager.js', status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' } ]
+FILES TO BE TESTED [ 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js',
+  'repos/lambdas/functions/LambdaOne/LambdaOne.js' ]
+
+
+
+
+  Test lambda function
+  Test lambda function
+    ✓ Should return Goodbye World33
+    ✓ Should return hello World
+
+
+
+  1 passing (5ms)
+
+0
+{ pass: true }
+
+  1 passing (3ms)
+
+0
+{ pass: true }
