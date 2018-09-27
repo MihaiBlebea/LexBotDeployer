@@ -4,7 +4,8 @@ service: demo
 provider:
   name: aws
   runtime: nodejs8.10
-
+tenant: mytenant
+app: demos
 functions:
     hello:
         handler: LambdaTwo.goodbye

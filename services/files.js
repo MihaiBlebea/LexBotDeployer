@@ -43,7 +43,9 @@ const getChangedLambdasFiles = (changedFiles, callback)=> {
     {
         result = []
         changedFiles.map((file)=> {
-            if(file.filename.includes('repos/lambdas/functions/') && file.filename.includes('.serverless') === false)
+            if(file.filename.includes('repos/lambdas/functions/') &&
+                file.filename.includes('.serverless') === false &&
+                file.filename.includes('.yml') === false)
             {
                 result.push(file)
             }
