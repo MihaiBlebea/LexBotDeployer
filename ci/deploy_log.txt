@@ -1,107 +1,58 @@
-ALL FILES [ { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+ALL FILES [ { filename: 'repos/lambdas/functions/ceva/myService/serverless.yml',
+    status: 'Added' },
+  { filename: 'repos/lambdas/functions/ceva/myService/handler.js',
+    status: 'Added' },
+  { filename: 'repos/lambdas/functions/ceva/myService/.gitignore',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/serverless-state.json',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/.serverless/demo.zip',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-update-stack.json',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/serverless.yml',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
     status: 'Modified' },
   { filename:
      'repos/lambdas/functions/LambdaOne/.serverless/serverless-state.json',
-    status: 'Deleted' },
+    status: 'Modified' },
   { filename: 'repos/lambdas/functions/LambdaOne/.serverless/demo.zip',
-    status: 'Deleted' },
+    status: 'Modified' },
   { filename:
      'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-update-stack.json',
-    status: 'Deleted' },
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Deleted' } ]
+CHANGED FILES [ { filename: 'repos/lambdas/functions/ceva/myService/serverless.yml',
+    status: 'Added' },
+  { filename: 'repos/lambdas/functions/ceva/myService/handler.js',
+    status: 'Added' },
+  { filename: 'repos/lambdas/functions/ceva/myService/.gitignore',
+    status: 'Added' },
   { filename:
-     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-create-stack.json',
-    status: 'Deleted' } ]
-CHANGED FILES [ { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+     'repos/lambdas/functions/LambdaTwo/.serverless/serverless-state.json',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/.serverless/demo.zip',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-update-stack.json',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/serverless.yml',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
     status: 'Modified' },
   { filename:
      'repos/lambdas/functions/LambdaOne/.serverless/serverless-state.json',
-    status: 'Deleted' },
+    status: 'Modified' },
   { filename: 'repos/lambdas/functions/LambdaOne/.serverless/demo.zip',
-    status: 'Deleted' },
+    status: 'Modified' },
   { filename:
      'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-update-stack.json',
-    status: 'Deleted' },
-  { filename:
-     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-create-stack.json',
-    status: 'Deleted' } ]
-LAMBDA [ 'repos/lambdas/functions/LambdaOne/LambdaOne.js' ]
-TEST NAME LambdaOne.js
-
-
-  Test lambda function
-    ✓ Should return hello World
-
-
-  1 passing (4ms)
-
-0
-{ Error: Command failed: cd ../repos/lambdas/functions/LambdaOne && serverless deploy
-
-    at ChildProcess.exithandler (child_process.js:289:12)
-    at ChildProcess.emit (events.js:182:13)
-    at ChildProcess.EventEmitter.emit (domain.js:442:20)
-    at maybeClose (internal/child_process.js:961:16)
-    at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
-  killed: false,
-  code: 1,
-  signal: null,
-  cmd:
-   'cd ../repos/lambdas/functions/LambdaOne && serverless deploy' }
-STDOUT Serverless: Packaging service...
-Serverless: Excluding development dependencies...
-Serverless: Uploading CloudFormation file to S3...
-Serverless: Uploading artifacts...
-Serverless: Uploading service .zip file to S3 (236 B)...
-Serverless: Validating template...
-Serverless: Updating Stack...
-Serverless: Checking Stack update progress...
-.....
-Serverless: Operation failed!
- 
-  Serverless Error ---------------------------------------
- 
-  An error occurred: HelloLambdaFunction - Function not found: arn:aws:lambda:us-east-1:216849691610:function:demo-dev-hello (Service: AWSLambda; Status Code: 404; Error Code: ResourceNotFoundException; Request ID: f6220db7-c24c-11e8-9582-d99d277d521a).
- 
-  Get Support --------------------------------------------
-     Docs:          docs.serverless.com
-     Bugs:          github.com/serverless/serverless/issues
-     Issues:        forum.serverless.com
- 
-  Your Environment Information -----------------------------
-     OS:                     darwin
-     Node Version:           10.9.0
-     Serverless Version:     1.32.0
- 
-
-STDERR 
-JOB DONE
-ALL FILES [ { filename:
-     'repos/lambdas/functions/LambdaOne/.serverless/serverless-state.json',
-    status: 'Added' },
-  { filename: 'repos/lambdas/functions/LambdaOne/.serverless/demo.zip',
-    status: 'Added' },
-  { filename:
-     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-update-stack.json',
-    status: 'Added' },
-  { filename:
-     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-create-stack.json',
-    status: 'Added' },
-  { filename: 'ci/deploy_log.txt', status: 'Added' } ]
-CHANGED FILES [ { filename:
-     'repos/lambdas/functions/LambdaOne/.serverless/serverless-state.json',
-    status: 'Added' },
-  { filename: 'repos/lambdas/functions/LambdaOne/.serverless/demo.zip',
-    status: 'Added' },
-  { filename:
-     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-update-stack.json',
-    status: 'Added' },
-  { filename:
-     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-create-stack.json',
-    status: 'Added' },
-  { filename: 'ci/deploy_log.txt', status: 'Added' } ]
-ALL FILES [ { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
-CHANGED FILES [ { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
-ALL FILES [ { filename: 'package.json', status: 'Modified' },
-  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
-CHANGED FILES [ { filename: 'package.json', status: 'Modified' },
-  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Deleted' } ]
+LAMBDA [ 'repos/lambdas/functions/ceva/myService/handler.js',
+  'repos/lambdas/functions/ceva/myService/.gitignore',
+  'repos/lambdas/functions/LambdaOne/LambdaOne.js' ]
+TEST NAME handler.js

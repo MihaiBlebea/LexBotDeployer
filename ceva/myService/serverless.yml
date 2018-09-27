@@ -1,0 +1,15 @@
+
+
+service: myService # NOTE: update this with your service name
+
+
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+
+
+functions:
+  hello:
+    handler: handler.hello

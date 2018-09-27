@@ -1,5 +1,5 @@
 
-service: demo
+service: LambdaOne
 
 app: myapp-dev
 tenant: mihaiblebea
