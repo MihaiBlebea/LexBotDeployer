@@ -49,13 +49,15 @@ class LambdaManager
                         if(error) console.log(error)
                         console.log('STDOUT', stdout)
                         console.log('STDERR', stderr)
-                        if(callback)
-                        {
-                            callback(stdout)
-                        }
                     })
                 }
             })
+
+            console.log(counter, files.length - 1)
+            if(counter == files.length - 1)
+            {
+                callback(stdout)
+            }
         })
 
         // this.files.processFiles('./../repos/lambdas/functions', (slotFiles)=> {
