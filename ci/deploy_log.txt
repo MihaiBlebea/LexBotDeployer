@@ -1,0 +1,17 @@
+ALL FILES [ { filename: 'repos/lambdas/functions/serverless.yml',
+    status: undefined },
+  { filename: 'repos/lambdas/functions/LambdaTwo.js',
+    status: undefined },
+  { filename: 'repos/lambdas/functions/LambdaOne.js',
+    status: 'Deleted' },
+  { filename: 'repos/lambdas/functions/.serverless/serverless-state.json',
+    status: 'Deleted' },
+  { filename: 'repos/lambdas/functions/.serverless/demo.zip',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/.serverless/cloudformation-template-update-stack.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/.serverless/cloudformation-template-create-stack.json',
+    status: 'Deleted' },
+  { filename: 'ci/deploy_log.txt', status: 'Deleted' } ]
