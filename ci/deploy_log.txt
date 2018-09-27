@@ -99,3 +99,5 @@ CHANGED FILES [ { filename:
      'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-create-stack.json',
     status: 'Added' },
   { filename: 'ci/deploy_log.txt', status: 'Added' } ]
+ALL FILES [ { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+CHANGED FILES [ { filename: 'ci/deploy_log.txt', status: 'Modified' } ]

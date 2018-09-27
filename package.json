@@ -13,9 +13,7 @@
         "adm-zip": "^0.4.11",
         "aws-sdk": "^2.319.0",
         "changed-git-files": "0.0.1",
-        "serverless": "^1.32.0"
-    },
-    "devDependencies": {
+        "serverless": "^1.32.0",
         "mocha": "^5.2.0"
     }
 }
