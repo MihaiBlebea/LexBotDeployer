@@ -25,6 +25,7 @@ class Wilbur
     // Main point of entry in the app, bootstrap the app //
     deploy(changedFiles, callback)
     {
+        console.log('CHANGED FILES', changedFiles)
         this.files.getChangedLambdasFiles(changedFiles, (files)=> {
 
             // Check if we have any deleted files
