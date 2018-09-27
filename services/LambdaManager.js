@@ -27,6 +27,7 @@ class LambdaManager
 
     deployLambdaServerless(files, callback)
     {
+        console.log('FILES TO BE TESTED', files)
         files.map((file)=> {
 
             var counter = 0
