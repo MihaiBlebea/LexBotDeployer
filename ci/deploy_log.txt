@@ -1,0 +1,75 @@
+ALL FILES [ { filename: 'services/LambdaManager.js', status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/serverless-state.json',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/.serverless/demo.zip',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-update-stack.json',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/LambdaTwo.zip',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/serverless-state.json',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-update-stack.json',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/LambdaOne.zip',
+    status: 'Modified' } ]
+CHANGED FILES [ { filename: 'services/LambdaManager.js', status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/serverless-state.json',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/.serverless/demo.zip',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-update-stack.json',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/LambdaTwo.zip',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/serverless-state.json',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-update-stack.json',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/LambdaOne.zip',
+    status: 'Modified' } ]
+LAMBDA [ 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js' ]
+TEST NAME LambdaTwo.js
+
+
+0 0
+  1) Uncaught error outside test suite
+  Test lambda function
+    ✓ Should return Goodbye World33
+
+
+  1 passing (5ms)
+  1 failing
+
+  1) Uncaught error outside test suite:
+     Uncaught ReferenceError: stdout is not defined
+      at files.map (/Users/mihai.blebea/Projects/LexBots/withNode/services/LambdaManager.js:59:26)
+      at Array.map (<anonymous>)
+      at LambdaManager.deployLambdaServerless (/Users/mihai.blebea/Projects/LexBots/withNode/services/LambdaManager.js:31:15)
+      at Wilbur.deployLambdaStuff (/Users/mihai.blebea/Projects/LexBots/withNode/services/Wilbur.js:115:28)
+      at files.getChangedLambdasFiles (/Users/mihai.blebea/Projects/LexBots/withNode/services/Wilbur.js:42:22)
+      at Object.getChangedLambdasFiles (/Users/mihai.blebea/Projects/LexBots/withNode/services/files.js:55:13)
+      at Wilbur.deploy (/Users/mihai.blebea/Projects/LexBots/withNode/services/Wilbur.js:29:20)
+      at files.getChangedFiles (deploy:34:14)
+      at changedGitFiles (/Users/mihai.blebea/Projects/LexBots/withNode/services/files.js:36:13)
+      at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/changed-git-files/index.js:20:21
+
+
+
+1

@@ -56,7 +56,7 @@ class LambdaManager
             console.log(counter, files.length - 1)
             if(counter == files.length - 1)
             {
-                callback(stdout)
+                callback()
             }
         })
 
