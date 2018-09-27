@@ -101,3 +101,7 @@ CHANGED FILES [ { filename:
   { filename: 'ci/deploy_log.txt', status: 'Added' } ]
 ALL FILES [ { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
 CHANGED FILES [ { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+ALL FILES [ { filename: 'package.json', status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+CHANGED FILES [ { filename: 'package.json', status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
