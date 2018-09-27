@@ -1,5 +1,5 @@
 
 module.exports.hello = (event, context, callback)=> {
     return 'hello World222'
-    console.log('cevasaaas2')
+    console.log('cev222asaaas2')
 }
