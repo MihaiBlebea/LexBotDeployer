@@ -56,3 +56,93 @@ LAMBDA [ 'repos/lambdas/functions/ceva/myService/handler.js',
   'repos/lambdas/functions/ceva/myService/.gitignore',
   'repos/lambdas/functions/LambdaOne/LambdaOne.js' ]
 TEST NAME handler.js
+ALL FILES [ { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/serverless-state.json',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/.serverless/demo.zip',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-update-stack.json',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/serverless.yml',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/serverless-state.json',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/.serverless/demo.zip',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-update-stack.json',
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' },
+  { filename: 'ceva/myService/serverless.yml', status: 'Added' },
+  { filename: 'ceva/myService/handler.js', status: 'Added' },
+  { filename: 'ceva/myService/.gitignore', status: 'Added' } ]
+CHANGED FILES [ { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/serverless-state.json',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/.serverless/demo.zip',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-update-stack.json',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/serverless.yml',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/serverless-state.json',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/.serverless/demo.zip',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-update-stack.json',
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' },
+  { filename: 'ceva/myService/serverless.yml', status: 'Added' },
+  { filename: 'ceva/myService/handler.js', status: 'Added' },
+  { filename: 'ceva/myService/.gitignore', status: 'Added' } ]
+LAMBDA [ 'repos/lambdas/functions/LambdaOne/LambdaOne.js' ]
+TEST NAME LambdaOne.js
+
+
+  Test lambda function
+    ✓ Should return hello World
+
+
+  1 passing (5ms)
+
+0
+STDOUT Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Creating Stack...
+Serverless: Checking Stack create progress...
+.....
+Serverless: Stack create finished...
+Serverless: Uploading CloudFormation file to S3...
+Serverless: Uploading artifacts...
+Serverless: Uploading service .zip file to S3 (242 B)...
+Serverless: Validating template...
+Serverless: Updating Stack...
+Serverless: Checking Stack update progress...
+...............
+Serverless: Stack update finished...
+Service Information
+service: LambdaOne
+stage: dev
+region: us-east-1
+stack: LambdaOne-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: LambdaOne-dev-hello
+Serverless: Publishing service to Serverless Platform...
+Serverless: Successfully published your service on the Serverless Platform
+Serverless: Service URL:  https://dashboard.serverless.com/tenants/mihaiblebea/applications/myapp-dev/services/LambdaOne
+
+STDERR 
+JOB DONE
