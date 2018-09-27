@@ -45,7 +45,7 @@ class LambdaManager
 
                 if(counter === files.length - 1 && passed === true)
                 {
-                    exec('cd ../' + folderPath + ' && pwd', (error, stdout, stderr)=> {
+                    exec('cd ../' + folderPath + ' && serverless deploy', (error, stdout, stderr)=> {
                         if(error) console.log(error)
                         console.log('STDOUT', stdout)
                         console.log('STDERR', stderr)
