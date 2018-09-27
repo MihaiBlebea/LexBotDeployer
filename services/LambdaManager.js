@@ -27,13 +27,11 @@ class LambdaManager
 
     deployLambdaServerless(files, callback)
     {
-        console.log('FILES TO BE TESTED', files)
         files.map((file)=> {
 
             var counter = 0
             var passed = true
             this.runUnitTesting(file, (result)=> {
-                console.log(result)
                 if(result.pass === false)
                 {
                     passed = false
@@ -43,6 +41,7 @@ class LambdaManager
                 var folderPath = file.replace('/' + jsFileName, '');
 
                 counter++
+                console.log(counter, files.length)
                 if(counter === files.length && passed === true)
                 {
                     exec('cd ../' + folderPath + ' && serverless deploy', (error, stdout, stderr)=> {
