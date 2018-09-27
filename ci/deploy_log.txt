@@ -73,3 +73,91 @@ TEST NAME LambdaTwo.js
 
 
 1
+ALL FILES [ { filename: 'services/LambdaManager.js', status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Added' } ]
+CHANGED FILES [ { filename: 'services/LambdaManager.js', status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Added' } ]
+LAMBDA [ 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js',
+  'repos/lambdas/functions/LambdaOne/LambdaOne.js' ]
+TEST NAME LambdaTwo.js
+
+
+0 1
+TEST NAME LambdaOne.js
+
+
+0 1
+  Test lambda function
+  Test lambda function
+    ✓ Should return Goodbye World33
+    ✓ Should return hello World
+
+
+
+  1 passing (5ms)
+
+0
+
+  1 passing (8ms)
+
+0
+STDOUT Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Uploading CloudFormation file to S3...
+Serverless: Uploading artifacts...
+Serverless: Uploading service .zip file to S3 (241 B)...
+Serverless: Validating template...
+Serverless: Updating Stack...
+Serverless: Checking Stack update progress...
+.........
+Serverless: Stack update finished...
+Service Information
+service: LambdaTwo
+stage: dev
+region: us-east-1
+stack: LambdaTwo-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: LambdaTwo-dev-hello
+Serverless: Publishing service to Serverless Platform...
+Serverless: Successfully published your service on the Serverless Platform
+Serverless: Service URL:  https://dashboard.serverless.com/tenants/mihaiblebea/applications/myapp-dev/services/LambdaTwo
+
+STDERR 
+STDOUT Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Uploading CloudFormation file to S3...
+Serverless: Uploading artifacts...
+Serverless: Uploading service .zip file to S3 (236 B)...
+Serverless: Validating template...
+Serverless: Updating Stack...
+Serverless: Checking Stack update progress...
+.........
+Serverless: Stack update finished...
+Service Information
+service: LambdaOne
+stage: dev
+region: us-east-1
+stack: LambdaOne-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: LambdaOne-dev-hello
+Serverless: Publishing service to Serverless Platform...
+Serverless: Successfully published your service on the Serverless Platform
+Serverless: Service URL:  https://dashboard.serverless.com/tenants/mihaiblebea/applications/myapp-dev/services/LambdaOne
+
+STDERR 
