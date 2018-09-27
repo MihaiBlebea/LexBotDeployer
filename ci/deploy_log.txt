@@ -128,3 +128,26 @@ Serverless: Updating Stack...
 
 STDERR 
 JOB DONE
+ALL FILES [ { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/serverless-state.json',
+    status: 'Deleted' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/.serverless/demo.zip',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-update-stack.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-create-stack.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/serverless-state.json',
+    status: 'Deleted' },
+  { filename: 'repos/lambdas/functions/LambdaOne/.serverless/demo.zip',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-update-stack.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-create-stack.json',
+    status: 'Deleted' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
