@@ -43,3 +43,23 @@ LAMBDA [ 'repos/lambdas/functions/LambdaTwo/.serverless/serverless-state.json',
   'repos/lambdas/functions/LambdaOne/.serverless/demo.zip',
   'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-update-stack.json' ]
 TEST NAME serverless-state.json
+ALL FILES [ { filename: 'services/files.js', status: 'Modified' },
+  { filename: 'services/Wilbur.js', status: 'Modified' },
+  { filename: 'services/LambdaManager.js', status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/serverless-state.json',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/.serverless/demo.zip',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-update-stack.json',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/serverless-state.json',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/.serverless/demo.zip',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-update-stack.json',
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
