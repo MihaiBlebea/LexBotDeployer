@@ -43,6 +43,7 @@ class LambdaManager
 
                 counter++
                 console.log('CURRENT DIR', __dirname)
+                console.log('NAVIGATE TO FUNCTION', '../' + folderPath)
                 if(counter === files.length && passed === true)
                 {
                     exec('cd ../' + folderPath + ' && serverless deploy', (error, stdout, stderr)=> {
