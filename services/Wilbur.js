@@ -57,7 +57,16 @@ class Wilbur
             {
                 console.log('Deleted files', deletedFiles)
                 let processedFiles = this.processDeletedFiles(deletedFiles)
-                console.log(processedFiles)
+
+                processedFiles.map((file)=> {
+                    if(file.type === 'slots')
+                    {
+                        let json = require(file.path)
+                        console.log('Deleted file JSON', json)
+                        slotName = json.name
+                        this.slotManager.deleteSlot(slotName)
+                    }
+                })
                 // Trigger the delete resource flow
                 // this.slotManager.deleteSlot()
             }
