@@ -1,0 +1,5 @@
+ALL FILES [ { filename: 'repos/slots/SlotTypeThree.json',
+    status: 'Deleted' } ]
+CHANGED FILES [ { filename: 'repos/slots/SlotTypeThree.json',
+    status: 'Deleted' } ]
+Deleted files [ 'repos/slots/SlotTypeThree.json' ]

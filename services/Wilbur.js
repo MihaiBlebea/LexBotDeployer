@@ -56,6 +56,8 @@ class Wilbur
             if(deletedFiles.length > 0)
             {
                 console.log('Deleted files', deletedFiles)
+                let processedFiles = this.processDeletedFiles(deletedFiles)
+                console.log(processedFiles)
                 // Trigger the delete resource flow
                 // this.slotManager.deleteSlot()
             }
@@ -83,6 +85,24 @@ class Wilbur
             }
         })
         return result
+    }
+
+    processDeletedFiles(files)
+    {
+        result = []
+        return files.map((file)=> {
+            return result.push(this.splitFilePath())
+        })
+    }
+
+    splitFilePath(path)
+    {
+        let splitFile = path.split('/')
+        return {
+            fileName: splitFile[splitFile.length - 1],
+            type: splitFile[splitFile.length - 2],
+            path: path
+        }
     }
 
     hasModifiedFiles(files)
