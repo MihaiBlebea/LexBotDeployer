@@ -91,7 +91,7 @@ class Wilbur
     {
         result = []
         return files.map((file)=> {
-            return result.push(this.splitFilePath())
+            return result.push(this.splitFilePath(file))
         })
     }
 
