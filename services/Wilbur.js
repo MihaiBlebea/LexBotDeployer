@@ -34,7 +34,7 @@ class Wilbur
 
             if(deletedFiles.length > 0)
             {
-                // Trigger the delete resource flow
+                // Trigger delete lambda
             }
 
             if(modifiedFiles.length > 0)
@@ -55,7 +55,9 @@ class Wilbur
 
             if(deletedFiles.length > 0)
             {
+                console.log('Deleted files', deletedFiles)
                 // Trigger the delete resource flow
+                // this.slotManager.deleteSlot()
             }
 
             // Check if all changed files are flagged as deleted

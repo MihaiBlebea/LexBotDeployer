@@ -27,26 +27,6 @@ class SlotManager
         })
     }
 
-    // getSlotVersionNonCli(slotName, callback)
-    // {
-    //     var params = {
-    //         version: "$LATEST",
-    //         name: slotName
-    //     }
-    //     this.lex.getSlotType(params, (error, data)=> {
-    //         // if(error) console.log(error.stack)
-    //         if(data !== null)
-    //         {
-    //             this.log(`Getting the checksum of the latest version for ${data.name}`)
-    //         }
-    //
-    //         if(callback)
-    //         {
-    //             callback(data)
-    //         }
-    //     })
-    // }
-
     getSlotVersion(slotName, callback)
     {
         exec(`aws lex-models get-slot-type \
@@ -90,26 +70,6 @@ class SlotManager
         })
     }
 
-    // createSlotVersion(slotName, checksum, callback)
-    // {
-    //     var params = {
-    //         name: slotName,
-    //         checksum: checksum
-    //     }
-    //     this.lex.createSlotTypeVersion(params, (error, data)=> {
-    //         if(error)
-    //         {
-    //             console.log(error.stack);
-    //         } else {
-    //             this.log(`Creating a new version for ${data.name}. New version is ${data.version}`)
-    //             if(callback)
-    //             {
-    //                 callback(data)
-    //             }
-    //         }
-    //     })
-    // }
-
     createSlotVersion(slotName, checksum, callback)
     {
         exec(`aws lex-models create-slot-type-version \
@@ -130,66 +90,28 @@ class SlotManager
                 callback(data)
             }
         })
-
-
-        // var params = {
-        //     name: slotName,
-        //     checksum: checksum
-        // }
-        // this.lex.createSlotTypeVersion(params, (error, data)=> {
-        //     if(error)
-        //     {
-        //         console.log(error.stack);
-        //     } else {
-        //         this.log(`Creating a new version for ${data.name}. New version is ${data.version}`)
-        //         if(callback)
-        //         {
-        //             callback(data)
-        //         }
-        //     }
-        // })
     }
 
     deleteSlot(slotName)
     {
-        var params = {
-            name: slotName
-        }
-        this.lex.deleteSlotType(params, (error, data)=> {
-            if(error)
+        exec(`aws lex-models delete-slot-type
+                    --name ${slotName}>`, (error, stdout, stderr)=> {
+            if(error) console.log(error)
+            console.log(stdout)
+            console.log(stderr)
+            var data = null
+            if(stdout)
             {
-                console.log(error.stack);
-            } else {
-                console.log(data)
+                data = JSON.parse(stdout)
+            }
+            this.log(`Deleted ${slotName}.`)
+            if(callback)
+            {
+                callback(data)
             }
         })
     }
 
-    // deploySlot(slotName, callback, timeout)
-    // {
-    //     if(!timeout)
-    //     {
-    //         timeout = 1000
-    //     }
-    //     this.log(`Starting to deploy slot ${slotName}.`)
-    //     this.getSlotVersion(slotName, (versionData)=> {
-    //         setTimeout(()=> {
-    //             this.putSlot(slotName, versionData, (data)=> {
-    //                 setTimeout(()=> {
-    //                     this.createSlotVersion(slotName, data.checksum, (data)=> {
-    //                         this.log(`Slot ${slotName} was deployed.`)
-    //                         if(callback)
-    //                         {
-    //                             setTimeout(()=> {
-    //                                 callback(data)
-    //                             }, timeout)
-    //                         }
-    //                     })
-    //                 }, timeout)
-    //             })
-    //         }, timeout)
-    //     })
-    // }
     deploySlot(slotName, callback)
     {
         this.log(`Starting to deploy slot ${slotName}.`)
