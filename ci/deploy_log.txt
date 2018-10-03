@@ -212,3 +212,10 @@ BadRequestException: Invalid number of intents for bot "BotTwo". A bot should ha
     at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10
     at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:17)
     at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:18)
+ALL FILES [ { filename: 'repos/slots/SlotTypeSix.json', status: 'Deleted' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+CHANGED FILES [ { filename: 'repos/slots/SlotTypeSix.json', status: 'Deleted' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+Deleted files [ 'repos/slots/SlotTypeSix.json' ]
+2
+[ 1 ]

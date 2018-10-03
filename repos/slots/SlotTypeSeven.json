@@ -1,0 +1,9 @@
+{
+    "name": "SlotTypeSeven",
+    "description": "Available pizza sauces",
+    "enumerationValues": [
+        {
+            "value": "red"
+        }
+    ]
+}

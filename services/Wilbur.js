@@ -90,9 +90,10 @@ class Wilbur
     processDeletedFiles(files)
     {
         result = []
-        return files.map((file)=> {
+        files.map((file)=> {
             return result.push(this.splitFilePath(file))
         })
+        return result
     }
 
     splitFilePath(path)
