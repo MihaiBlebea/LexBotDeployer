@@ -98,6 +98,7 @@ class Wilbur
     splitFilePath(path)
     {
         let splitFile = path.split('/')
+        console.log(splitFile)
         return {
             fileName: splitFile[splitFile.length - 1],
             type: splitFile[splitFile.length - 2],

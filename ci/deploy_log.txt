@@ -3,3 +3,11 @@ ALL FILES [ { filename: 'repos/slots/SlotTypeFour.json', status: 'Deleted' },
 CHANGED FILES [ { filename: 'repos/slots/SlotTypeFour.json', status: 'Deleted' },
   { filename: 'ci/deploy_log.txt', status: 'Deleted' } ]
 Deleted files [ 'repos/slots/SlotTypeFour.json' ]
+ALL FILES [ { filename: 'services/Wilbur.js', status: 'Modified' },
+  { filename: 'repos/slots/SlotTypeFour.json', status: 'Deleted' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+CHANGED FILES [ { filename: 'services/Wilbur.js', status: 'Modified' },
+  { filename: 'repos/slots/SlotTypeFour.json', status: 'Deleted' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+Deleted files [ 'repos/slots/SlotTypeFour.json' ]
+[ 1 ]
