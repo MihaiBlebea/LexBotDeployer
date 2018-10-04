@@ -33,7 +33,7 @@ class LambdaManager
             Principal: 's3.amazonaws.com',
             SourceAccount: '216849691610',
             SourceArn: 'arn:aws:lambda:us-east-1:216849691610:function:' + lambdaName,
-            StatementId: Math.random().toString()
+            StatementId: Math.floor((Math.random() * 10) + 1).toString()
         }
         this.lambda.addPermission(params, (error, data)=> {
             if(error) console.log(error, error.stack)
