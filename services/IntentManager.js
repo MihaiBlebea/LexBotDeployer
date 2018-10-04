@@ -11,26 +11,6 @@ class IntentManager
         this.log = log
     }
 
-    // createIntentVersion(intentName, checksum, callback)
-    // {
-    //     var params = {
-    //         name: intentName,
-    //         checksum: checksum
-    //     }
-    //     this.lex.createIntentVersion(params, (error, data)=> {
-    //         if(error)
-    //         {
-    //             console.log(error.stack);
-    //         } else {
-    //             this.log(`Creating a new version for intent ${data.name}. New version is ${data.version}`)
-    //             if(callback)
-    //             {
-    //                 callback(data)
-    //             }
-    //         }
-    //     })
-    // }
-
     createIntentVersion(intentName, checksum, callback)
     {
         exec(`aws lex-models create-intent-version \
@@ -52,24 +32,6 @@ class IntentManager
                 callback(data)
             }
         })
-
-
-        // var params = {
-        //     name: intentName,
-        //     checksum: checksum
-        // }
-        // this.lex.createIntentVersion(params, (error, data)=> {
-        //     if(error)
-        //     {
-        //         console.log(error.stack);
-        //     } else {
-        //         this.log(`Creating a new version for intent ${data.name}. New version is ${data.version}`)
-        //         if(callback)
-        //         {
-        //             callback(data)
-        //         }
-        //     }
-        // })
     }
 
     putIntent(intentName, versionData, slotVersions, callback)
@@ -98,44 +60,6 @@ class IntentManager
         })
     }
 
-    // getIntentVersions(intentName, callback)
-    // {
-    //     var params = {
-    //         name: intentName
-    //     }
-    //     this.lex.getIntentVersions(params, (error, data)=> {
-    //         if(error)
-    //         {
-    //             console.log(error.stack);
-    //         } else {
-    //             if(callback)
-    //             {
-    //                 callback(data)
-    //             }
-    //         }
-    //     })
-    // }
-
-    // getIntentLatestVersion(intentName, callback)
-    // {
-    //     var params = {
-    //         version: '$LATEST',
-    //         name: intentName
-    //     }
-    //     this.lex.getIntent(params, (error, data)=> {
-    //         // if(err) console.log(err.stack)
-    //         if(data !== null)
-    //         {
-    //             this.log(`Getting the checksum for the latest version of intent ${data.name}.`)
-    //         }
-    //
-    //         if(callback)
-    //         {
-    //             callback(data)
-    //         }
-    //     })
-    // }
-
     getIntentLatestVersion(intentName, callback)
     {
         exec(`aws lex-models get-intent \
@@ -157,23 +81,6 @@ class IntentManager
                 callback(data)
             }
         })
-
-        // var params = {
-        //     version: '$LATEST',
-        //     name: intentName
-        // }
-        // this.lex.getIntent(params, (error, data)=> {
-        //     // if(err) console.log(err.stack)
-        //     if(data !== null)
-        //     {
-        //         this.log(`Getting the checksum for the latest version of intent ${data.name}.`)
-        //     }
-        //
-        //     if(callback)
-        //     {
-        //         callback(data)
-        //     }
-        // })
     }
 
     deployIntent(intentName, slotVersions, callback)

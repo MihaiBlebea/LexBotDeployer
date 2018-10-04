@@ -55,20 +55,19 @@ class Wilbur
 
             if(deletedFiles.length > 0)
             {
-                console.log('Deleted files', deletedFiles)
-                let processedFiles = this.processDeletedFiles(deletedFiles)
-
-                processedFiles.map((file)=> {
-                    if(file.type === 'slots')
-                    {
-                        let json = require(file.path)
-                        console.log('Deleted file JSON', json)
-                        slotName = json.name
-                        this.slotManager.deleteSlot(slotName)
-                    }
-                })
-                // Trigger the delete resource flow
-                // this.slotManager.deleteSlot()
+                // console.log('Deleted files', deletedFiles)
+                // let processedFiles = this.processDeletedFiles(deletedFiles)
+                //
+                // processedFiles.map((file)=> {
+                //     if(file.type === 'slots')
+                //     {
+                //         console.log(process.cwd())
+                //         let json = require('./../' + file.path)
+                //         console.log('Deleted file JSON', json)
+                //         slotName = json.name
+                //         this.slotManager.deleteSlot(slotName)
+                //     }
+                // })
             }
 
             // Check if all changed files are flagged as deleted

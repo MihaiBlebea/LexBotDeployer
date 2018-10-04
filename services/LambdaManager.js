@@ -58,41 +58,6 @@ class LambdaManager
                 callback()
             }
         })
-
-        // this.files.processFiles('./../repos/lambdas/functions', (slotFiles)=> {
-        //     slotFiles.shift()
-        //     var serverlessFileIndex = slotFiles.indexOf('serverless')
-        //     if(serverlessFileIndex > -1)
-        //     {
-        //         slotFiles.splice(serverlessFileIndex, 1)
-        //     }
-        //
-        //     var counter = 0
-        //     var passed = true
-        //     slotFiles.map((fileName)=> {
-        //         this.runUnitTesting(fileName, (result)=> {
-        //
-        //             if(result.pass === false)
-        //             {
-        //                 passed = false
-        //             }
-        //
-        //             counter++
-        //             if(counter === slotFiles.length - 1 && passed === true)
-        //             {
-        //                 exec('cd ../repos/lambdas/functions && pwd && serverless deploy', (error, stdout, stderr)=> {
-        //                     if(error) console.log(error)
-        //                     console.log('STDOUT', stdout)
-        //                     console.log('STDERR', stderr)
-        //                     if(callback)
-        //                     {
-        //                         callback(stdout)
-        //                     }
-        //                 })
-        //             }
-        //         })
-        //     })
-        // })
     }
 }
 

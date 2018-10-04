@@ -74,46 +74,7 @@ class BotManager
                 }
             }
         })
-
-        // var params = {
-        //     name: botName,
-        //     checksum: checksum
-        // }
-        //
-        // this.lex.createBotVersion(params, (error, data)=> {
-        //     if(error)
-        //     {
-        //         console.log(error.stack);
-        //     } else {
-        //         this.log(`Creating a new version for bot ${data.name}. New bot version is ${data.version}`)
-        //         if(callback)
-        //         {
-        //             callback(data)
-        //         }
-        //     }
-        // })
     }
-
-    // createBotVersion(botName, checksum, callback)
-    // {
-    //     var params = {
-    //         name: botName,
-    //         checksum: checksum
-    //     }
-    //
-    //     this.lex.createBotVersion(params, (error, data)=> {
-    //         if(error)
-    //         {
-    //             console.log(error.stack);
-    //         } else {
-    //             this.log(`Creating a new version for bot ${data.name}. New bot version is ${data.version}`)
-    //             if(callback)
-    //             {
-    //                 callback(data)
-    //             }
-    //         }
-    //     })
-    // }
 
     getBotVersions(botName, callback)
     {
@@ -134,44 +95,7 @@ class BotManager
                 callback(data)
             }
         })
-
-        // var params = {
-        //     name: botName,
-        //     versionOrAlias: '$LATEST'
-        // }
-        // this.lex.getBot(params, (error, data)=> {
-        //     // if(error) console.log(error, error.stack)
-        //     if(data !== null)
-        //     {
-        //         this.log(`Getting the checksum for the latest version of bot ${data.name}.`)
-        //     }
-        //
-        //     if(callback)
-        //     {
-        //         callback(data)
-        //     }
-        // })
     }
-
-    // getBotVersions(botName, callback)
-    // {
-    //     var params = {
-    //         name: botName,
-    //         versionOrAlias: '$LATEST'
-    //     }
-    //     this.lex.getBot(params, (error, data)=> {
-    //         // if(error) console.log(error, error.stack)
-    //         if(data !== null)
-    //         {
-    //             this.log(`Getting the checksum for the latest version of bot ${data.name}.`)
-    //         }
-    //
-    //         if(callback)
-    //         {
-    //             callback(data)
-    //         }
-    //     })
-    // }
 
     deleteBot(botName)
     {
