@@ -148,7 +148,7 @@ class Wilbur
             if(callback)
             {
                 console.log('RESULT AFTER DEPLOY', result)
-                this.lambdaManager.addPermission('nam', (data)=> {
+                this.lambdaManager.addPermission('LambdaThree', (data)=> {
                     callback(data)
                 })
             }
