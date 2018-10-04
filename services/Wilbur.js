@@ -147,7 +147,10 @@ class Wilbur
         this.lambdaManager.deployLambdaServerless(files, (result)=> {
             if(callback)
             {
-                callback(result)
+                console.log('RESULT AFTER DEPLOY', result)
+                this.lambdaManager.addPermission('nam', (data)=> {
+                    callback(data)
+                })
             }
         })
     }

@@ -25,6 +25,25 @@ class LambdaManager
         this.tester.testLambda('./../repos/lambdas/tests/' + testName, callback)
     }
 
+    addPermission(lambdaName, callback)
+    {
+        var params = {
+            Action: 'lambda:InvokeFunction',
+            FunctionName: lambdaName,
+            Principal: 's3.amazonaws.com',
+            SourceAccount: 'AKIAINCFUDM6QC6WWYEA',
+            SourceArn: 'arn:aws:lambda:us-east-1:216849691610:function:' + lambdaName,
+            StatementId: 'ID-1'
+        }
+        this.lambda.addPermission(params, (error, data)=> {
+            if(error) console.log(error, error.stack)
+            if(callback)
+            {
+                callback(data)
+            }
+        })
+    }
+
     deployLambdaServerless(files, callback)
     {
         files.map((file)=> {
