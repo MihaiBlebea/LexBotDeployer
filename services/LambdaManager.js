@@ -31,7 +31,7 @@ class LambdaManager
             Action: 'lambda:InvokeFunction',
             FunctionName: lambdaName,
             Principal: 's3.amazonaws.com',
-            SourceAccount: 'AKIAINCFUDM6QC6WWYEA',
+            SourceAccount: 'aws2303002',
             SourceArn: 'arn:aws:lambda:us-east-1:216849691610:function:' + lambdaName,
             StatementId: 'ID-1'
         }
