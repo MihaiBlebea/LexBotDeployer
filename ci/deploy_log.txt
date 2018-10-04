@@ -1,0 +1,20 @@
+ALL FILES [ { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/serverless-state.json',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-update-stack.json',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/LambdaTwo.zip',
+    status: 'Modified' },
+  { filename: 'ci/test-placeholder', status: 'Added' } ]
+CHANGED FILES [ { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/serverless-state.json',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-update-stack.json',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/LambdaTwo.zip',
+    status: 'Modified' },
+  { filename: 'ci/test-placeholder', status: 'Added' } ]
