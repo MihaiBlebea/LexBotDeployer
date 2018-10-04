@@ -107,7 +107,6 @@ class Wilbur
     splitFilePath(path)
     {
         let splitFile = path.split('/')
-        console.log(splitFile.length - 1)
         return {
             fileName: splitFile[splitFile.length - 1],
             type: splitFile[splitFile.length - 2],
@@ -143,15 +142,25 @@ class Wilbur
 
     deployLambdaStuff(files, callback)
     {
-        console.log('LAMBDA', files)
-        this.lambdaManager.deployLambdaServerless(files, (result)=> {
-            if(callback)
-            {
-                console.log('RESULT AFTER DEPLOY', result)
-                this.lambdaManager.addPermission('LambdaTwo-dev-hello', (data)=> {
-                    callback(data)
+
+        this.lambdaManager.deployLambdaServerless(files, (files)=> {
+
+            console.log('RESULT AFTER DEPLOY', result)
+            let counter = 0
+            files.map((file)=> {
+                // Get the name of the Lambda function //
+                let splitPath = this.splitFilePath(file)
+                let lambdaName = splitPath.name.split('.')[0] + '-dev-hello'
+                // Get the name of the Lambda function //
+
+                this.lambdaManager.addPermission(lambdaName, (data)=> {
+                    counter++
+                    if(counter == files.length - 1 && callback !== null)
+                    {
+                        callback()
+                    }
                 })
-            }
+            })
         })
     }
 
