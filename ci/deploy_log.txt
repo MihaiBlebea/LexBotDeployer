@@ -1,0 +1,18 @@
+ALL FILES [ { filename: 'services/LambdaManager.js', status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js',
+    status: 'Modified' } ]
+CHANGED FILES [ { filename: 'services/LambdaManager.js', status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js',
+    status: 'Modified' } ]
+LAMBDA [ 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js' ]
+
+
+RESULT AFTER DEPLOY undefined
+  Test lambda function
+    ✓ Should return Goodbye World33
+
+
+  1 passing (45ms)
+
+0
+JOB DONE
