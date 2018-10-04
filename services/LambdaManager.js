@@ -74,7 +74,7 @@ class LambdaManager
 
             if(counter == files.length - 1)
             {
-                callback()
+                callback(files)
             }
         })
     }

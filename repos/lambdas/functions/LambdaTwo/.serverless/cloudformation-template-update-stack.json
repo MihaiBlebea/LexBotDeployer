@@ -92,7 +92,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/LambdaTwo/dev/1538645610928-2018-10-04T09:33:30.928Z/LambdaTwo.zip"
+          "S3Key": "serverless/LambdaTwo/dev/1538647208368-2018-10-04T10:00:08.368Z/LambdaTwo.zip"
         },
         "FunctionName": "LambdaTwo-dev-hello",
         "Handler": "LambdaTwo.goodbye",
@@ -111,14 +111,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "HelloLambdaVersionyLwPDDSEZJ4pNnkW7eQNl0AUD5GhbEbhGnhps7yIA": {
+    "HelloLambdaVersionrInsUsBRHu0xkWrzdeOAVRYo92EAq54JkB2bKIUV0": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "HelloLambdaFunction"
         },
-        "CodeSha256": "hdnCkJF8PGYmzLCbk1No0jLV4LpiOZaBhkxSDRvxM3E="
+        "CodeSha256": "9gAub+vG2Hn0zxBTqB9iN4eNmrh9UU3VB9Ab6EYsDbE="
       }
     }
   },
@@ -131,7 +131,7 @@
     "HelloLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "HelloLambdaVersionyLwPDDSEZJ4pNnkW7eQNl0AUD5GhbEbhGnhps7yIA"
+        "Ref": "HelloLambdaVersionrInsUsBRHu0xkWrzdeOAVRYo92EAq54JkB2bKIUV0"
       }
     }
   }
