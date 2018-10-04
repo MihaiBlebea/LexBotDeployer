@@ -16,3 +16,23 @@ RESULT AFTER DEPLOY undefined
 
 0
 JOB DONE
+ALL FILES [ { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/serverless-state.json',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-update-stack.json',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/LambdaTwo.zip',
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Added' } ]
+CHANGED FILES [ { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/serverless-state.json',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-update-stack.json',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/LambdaTwo.zip',
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Added' } ]
