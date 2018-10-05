@@ -1154,3 +1154,29 @@ Serverless: Operation failed!
  
 
 STDERR 
+ALL FILES [ { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/serverless-state.json',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-update-stack.json',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-create-stack.json',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/LambdaTwo.zip',
+    status: 'Added' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+CHANGED FILES [ { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/serverless-state.json',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-update-stack.json',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-create-stack.json',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/LambdaTwo.zip',
+    status: 'Added' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
