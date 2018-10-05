@@ -8,7 +8,7 @@ provider:
   name: aws
   runtime: nodejs8.10
   stage: production
-  
+
 functions:
     hello:
         handler: LambdaThree.hello
