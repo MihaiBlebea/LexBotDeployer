@@ -106,7 +106,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/LambdaOne/dev/1538742784673-2018-10-05T12:33:04.673Z/LambdaOne.zip"
+                "S3Key": "serverless/LambdaOne/dev/1538743096480-2018-10-05T12:38:16.480Z/LambdaOne.zip"
               },
               "FunctionName": "LambdaOne-dev-hello",
               "Handler": "LambdaOne.hello",
@@ -125,14 +125,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "HelloLambdaVersionUIu8lRL83B1H9kIhrWYD2ju2e3FCatMO60F3cdMM": {
+          "HelloLambdaVersionkcQmb1Luo4WaAFtibIVjPwyyG0B3z3RrEqfMtA": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "HelloLambdaFunction"
               },
-              "CodeSha256": "hHQ0DADx072UZVfIfstONejI18zabwEJx8n4ahiiYkk="
+              "CodeSha256": "IK3q8ffPKmufJ3bds9q7njblZjzK0T3fEVaqKWlso1U="
             }
           }
         },
@@ -145,7 +145,7 @@
           "HelloLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "HelloLambdaVersionUIu8lRL83B1H9kIhrWYD2ju2e3FCatMO60F3cdMM"
+              "Ref": "HelloLambdaVersionkcQmb1Luo4WaAFtibIVjPwyyG0B3z3RrEqfMtA"
             }
           }
         }
@@ -186,7 +186,7 @@
     "artifact": "/Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions/LambdaOne/.serverless/LambdaOne.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/LambdaOne/dev/1538742784673-2018-10-05T12:33:04.673Z",
+    "artifactDirectoryName": "serverless/LambdaOne/dev/1538743096480-2018-10-05T12:38:16.480Z",
     "artifact": "LambdaOne.zip"
   }
 }
