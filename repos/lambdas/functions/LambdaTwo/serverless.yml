@@ -1,0 +1,14 @@
+
+service: LambdaOne
+
+app: myapp-dev
+tenant: mihaiblebea
+
+provider:
+    name: aws
+    runtime: nodejs8.10
+    stage: production
+
+functions:
+    hello:
+        handler: LambdaOne.hello
