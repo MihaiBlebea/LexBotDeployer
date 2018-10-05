@@ -194,3 +194,155 @@ BadRequestException: Invalid number of intents for bot "BotOne". A bot should ha
     at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10
     at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:17)
     at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:18)
+ALL FILES [ { filename: 'test.json', status: 'Added' },
+  { filename: 'repos/intents/IntentOne.json', status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Added' } ]
+CHANGED FILES [ { filename: 'test.json', status: 'Added' },
+  { filename: 'repos/intents/IntentOne.json', status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Added' } ]
+[13:28:20:64] : Starting to deploy slot SlotTypeOne.
+[13:28:20:69] : Starting to deploy slot SlotTypeTwo.
+[13:28:21:785] : Updating the slot code for SlotTypeTwo
+[13:28:21:792] : Updating the slot code for SlotTypeOne
+{
+    "name": "SlotTypeOne",
+    "description": "Available pizza sauces",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "green"
+        }
+    ],
+    "lastUpdatedDate": 1538742301.432,
+    "createdDate": 1538742301.432,
+    "version": "1",
+    "checksum": "81cbb146-5f5f-4840-8e59-18a6b2685a77",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[13:28:22:844] : Creating a new version for SlotTypeOne. New version is 1
+[13:28:22:844] : Slot SlotTypeOne was deployed.
+[13:28:22:845] : Starting to deploy intent IntentOne.
+[13:28:22:849] : Starting to deploy intent IntentTwo.
+{
+    "name": "SlotTypeTwo",
+    "description": "Available pizza sauces two",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        }
+    ],
+    "lastUpdatedDate": 1538742301.331,
+    "createdDate": 1538742301.331,
+    "version": "1",
+    "checksum": "b88dc571-fe51-471f-b68c-0c62730cb435",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[13:28:22:857] : Creating a new version for SlotTypeTwo. New version is 1
+[13:28:22:857] : Slot SlotTypeTwo was deployed.
+[13:28:23:843] : Getting the checksum of the latest version for IntentTwo
+{ Error: Command failed: aws lex-models get-intent                     --region us-east-1                     --name IntentOne                     --intent-version "\$LATEST"
+
+An error occurred (NotFoundException) when calling the GetIntent operation: The specified resource 'IntentOne' does not exist. Choose another resource.
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Socket.stream.socket.on (internal/child_process.js:380:11)
+    at Socket.emit (events.js:182:13)
+    at Socket.EventEmitter.emit (domain.js:442:20)
+    at Pipe._handle.close (net.js:599:12)
+  killed: false,
+  code: 255,
+  signal: null,
+  cmd:
+   'aws lex-models get-intent                     --region us-east-1                     --name IntentOne                     --intent-version "\\$LATEST"' }
+[13:28:24:175] : Updating the code for intent IntentTwo.
+[13:28:24:182] : Updating the code for intent IntentOne.
+[13:28:25:278] : Getting the checksum of the latest version for IntentOne
+[13:28:25:278] : Intent IntentOne was deployed.
+[13:28:25:279] : Starting to deploy bot BotOne.
+[13:28:25:283] : Starting to deploy bot BotTwo.
+[13:28:25:292] : Getting the checksum of the latest version for IntentTwo
+[13:28:25:292] : Intent IntentTwo was deployed.
+{ Error: Command failed: aws lex-models get-bot                     --region us-east-1                     --name BotOne                     --version-or-alias "\$LATEST"
+
+An error occurred (NotFoundException) when calling the GetBot operation: The specified resource 'BotOne' does not exist. Choose another resource.
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
+  killed: false,
+  code: 255,
+  signal: null,
+  cmd:
+   'aws lex-models get-bot                     --region us-east-1                     --name BotOne                     --version-or-alias "\\$LATEST"' }
+
+
+An error occurred (NotFoundException) when calling the GetBot operation: The specified resource 'BotOne' does not exist. Choose another resource.
+
+{ Error: Command failed: aws lex-models get-bot                     --region us-east-1                     --name BotTwo                     --version-or-alias "\$LATEST"
+
+An error occurred (NotFoundException) when calling the GetBot operation: The specified resource 'BotTwo' does not exist. Choose another resource.
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Socket.stream.socket.on (internal/child_process.js:380:11)
+    at Socket.emit (events.js:182:13)
+    at Socket.EventEmitter.emit (domain.js:442:20)
+    at Pipe._handle.close (net.js:599:12)
+  killed: false,
+  code: 255,
+  signal: null,
+  cmd:
+   'aws lex-models get-bot                     --region us-east-1                     --name BotTwo                     --version-or-alias "\\$LATEST"' }
+
+
+An error occurred (NotFoundException) when calling the GetBot operation: The specified resource 'BotTwo' does not exist. Choose another resource.
+
+[13:28:26:598] : Updating the code for the bot BotOne.
+[13:28:26:667] : Updating the code for the bot BotTwo.
+{ Error: Command failed: aws lex-models create-bot-version                     --region us-east-1                     --name BotTwo                     --checksum "f6bdfc97-66a7-4d9d-bdc5-0e4055f41464"
+
+An error occurred (BadRequestException) when calling the CreateBotVersion operation: You can't create a version of the bot named 'BotTwo' while it has status 'NOT_BUILT'. You can create a version of a bot only when its status is READY or BUILDING.
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:250:5)
+  killed: false,
+  code: 255,
+  signal: null,
+  cmd:
+   'aws lex-models create-bot-version                     --region us-east-1                     --name BotTwo                     --checksum "f6bdfc97-66a7-4d9d-bdc5-0e4055f41464"' }
+{ Error: Command failed: aws lex-models create-bot-version                     --region us-east-1                     --name BotOne                     --checksum "15b15611-1d24-4b24-98f8-9c44ab0eb8d8"
+
+An error occurred (BadRequestException) when calling the CreateBotVersion operation: You can't create a version of the bot named 'BotOne' while it has status 'NOT_BUILT'. You can create a version of a bot only when its status is READY or BUILDING.
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Socket.stream.socket.on (internal/child_process.js:380:11)
+    at Socket.emit (events.js:182:13)
+    at Socket.EventEmitter.emit (domain.js:442:20)
+    at Pipe._handle.close (net.js:599:12)
+  killed: false,
+  code: 255,
+  signal: null,
+  cmd:
+   'aws lex-models create-bot-version                     --region us-east-1                     --name BotOne                     --checksum "15b15611-1d24-4b24-98f8-9c44ab0eb8d8"' }

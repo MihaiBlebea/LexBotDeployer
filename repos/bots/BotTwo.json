@@ -2,7 +2,7 @@
     "intents": [
         {
             "intentVersion": "1",
-            "intentName": "IntentOne"
+            "intentName": "IntentTwo"
         }
     ],
     "name": "BotTwo",
