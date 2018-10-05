@@ -202,3 +202,72 @@ Serverless: Operation failed!
  
 
 STDERR 
+ALL FILES [ { filename: 'services/LambdaManager.js', status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+CHANGED FILES [ { filename: 'services/LambdaManager.js', status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+
+
+RESULT AFTER DEPLOY [ 'repos/lambdas/functions/LambdaOne/LambdaOne.js' ]
+  Test lambda function
+    ✓ Should return hello World
+
+
+  1 passing (37ms)
+
+0
+{ ResourceNotFoundException: Function not found: arn:aws:lambda:us-east-1:216849691610:function:LambdaOne-dev-hello
+    at Object.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/json.js:48:29)
+    at Request.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/rest_json.js:52:8)
+    at Request.callListeners (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:109:20)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:81:10)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:683:18)
+    at Request.transition (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:22:14)
+    at AcceptorStateMachine.runTo (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:14:12)
+    at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10
+    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:17)
+    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:18)
+  message:
+   'Function not found: arn:aws:lambda:us-east-1:216849691610:function:LambdaOne-dev-hello',
+  code: 'ResourceNotFoundException',
+  time: 2018-10-05T12:46:58.066Z,
+  requestId: 'bf021cc3-c89c-11e8-a590-95cc7d41a8e1',
+  statusCode: 404,
+  retryable: false,
+  retryDelay: 17.13982167540058 } 'ResourceNotFoundException: Function not found: arn:aws:lambda:us-east-1:216849691610:function:LambdaOne-dev-hello\n    at Object.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/json.js:48:29)\n    at Request.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/rest_json.js:52:8)\n    at Request.callListeners (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:109:20)\n    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:81:10)\n    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:683:18)\n    at Request.transition (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:22:14)\n    at AcceptorStateMachine.runTo (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:14:12)\n    at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10\n    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:17)\n    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:18)'
+{ Error: Command failed: cd ../repos/lambdas/functions/LambdaOne && serverless deploy function --function LambdaOne
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Socket.stream.socket.on (internal/child_process.js:380:11)
+    at Socket.emit (events.js:182:13)
+    at Socket.EventEmitter.emit (domain.js:442:20)
+    at Pipe._handle.close (net.js:599:12)
+  killed: false,
+  code: 1,
+  signal: null,
+  cmd:
+   'cd ../repos/lambdas/functions/LambdaOne && serverless deploy function --function LambdaOne' }
+STDOUT  
+  Serverless Error ---------------------------------------
+ 
+  Function "LambdaOne" doesn't exist in this Service
+ 
+  Get Support --------------------------------------------
+     Docs:          docs.serverless.com
+     Bugs:          github.com/serverless/serverless/issues
+     Issues:        forum.serverless.com
+ 
+  Your Environment Information -----------------------------
+     OS:                     darwin
+     Node Version:           10.9.0
+     Serverless Version:     1.32.0
+ 
+
+STDERR 

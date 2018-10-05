@@ -63,7 +63,7 @@ class LambdaManager
 
                 if(passed === true)
                 {
-                    exec('cd ../' + folderPath + ' && serverless deploy function --function LambdaOne', (error, stdout, stderr)=> {
+                    exec('cd ../' + folderPath + ' && serverless deploy', (error, stdout, stderr)=> {
                         if(error) console.log(error)
                         console.log('STDOUT', stdout)
                         console.log('STDERR', stderr)
