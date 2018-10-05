@@ -150,7 +150,7 @@ class Wilbur
             files.map((file)=> {
                 // Get the name of the Lambda function //
                 let splitPath = this.splitFilePath(file)
-                let lambdaName = splitPath.fileName.split('.')[0] + '-dev-hello'
+                let lambdaName = splitPath.fileName.split('.')[0] + '-production-hello'
                 // Get the name of the Lambda function //
 
                 this.lambdaManager.addPermission(lambdaName, (data)=> {
