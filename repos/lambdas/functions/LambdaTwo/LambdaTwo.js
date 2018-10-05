@@ -1,5 +1,5 @@
 
-module.exports.goodbye = (event, context, callback)=> {
+module.exports.hello = (event, context, callback)=> {
     return 'Goodbye World33'
     console.log('serban444sss')
 }

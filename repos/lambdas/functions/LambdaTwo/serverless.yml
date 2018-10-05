@@ -11,4 +11,4 @@ provider:
 
 functions:
     hello:
-        handler: LambdaTwo.goodbye
+        handler: LambdaTwo.hello

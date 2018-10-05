@@ -882,3 +882,71 @@ Serverless: Successfully published your service on the Serverless Platform
 Serverless: Service URL:  https://dashboard.serverless.com/tenants/mihaiblebea/applications/myapp-dev/services/LambdaThree
 
 STDERR 
+ALL FILES [ { filename: 'services/Wilbur.js', status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaThree/LambdaThree.js',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaThree/.serverless/serverless-state.json',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaThree/.serverless/cloudformation-template-update-stack.json',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaThree/.serverless/cloudformation-template-create-stack.json',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaThree/.serverless/LambdaThree.zip',
+    status: 'Added' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+CHANGED FILES [ { filename: 'services/Wilbur.js', status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaThree/LambdaThree.js',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaThree/.serverless/serverless-state.json',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaThree/.serverless/cloudformation-template-update-stack.json',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaThree/.serverless/cloudformation-template-create-stack.json',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaThree/.serverless/LambdaThree.zip',
+    status: 'Added' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+
+
+RESULT AFTER DEPLOY [ 'repos/lambdas/functions/LambdaThree/LambdaThree.js' ]
+  Test lambda function 3
+    ✓ Should return hello wwwWorleeeee
+
+
+  1 passing (37ms)
+
+0
+STDOUT Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Uploading CloudFormation file to S3...
+Serverless: Uploading artifacts...
+Serverless: Uploading service .zip file to S3 (237 B)...
+Serverless: Validating template...
+Serverless: Updating Stack...
+Serverless: Checking Stack update progress...
+.........
+Serverless: Stack update finished...
+Service Information
+service: LambdaThree
+stage: production
+region: us-east-1
+stack: LambdaThree-production
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: LambdaThree-production-hello
+Serverless: Publishing service to Serverless Platform...
+Serverless: Successfully published your service on the Serverless Platform
+Serverless: Service URL:  https://dashboard.serverless.com/tenants/mihaiblebea/applications/myapp-dev/services/LambdaThree
+
+STDERR 
