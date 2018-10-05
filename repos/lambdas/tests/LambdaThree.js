@@ -4,6 +4,6 @@ const lambda = require('./../functions/LambdaThree/LambdaThree.js')
 
 describe('Test lambda function 3', function() {
     it('Should return hello wwwWorleeeee', function() {
-        assert.equal(lambda.goodbye(), 'hello Worleeeee')
+        assert.equal(lambda.hello(), 'hello Worleeeee')
     })
 })
