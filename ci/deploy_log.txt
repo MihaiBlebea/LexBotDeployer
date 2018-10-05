@@ -950,3 +950,106 @@ Serverless: Successfully published your service on the Serverless Platform
 Serverless: Service URL:  https://dashboard.serverless.com/tenants/mihaiblebea/applications/myapp-dev/services/LambdaThree
 
 STDERR 
+ALL FILES [ { filename: 'repos/lambdas/tests/LambdaTwo.js',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/serverless.yml',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaThree/.serverless/serverless-state.json',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaThree/.serverless/cloudformation-template-update-stack.json',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaThree/.serverless/LambdaThree.zip',
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+CHANGED FILES [ { filename: 'repos/lambdas/tests/LambdaTwo.js',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/serverless.yml',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaThree/.serverless/serverless-state.json',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaThree/.serverless/cloudformation-template-update-stack.json',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaThree/.serverless/LambdaThree.zip',
+    status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+
+
+RESULT AFTER DEPLOY [ 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js' ]
+  Test lambda function
+    ✓ Should return Goodbye World33
+
+
+  1 passing (37ms)
+
+0
+{ ResourceNotFoundException: Function not found: arn:aws:lambda:us-east-1:216849691610:function:LambdaTwo-production-hello
+    at Object.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/json.js:48:29)
+    at Request.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/rest_json.js:52:8)
+    at Request.callListeners (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:109:20)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:81:10)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:683:18)
+    at Request.transition (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:22:14)
+    at AcceptorStateMachine.runTo (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:14:12)
+    at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10
+    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:17)
+    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:18)
+  message:
+   'Function not found: arn:aws:lambda:us-east-1:216849691610:function:LambdaTwo-production-hello',
+  code: 'ResourceNotFoundException',
+  time: 2018-10-05T13:10:38.753Z,
+  requestId: '0dcf6c6b-c8a0-11e8-b576-9188050ddde3',
+  statusCode: 404,
+  retryable: false,
+  retryDelay: 5.771932118796208 } 'ResourceNotFoundException: Function not found: arn:aws:lambda:us-east-1:216849691610:function:LambdaTwo-production-hello\n    at Object.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/json.js:48:29)\n    at Request.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/rest_json.js:52:8)\n    at Request.callListeners (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:109:20)\n    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:81:10)\n    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:683:18)\n    at Request.transition (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:22:14)\n    at AcceptorStateMachine.runTo (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:14:12)\n    at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10\n    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:17)\n    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:18)'
+{ Error: Command failed: cd ../repos/lambdas/functions/LambdaTwo && serverless deploy
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Socket.stream.socket.on (internal/child_process.js:380:11)
+    at Socket.emit (events.js:182:13)
+    at Socket.EventEmitter.emit (domain.js:442:20)
+    at Pipe._handle.close (net.js:599:12)
+  killed: false,
+  code: 1,
+  signal: null,
+  cmd:
+   'cd ../repos/lambdas/functions/LambdaTwo && serverless deploy' }
+STDOUT Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Uploading CloudFormation file to S3...
+Serverless: Uploading artifacts...
+Serverless: Uploading service .zip file to S3 (246 B)...
+Serverless: Validating template...
+Serverless: Updating Stack...
+Serverless: Checking Stack update progress...
+....
+Serverless: Operation failed!
+ 
+  Serverless Error ---------------------------------------
+ 
+  An error occurred: HelloLambdaFunction - Function not found: arn:aws:lambda:us-east-1:216849691610:function:LambdaTwo-production-hello (Service: AWSLambda; Status Code: 404; Error Code: ResourceNotFoundException; Request ID: 146f96d0-c8a0-11e8-a82a-b9f90ea4d444).
+ 
+  Get Support --------------------------------------------
+     Docs:          docs.serverless.com
+     Bugs:          github.com/serverless/serverless/issues
+     Issues:        forum.serverless.com
+ 
+  Your Environment Information -----------------------------
+     OS:                     darwin
+     Node Version:           10.9.0
+     Serverless Version:     1.32.0
+ 
+
+STDERR 
