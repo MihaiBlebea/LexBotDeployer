@@ -1,8 +1,8 @@
 {
   "service": {
-    "service": "LambdaOne",
+    "service": "LambdaTwo",
     "serviceObject": {
-      "name": "LambdaOne"
+      "name": "LambdaTwo"
     },
     "provider": {
       "stage": "production",
@@ -22,7 +22,7 @@
           "HelloLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-              "LogGroupName": "/aws/lambda/LambdaOne-production-hello"
+              "LogGroupName": "/aws/lambda/LambdaTwo-production-hello"
             }
           },
           "IamRoleLambdaExecution": {
@@ -51,7 +51,7 @@
                       "-",
                       [
                         "production",
-                        "LambdaOne",
+                        "LambdaTwo",
                         "lambda"
                       ]
                     ]
@@ -66,7 +66,7 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/LambdaOne-production-hello:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/LambdaTwo-production-hello:*"
                           }
                         ]
                       },
@@ -77,7 +77,7 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/LambdaOne-production-hello:*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/LambdaTwo-production-hello:*:*"
                           }
                         ]
                       }
@@ -90,7 +90,7 @@
                 "Fn::Join": [
                   "-",
                   [
-                    "LambdaOne",
+                    "LambdaTwo",
                     "production",
                     "us-east-1",
                     "lambdaRole"
@@ -106,10 +106,10 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/LambdaOne/production/1538744323986-2018-10-05T12:58:43.986Z/LambdaOne.zip"
+                "S3Key": "serverless/LambdaTwo/production/1538744324058-2018-10-05T12:58:44.058Z/LambdaTwo.zip"
               },
-              "FunctionName": "LambdaOne-production-hello",
-              "Handler": "LambdaOne.hello",
+              "FunctionName": "LambdaTwo-production-hello",
+              "Handler": "LambdaTwo.goodbye",
               "MemorySize": 1024,
               "Role": {
                 "Fn::GetAtt": [
@@ -125,14 +125,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "HelloLambdaVersionEctoAkzET6e5cdzebaKDRiZg6ssH7gJrm5g3ZXLcY": {
+          "HelloLambdaVersionTZUXse9eweWcpiqoQqSj4fm0KkINV2iVUIRbg1lM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "HelloLambdaFunction"
               },
-              "CodeSha256": "n9d7z6Or5bfGwQsdZXmMn7THDk5ovTLlUKBJGyJYPVU="
+              "CodeSha256": "oHiAfsVkZMrVmrf5B7xueRxw2AKm+aIGBcONMSpptCA="
             }
           }
         },
@@ -145,7 +145,7 @@
           "HelloLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "HelloLambdaVersionEctoAkzET6e5cdzebaKDRiZg6ssH7gJrm5g3ZXLcY"
+              "Ref": "HelloLambdaVersionTZUXse9eweWcpiqoQqSj4fm0KkINV2iVUIRbg1lM"
             }
           }
         }
@@ -171,9 +171,9 @@
     "pluginsData": {},
     "functions": {
       "hello": {
-        "handler": "LambdaOne.hello",
+        "handler": "LambdaTwo.goodbye",
         "events": [],
-        "name": "LambdaOne-production-hello",
+        "name": "LambdaTwo-production-hello",
         "package": {},
         "memory": 1024,
         "timeout": 6,
@@ -183,10 +183,10 @@
     },
     "app": "myapp-dev",
     "tenant": "mihaiblebea",
-    "artifact": "/Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions/LambdaOne/.serverless/LambdaOne.zip"
+    "artifact": "/Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/functions/LambdaTwo/.serverless/LambdaTwo.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/LambdaOne/production/1538744323986-2018-10-05T12:58:43.986Z",
-    "artifact": "LambdaOne.zip"
+    "artifactDirectoryName": "serverless/LambdaTwo/production/1538744324058-2018-10-05T12:58:44.058Z",
+    "artifact": "LambdaTwo.zip"
   }
 }

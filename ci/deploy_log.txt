@@ -532,3 +532,132 @@ Serverless: Successfully published your service on the Serverless Platform
 Serverless: Service URL:  https://dashboard.serverless.com/tenants/mihaiblebea/applications/myapp-dev/services/LambdaOne
 
 STDERR 
+ALL FILES [ { filename: 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaThree/LambdaThree.js',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/serverless-state.json',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-update-stack.json',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-create-stack.json',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/LambdaOne.zip',
+    status: 'Added' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+CHANGED FILES [ { filename: 'repos/lambdas/functions/LambdaTwo/LambdaTwo.js',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaThree/LambdaThree.js',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/serverless-state.json',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-update-stack.json',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-create-stack.json',
+    status: 'Added' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/LambdaOne.zip',
+    status: 'Added' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+
+
+
+
+
+
+  Test lambda function
+  Test lambda function 3
+  Test lambda function
+    ✓ Should return Goodbye World33
+    1) Should return hello wwwWorleeeee
+    ✓ Should return hello World
+
+
+
+
+  1 passing (10ms)
+
+0
+
+  0 passing (11ms)
+  1 failing
+
+  1) Test lambda function 3
+       Should return hello wwwWorleeeee:
+     TypeError: lambda.goodbye is not a function
+      at Context.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/tests/LambdaThree.js:7:29)
+
+
+
+1
+
+  1 passing (15ms)
+
+0
+STDOUT Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Uploading CloudFormation file to S3...
+Serverless: Uploading artifacts...
+Serverless: Uploading service .zip file to S3 (246 B)...
+Serverless: Validating template...
+Serverless: Updating Stack...
+Serverless: Checking Stack update progress...
+.........
+Serverless: Stack update finished...
+Service Information
+service: LambdaOne
+stage: production
+region: us-east-1
+stack: LambdaOne-production
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: LambdaOne-production-hello
+Serverless: Publishing service to Serverless Platform...
+Serverless: Successfully published your service on the Serverless Platform
+Serverless: Service URL:  https://dashboard.serverless.com/tenants/mihaiblebea/applications/myapp-dev/services/LambdaOne
+
+STDERR 
+STDOUT Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Creating Stack...
+Serverless: Checking Stack create progress...
+.....
+Serverless: Stack create finished...
+Serverless: Uploading CloudFormation file to S3...
+Serverless: Uploading artifacts...
+Serverless: Uploading service .zip file to S3 (245 B)...
+Serverless: Validating template...
+Serverless: Updating Stack...
+Serverless: Checking Stack update progress...
+................
+Serverless: Stack update finished...
+Service Information
+service: LambdaTwo
+stage: production
+region: us-east-1
+stack: LambdaTwo-production
+api keys:
+  None
+endpoints:
+  None
+functions:
+  hello: LambdaTwo-production-hello
+Serverless: Publishing service to Serverless Platform...
+Serverless: Successfully published your service on the Serverless Platform
+Serverless: Service URL:  https://dashboard.serverless.com/tenants/mihaiblebea/applications/myapp-dev/services/LambdaTwo
+
+STDERR 
