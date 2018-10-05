@@ -358,3 +358,53 @@ CHANGED FILES [ { filename: 'repos/bots/BotOne.json', status: 'Modified' },
 [14:55:34:217] : Creating a new version for BotOne. New version is 4
 [14:55:34:217] : Bot BotOne was deployed.
 JOB DONE
+ALL FILES [ { filename:
+     'repos/lambdas/functions/LambdaThree/.serverless/serverless-state.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaThree/.serverless/cloudformation-template-update-stack.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaThree/.serverless/cloudformation-template-create-stack.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaThree/.serverless/LambdaThree.zip',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/serverless-state.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-update-stack.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-create-stack.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/LambdaOne.zip',
+    status: 'Deleted' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
+CHANGED FILES [ { filename:
+     'repos/lambdas/functions/LambdaThree/.serverless/serverless-state.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaThree/.serverless/cloudformation-template-update-stack.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaThree/.serverless/cloudformation-template-create-stack.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaThree/.serverless/LambdaThree.zip',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/serverless-state.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-update-stack.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-create-stack.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/LambdaOne.zip',
+    status: 'Deleted' },
+  { filename: 'ci/deploy_log.txt', status: 'Modified' } ]
