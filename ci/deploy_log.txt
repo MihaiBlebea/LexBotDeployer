@@ -74,3 +74,131 @@ Serverless: Operation failed!
  
 
 STDERR 
+ALL FILES [ { filename: 'services/LambdaManager.js', status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/serverless-state.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-update-stack.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-create-stack.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/LambdaTwo.zip',
+    status: 'Deleted' },
+  { filename: 'repos/lambdas/functions/LambdaThree/LambdaThree.js',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/serverless-state.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-update-stack.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-create-stack.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/LambdaOne.zip',
+    status: 'Deleted' },
+  { filename: 'ci/deploy_log.txt', status: 'Added' } ]
+CHANGED FILES [ { filename: 'services/LambdaManager.js', status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/serverless-state.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-update-stack.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/cloudformation-template-create-stack.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaTwo/.serverless/LambdaTwo.zip',
+    status: 'Deleted' },
+  { filename: 'repos/lambdas/functions/LambdaThree/LambdaThree.js',
+    status: 'Modified' },
+  { filename: 'repos/lambdas/functions/LambdaOne/LambdaOne.js',
+    status: 'Modified' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/serverless-state.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-update-stack.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/cloudformation-template-create-stack.json',
+    status: 'Deleted' },
+  { filename:
+     'repos/lambdas/functions/LambdaOne/.serverless/LambdaOne.zip',
+    status: 'Deleted' },
+  { filename: 'ci/deploy_log.txt', status: 'Added' } ]
+
+
+
+
+  Test lambda function 3
+  Test lambda function
+    1) Should return hello wwwWorleeeee
+    ✓ Should return hello World
+
+
+
+  0 passing (10ms)
+  1 failing
+
+  1) Test lambda function 3
+       Should return hello wwwWorleeeee:
+     TypeError: lambda.goodbye is not a function
+      at Context.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/repos/lambdas/tests/LambdaThree.js:7:29)
+
+
+
+1
+
+  1 passing (7ms)
+
+0
+{ Error: Command failed: cd ../repos/lambdas/functions/LambdaOne && serverless deploy
+
+    at ChildProcess.exithandler (child_process.js:289:12)
+    at ChildProcess.emit (events.js:182:13)
+    at ChildProcess.EventEmitter.emit (domain.js:442:20)
+    at maybeClose (internal/child_process.js:961:16)
+    at Socket.stream.socket.on (internal/child_process.js:380:11)
+    at Socket.emit (events.js:182:13)
+    at Socket.EventEmitter.emit (domain.js:442:20)
+    at Pipe._handle.close (net.js:599:12)
+  killed: false,
+  code: 1,
+  signal: null,
+  cmd:
+   'cd ../repos/lambdas/functions/LambdaOne && serverless deploy' }
+STDOUT Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Uploading CloudFormation file to S3...
+Serverless: Uploading artifacts...
+Serverless: Uploading service .zip file to S3 (243 B)...
+Serverless: Validating template...
+Serverless: Updating Stack...
+Serverless: Checking Stack update progress...
+....
+Serverless: Operation failed!
+ 
+  Serverless Error ---------------------------------------
+ 
+  An error occurred: HelloLambdaFunction - Function not found: arn:aws:lambda:us-east-1:216849691610:function:LambdaOne-dev-hello (Service: AWSLambda; Status Code: 404; Error Code: ResourceNotFoundException; Request ID: 4e4d1cf8-c89c-11e8-89ed-ab6ba945ad9d).
+ 
+  Get Support --------------------------------------------
+     Docs:          docs.serverless.com
+     Bugs:          github.com/serverless/serverless/issues
+     Issues:        forum.serverless.com
+ 
+  Your Environment Information -----------------------------
+     OS:                     darwin
+     Node Version:           10.9.0
+     Serverless Version:     1.32.0
+ 
+
+STDERR 
