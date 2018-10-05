@@ -92,7 +92,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/LambdaOne/production/1538744323986-2018-10-05T12:58:43.986Z/LambdaOne.zip"
+          "S3Key": "serverless/LambdaOne/production/1538745339728-2018-10-05T13:15:39.728Z/LambdaOne.zip"
         },
         "FunctionName": "LambdaOne-production-hello",
         "Handler": "LambdaOne.hello",
@@ -111,14 +111,14 @@
         "IamRoleLambdaExecution"
       ]
     },
-    "HelloLambdaVersionEctoAkzET6e5cdzebaKDRiZg6ssH7gJrm5g3ZXLcY": {
+    "HelloLambdaVersionKjHZOrhLzOguydBrTo8ce62155BitirQI1wT47Klwo": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "HelloLambdaFunction"
         },
-        "CodeSha256": "n9d7z6Or5bfGwQsdZXmMn7THDk5ovTLlUKBJGyJYPVU="
+        "CodeSha256": "vI8FkQ8aAs7j2GCNlyglybs415TRjQfJXR+QqrQsvLo="
       }
     }
   },
@@ -131,7 +131,7 @@
     "HelloLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "HelloLambdaVersionEctoAkzET6e5cdzebaKDRiZg6ssH7gJrm5g3ZXLcY"
+        "Ref": "HelloLambdaVersionKjHZOrhLzOguydBrTo8ce62155BitirQI1wT47Klwo"
       }
     }
   }
