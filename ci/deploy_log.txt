@@ -1,0 +1,199 @@
+ALL FILES [ { filename: 'repos/intents/IntentOne.json', status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Deleted' } ]
+CHANGED FILES [ { filename: 'repos/intents/IntentOne.json', status: 'Modified' },
+  { filename: 'ci/deploy_log.txt', status: 'Deleted' } ]
+[14:25:17:660] : Starting to deploy slot SlotTypeOne.
+[14:25:17:666] : Starting to deploy slot SlotTypeTwo.
+[14:25:19:412] : Updating the slot code for SlotTypeOne
+[14:25:19:433] : Updating the slot code for SlotTypeTwo
+{
+    "name": "SlotTypeOne",
+    "description": "Available pizza sauces",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "green"
+        }
+    ],
+    "lastUpdatedDate": 1538742301.432,
+    "createdDate": 1538742301.432,
+    "version": "1",
+    "checksum": "81cbb146-5f5f-4840-8e59-18a6b2685a77",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[14:25:20:485] : Creating a new version for SlotTypeOne. New version is 1
+[14:25:20:485] : Slot SlotTypeOne was deployed.
+[14:25:20:486] : Starting to deploy intent IntentOne.
+[14:25:20:489] : Starting to deploy intent IntentTwo.
+{
+    "name": "SlotTypeTwo",
+    "description": "Available pizza sauces two",
+    "enumerationValues": [
+        {
+            "value": "red"
+        },
+        {
+            "value": "pink"
+        }
+    ],
+    "lastUpdatedDate": 1538742301.331,
+    "createdDate": 1538742301.331,
+    "version": "1",
+    "checksum": "b88dc571-fe51-471f-b68c-0c62730cb435",
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+}
+
+
+[14:25:20:502] : Creating a new version for SlotTypeTwo. New version is 1
+[14:25:20:502] : Slot SlotTypeTwo was deployed.
+[14:25:21:517] : Getting the checksum of the latest version for IntentTwo
+[14:25:21:525] : Getting the checksum of the latest version for IntentOne
+[14:25:21:853] : Updating the code for intent IntentOne.
+BadRequestException: Lex is unable to access the Lambda function arn:aws:lambda:us-east-1:216849691610:function:LambdaOne-production-hello in the context of intent arn:aws:lex:us-east-1:216849691610:intent:IntentTwo:$LATEST.  Please check the resource-based policy on the function.
+    at Object.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/json.js:48:29)
+    at Request.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/rest_json.js:52:8)
+    at Request.callListeners (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:109:20)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:81:10)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:683:18)
+    at Request.transition (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:22:14)
+    at AcceptorStateMachine.runTo (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:14:12)
+    at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10
+    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:17)
+    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:18)
+[14:25:22:896] : Getting the checksum of the latest version for IntentOne
+[14:25:22:896] : Intent IntentOne was deployed.
+[14:25:22:896] : Starting to deploy bot BotOne.
+[14:25:22:900] : Starting to deploy bot BotTwo.
+{
+    "name": "BotOne",
+    "description": "Bot to order human2222",
+    "intents": [
+        {
+            "intentName": "IntentOne",
+            "intentVersion": "2"
+        }
+    ],
+    "clarificationPrompt": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "I didn't understand you, what would you like to do?"
+            }
+        ],
+        "maxAttempts": 3
+    },
+    "abortStatement": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "Sorry, I'm not able to assist at this time"
+            }
+        ]
+    },
+    "status": "READY",
+    "lastUpdatedDate": 1538744151.084,
+    "createdDate": 1538742506.528,
+    "idleSessionTTLInSeconds": 600,
+    "voiceId": "Salli",
+    "checksum": "dc894e53-4302-4731-b0f0-b868abbf243c",
+    "version": "$LATEST",
+    "locale": "en-US",
+    "childDirected": false
+}
+
+
+{
+    "name": "BotTwo",
+    "description": "Bot to order human222",
+    "intents": [
+        {
+            "intentName": "IntentTwo",
+            "intentVersion": "1"
+        }
+    ],
+    "clarificationPrompt": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "I didn't understand you, what would you like to do?"
+            }
+        ],
+        "maxAttempts": 3
+    },
+    "abortStatement": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "Sorry, I'm not able to assist at this time"
+            }
+        ]
+    },
+    "status": "READY",
+    "lastUpdatedDate": 1538742653.226,
+    "createdDate": 1538742506.532,
+    "idleSessionTTLInSeconds": 600,
+    "voiceId": "Salli",
+    "checksum": "0a0ad795-75e7-420c-9bc4-1c90963c4088",
+    "version": "$LATEST",
+    "locale": "en-US",
+    "childDirected": false
+}
+
+
+BadRequestException: Invalid number of intents for bot "BotTwo". A bot should have a minimum of 1 intents. This bot has 0.
+    at Object.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/json.js:48:29)
+    at Request.extractError (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/protocol/rest_json.js:52:8)
+    at Request.callListeners (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:109:20)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/sequential_executor.js:81:10)
+    at Request.emit (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:683:18)
+    at Request.transition (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:22:14)
+    at AcceptorStateMachine.runTo (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:14:12)
+    at /Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/state_machine.js:26:10
+    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:38:17)
+    at Request.<anonymous> (/Users/mihai.blebea/Projects/LexBots/withNode/node_modules/aws-sdk/lib/request.js:685:18)
+[14:25:24:239] : Updating the code for the bot BotOne.
+{
+    "name": "BotOne",
+    "description": "Bot to order human2222",
+    "intents": [
+        {
+            "intentName": "IntentOne",
+            "intentVersion": "3"
+        }
+    ],
+    "clarificationPrompt": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "I didn't understand you, what would you like to do?"
+            }
+        ],
+        "maxAttempts": 3
+    },
+    "abortStatement": {
+        "messages": [
+            {
+                "contentType": "PlainText",
+                "content": "Sorry, I'm not able to assist at this time"
+            }
+        ]
+    },
+    "status": "BUILDING",
+    "lastUpdatedDate": 1538745930.212,
+    "createdDate": 1538745930.212,
+    "idleSessionTTLInSeconds": 600,
+    "voiceId": "Salli",
+    "checksum": "69d5fb5f-e1ee-4343-a08f-9357cc52ebbb",
+    "version": "2",
+    "locale": "en-US",
+    "childDirected": false
+}
+
+
+[14:25:30:318] : Creating a new version for BotOne. New version is 2
+[14:25:30:318] : Bot BotOne was deployed.
+JOB DONE
