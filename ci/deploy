@@ -12,13 +12,15 @@ const SlotManager = require('./../services/SlotManager')
 const IntentManager = require('./../services/IntentManager')
 const BotManager = require('./../services/BotManager')
 const LambdaManger = require('./../services/LambdaManager')
-
+const CredentialManager = require('./../services/CredentialManager')
 
 var branch = process.argv[2]
 
+var config = new CredentialManager()
+
 // Init dependencies //
-var lambda = new AWS.Lambda({ region: 'us-east-1' })
-var lex = new AWS.LexModelBuildingService({ region: 'us-east-1' })
+var lambda = new AWS.Lambda(config)
+var lex = new AWS.LexModelBuildingService(config)
 
 var slotManager = new SlotManager(lex, versions, log)
 var intentManager = new IntentManager(lex, versions, log)
