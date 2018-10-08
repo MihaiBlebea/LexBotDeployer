@@ -1,5 +1,5 @@
 
-service: LambdaThree
+service: LambdaFour
 
 app: myapp-dev
 tenant: mihaiblebea
@@ -11,4 +11,4 @@ provider:
 
 functions:
     hello:
-        handler: LambdaThree.hello
+        handler: LambdaFour.hello
